@@ -15,8 +15,8 @@ public class SaveParam : MonoBehaviour
         ParametersLoader loader = (ParametersLoader)GameObject.FindGameObjectsWithTag("Parameters")[0].GetComponent(typeof(ParametersLoader));
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/parameters.gd");
-        Debug.Log("test = " + loader.parameters.music_volume + " " + loader.parameters.snooze);
-        bf.Serialize(file, loader.parameters);
+        Debug.Log("test = " + ParametersLoader.parameters.music_volume + " " + ParametersLoader.parameters.snooze);
+        bf.Serialize(file, ParametersLoader.parameters);
         file.Close();
     }
 }

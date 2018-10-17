@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class DontDestroySpeaker : MonoBehaviour
 {
-
     private static bool created = false;
 
-    // Use this for initialization
+    /*Set the speaker as a don't destroy object*/
     void Start()
     {
         if (!created)

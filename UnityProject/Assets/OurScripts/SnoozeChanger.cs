@@ -1,25 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class SnoozeChanger : MonoBehaviour
 {
-    private ParametersLoader manager;
 
     public void Start()
     {
-        manager = (ParametersLoader)GameObject.FindGameObjectsWithTag("Parameters")[0].GetComponent(typeof(ParametersLoader));
+        ChangeColor(ParametersLoader.GetSnooze());
     }
 
     public void OnClick()
     {
-        if (manager != null)
+        ParametersLoader.SetSnooze(!ParametersLoader.GetSnooze());
+        Debug.Log("Snooze = " + ParametersLoader.GetSnooze());
+        ChangeColor(ParametersLoader.GetSnooze());
+    }
+
+    private void ChangeColor(bool active)
+    {
+        if (!active)
         {
-            manager.parameters.snooze = !manager.parameters.snooze;
+            gameObject.GetComponent<Image>().color = Color.gray;
         }
         else
         {
-            Debug.Log("Manager not found");
+            gameObject.GetComponent<Image>().color = Color.white;
         }
     }
 }
