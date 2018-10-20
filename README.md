@@ -1,5 +1,5 @@
 # LogicGate
-LogicGate est un projet développer avec Unity de jeu ayant pour but d'apprendre aux enfants 
+LogicGate est un projet développé avec Unity le jeu ayant pour but d'apprendre aux enfants 
 le concept des portes logiques de manière ludique.   
 ![](.menu.png)
 ![](.jeu.PNG)
