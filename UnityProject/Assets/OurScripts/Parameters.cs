@@ -4,13 +4,18 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
+//! Objet permettant de regrouper tous les paramètres du jeu.
 [System.Serializable]
 public class Parameters
 {
+	//! Volume de la musique
     public float music_volume;
+	//! État du vibreur
     public bool snooze;
+	//! Couleur de l'interface
     public float color;
 	
+	//! Chargement des paramètres depuis un fichier sérialiser.
     public void LoadParameters()
     {
         if (File.Exists(Application.persistentDataPath + "/parameters.gd"))
@@ -31,6 +36,7 @@ public class Parameters
         }
     }
 
+	//! Modifier l'état du vibreur
     public void change_snooze()
     {
         snooze = !snooze;

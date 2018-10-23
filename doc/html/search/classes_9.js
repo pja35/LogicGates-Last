@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['volumechanger',['VolumeChanger',['../class_volume_changer.html',1,'']]],
-  ['volumemanager',['VolumeManager',['../class_volume_manager.html',1,'']]]
+  ['saveparam',['SaveParam',['../class_save_param.html',1,'']]],
+  ['snoozechanger',['SnoozeChanger',['../class_snooze_changer.html',1,'']]]
 ];

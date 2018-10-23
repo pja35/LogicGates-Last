@@ -22,9 +22,8 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.0.1</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Projet visant à pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
  </tr>
  </tbody>
@@ -69,13 +68,16 @@ $(function() {
 <div class="title">Référence de la classe DraggerInstantiater</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Objet de base permettant de créer un dragger.  
+ <a href="class_dragger_instantiater.html#details">Plus de détails...</a></p>
 <div class="dynheader">
 Graphe d'héritage de DraggerInstantiater:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_dragger_instantiater.png" usemap="#DraggerInstantiater_map" alt=""/>
   <map id="DraggerInstantiater_map" name="DraggerInstantiater_map">
-<area href="class_dragger.html" alt="Dragger" shape="rect" coords="0,56,120,80"/>
+<area href="class_dragger.html" title="Gestionnaire des déplacements et positionnement d&#39;une porte. " alt="Dragger" shape="rect" coords="0,56,120,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -85,26 +87,34 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:a5ff1ad4684c5f1f6fb0c6eb66386c321 inherit pub_methods_class_dragger"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_anchor_state.html">AnchorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a5ff1ad4684c5f1f6fb0c6eb66386c321">FindNearest</a> (List&lt; <a class="el" href="class_anchor_state.html">AnchorState</a> &gt; anchor_list, GameObject to_move)</td></tr>
 <tr class="separator:a5ff1ad4684c5f1f6fb0c6eb66386c321 inherit pub_methods_class_dragger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac88471862f06150a27622527978fc672 inherit pub_methods_class_dragger"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#ac88471862f06150a27622527978fc672">DestroyOnBin</a> (GameObject obj)</td></tr>
+<tr class="memdesc:ac88471862f06150a27622527978fc672 inherit pub_methods_class_dragger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui va détruire l'objet qui lui est passée en argument.  <a href="class_dragger.html#ac88471862f06150a27622527978fc672">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac88471862f06150a27622527978fc672 inherit pub_methods_class_dragger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c35e5fa5a41f5f0ba823ecc94d94801 inherit pub_methods_class_dragger"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a0c35e5fa5a41f5f0ba823ecc94d94801">OnMouseDown</a> ()</td></tr>
+<tr class="memdesc:a0c35e5fa5a41f5f0ba823ecc94d94801 inherit pub_methods_class_dragger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet à l'objet d'être déplacé.  <a href="class_dragger.html#a0c35e5fa5a41f5f0ba823ecc94d94801">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0c35e5fa5a41f5f0ba823ecc94d94801 inherit pub_methods_class_dragger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fefaac4e505d917405736eafa051463 inherit pub_methods_class_dragger"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a6fefaac4e505d917405736eafa051463">OnMouseUp</a> ()</td></tr>
+<tr class="memdesc:a6fefaac4e505d917405736eafa051463 inherit pub_methods_class_dragger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Essaie de placer l'objet sur l'ancre la plus proche, si elle n'existe pas l'objet est détruit.  <a href="class_dragger.html#a6fefaac4e505d917405736eafa051463">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6fefaac4e505d917405736eafa051463 inherit pub_methods_class_dragger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad992b4962d200f6a323b4abf93206a6f inherit pub_methods_class_dragger"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#ad992b4962d200f6a323b4abf93206a6f">Update</a> ()</td></tr>
+<tr class="memdesc:ad992b4962d200f6a323b4abf93206a6f inherit pub_methods_class_dragger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet à cet objet d'être déplacé par le curseur.  <a href="class_dragger.html#ad992b4962d200f6a323b4abf93206a6f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad992b4962d200f6a323b4abf93206a6f inherit pub_methods_class_dragger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_dragger"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_dragger')"><img src="closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="class_dragger.html">Dragger</a></td></tr>
 <tr class="memitem:a1d16edf9f508d52493bda6130d9188d7 inherit pub_attribs_class_dragger"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a1d16edf9f508d52493bda6130d9188d7">initialObjMouseDistance</a></td></tr>
+<tr class="memdesc:a1d16edf9f508d52493bda6130d9188d7 inherit pub_attribs_class_dragger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conserve la distance au centre de l'objet. Exemple: Si on clique dans un angle du carré le centre garde la distance qu'il a avec le pointeur.  <a href="class_dragger.html#a1d16edf9f508d52493bda6130d9188d7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1d16edf9f508d52493bda6130d9188d7 inherit pub_attribs_class_dragger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a916c768cb219dee4d24ab41d869f1b4b inherit pub_attribs_class_dragger"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a916c768cb219dee4d24ab41d869f1b4b">mouseDown</a> = false</td></tr>
+<tr class="memdesc:a916c768cb219dee4d24ab41d869f1b4b inherit pub_attribs_class_dragger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen indiquant l'état de la souris.  <a href="class_dragger.html#a916c768cb219dee4d24ab41d869f1b4b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a916c768cb219dee4d24ab41d869f1b4b inherit pub_attribs_class_dragger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6877a2d7c8622dbebad040d764cc70e inherit pub_attribs_class_dragger"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_anchor_state.html">AnchorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#ae6877a2d7c8622dbebad040d764cc70e">anchorPoint</a> = null</td></tr>
+<tr class="memdesc:ae6877a2d7c8622dbebad040d764cc70e inherit pub_attribs_class_dragger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ancre à laquel le dragger est attaché.  <a href="class_dragger.html#ae6877a2d7c8622dbebad040d764cc70e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae6877a2d7c8622dbebad040d764cc70e inherit pub_attribs_class_dragger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock">
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_instantiater_8cs_source.html#l00005">5</a> du fichier <a class="el" href="_dragger_instantiater_8cs_source.html">DraggerInstantiater.cs</a>.</p>
+<div class="textblock"><p>Objet de base permettant de créer un dragger. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_instantiater_8cs_source.html#l00006">6</a> du fichier <a class="el" href="_dragger_instantiater_8cs_source.html">DraggerInstantiater.cs</a>.</p>
 </div><hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>OurScripts/Dragging/<a class="el" href="_dragger_instantiater_8cs_source.html">DraggerInstantiater.cs</a></li>
+<li>F:/LogicGate/LogicGate3/UnityProject/Assets/OurScripts/Dragging/<a class="el" href="_dragger_instantiater_8cs_source.html">DraggerInstantiater.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

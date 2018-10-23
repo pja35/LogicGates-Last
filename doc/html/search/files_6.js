@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removescene_2ecs',['RemoveScene.cs',['../_remove_scene_8cs.html',1,'']]]
+  ['quitter_2ecs',['Quitter.cs',['../_quitter_8cs.html',1,'']]]
 ];

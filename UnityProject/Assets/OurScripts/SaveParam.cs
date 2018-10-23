@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
+/**
+   \brief Permet de sauvegarder les paramètres.
+	
+ * Cette classe va permettre de sauvegarder les paramètres dans un fichier binaire 
+ * à partir de l'objet parameter qui les stockent tous.
+*/
 public class SaveParam : MonoBehaviour
 {
-
-
-
+	//! Sauvegarde les paramètres.
     public void save_parameters()
     {
         Debug.Log("Saving Parameters");

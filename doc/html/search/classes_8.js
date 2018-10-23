@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['saveparam',['SaveParam',['../class_save_param.html',1,'']]],
-  ['snoozechanger',['SnoozeChanger',['../class_snooze_changer.html',1,'']]]
+  ['removescene',['RemoveScene',['../class_remove_scene.html',1,'']]]
 ];

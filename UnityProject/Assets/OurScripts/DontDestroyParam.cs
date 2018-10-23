@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Protège un objet de la destruction
 public class DontDestroyParam : MonoBehaviour
 {
-
+	
+	// Booléen autorisant la destruction d'un objet
     private static bool created = false;
 
-    // Use this for initialization
-    void Start()
+    //! Protège l'objet attaché
+    public void Start()
     {
         if (!created)
         {

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['saveparam_2ecs',['SaveParam.cs',['../_save_param_8cs.html',1,'']]],
-  ['snoozechanger_2ecs',['SnoozeChanger.cs',['../_snooze_changer_8cs.html',1,'']]]
+  ['removescene_2ecs',['RemoveScene.cs',['../_remove_scene_8cs.html',1,'']]]
 ];

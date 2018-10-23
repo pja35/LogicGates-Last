@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removescene',['RemoveScene',['../class_remove_scene.html',1,'']]]
+  ['quitter',['Quitter',['../class_quitter.html',1,'']]]
 ];

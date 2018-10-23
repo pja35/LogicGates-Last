@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Classe pour éviter la destruction des haut-parleurs. 
 public class DontDestroySpeaker : MonoBehaviour
 {
     private static bool created = false;
 
-    /*Set the speaker as a don't destroy object*/
+    //! Fixe le haut-parleur comme un objet non-destructible.
     void Start()
     {
         if (!created)

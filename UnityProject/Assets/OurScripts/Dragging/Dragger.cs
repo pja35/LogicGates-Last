@@ -2,16 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Gestionnaire des déplacements et positionnement d'une porte.
 public class Dragger : MonoBehaviour
-{
+{	
+	/** 
+		\brief Conserve la distance au centre de l'objet.
+		Exemple: Si on clique dans un angle du carré le centre garde la distance qu'il a avec le pointeur.
+	*/
     public Vector3 initialObjMouseDistance;
+	//! Booléen indiquant l'état de la souris
     public bool mouseDown = false;
-
+	
+	//! Ancre à laquel le dragger est attaché.
     public AnchorState anchorPoint = null;
 
 
-    /*Find the nearest anchor in the list form the given object */
-
+    /** 
+		Trouve l'ancre la plus proche dans la liste qui lui est passée.
+		\param anchor_list La liste des ancres à tester.
+		\param to_move L'objet qui servira de point de référence pour la distance
+		\warning Cette fonction renvoie null si elle ne trouve pas d'ancre  		
+	*/
     public AnchorState FindNearest(List<AnchorState> anchor_list, GameObject to_move)
     {
 
@@ -32,6 +43,7 @@ public class Dragger : MonoBehaviour
         return (nearest.free) ? nearest : null;
     }
 
+	//! Fonction qui va détruire l'objet qui lui est passée en argument.
     public void DestroyOnBin(GameObject obj)
     {
         GameObject bin = GameObject.Find("Bin");
@@ -50,10 +62,13 @@ public class Dragger : MonoBehaviour
         }
     }
 
+	
+	//! Permet à l'objet d'être déplacé.
     public void OnMouseDown()
     {
         mouseDown = true;
-        /*To avoid the object going right under the mouse cursor*/
+		
+        // To avoid the object going right under the mouse cursor
         initialObjMouseDistance = gameObject.transform.position
         - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (anchorPoint != null)
@@ -64,10 +79,12 @@ public class Dragger : MonoBehaviour
 
     }
 
+	//! Essaie de placer l'objet sur l'ancre la plus proche, si elle n'existe pas l'objet est détruit. 
     public void OnMouseUp()
     {
         mouseDown = false;
-        /*Place the object on the nearest anchor*/
+		
+        //Place the object on the nearest anchor
         GameObject grid_holder = GameObject.Find("GridHolder");
         GridCreater grid = grid_holder.GetComponent<GridCreater>();
         AnchorState nearestAnchor = FindNearest(grid.anchor_list, gameObject);
@@ -85,7 +102,7 @@ public class Dragger : MonoBehaviour
         }
     }
 
-    /*if the mouse is pressed the object follow the mouse pointer*/
+    //! Permet à cet objet d'être déplacé par le curseur
     public void Update()
     {
         if (mouseDown)

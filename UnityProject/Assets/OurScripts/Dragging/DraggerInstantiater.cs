@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Objet de base permettant de créer un dragger.
 public class DraggerInstantiater : Dragger
 {
     private GameObject cloned = null;
 
+	/**
+		Créer un clone de la porte actuelle que l'on pourra déplacer.
+	*/
     private new void OnMouseDown()
     {
         mouseDown = true;
-        /*To avoid the object going right under the mouse cursor*/
+        //To avoid the object going right under the mouse cursor
         initialObjMouseDistance = gameObject.transform.position
             - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        /*Create a new object wich cant't multiply and will follow the corsor*/
+        //Create a new object wich cant't multiply and will follow the cursor
         cloned = Instantiate(gameObject);
         cloned.transform.SetParent(gameObject.transform.parent);
         cloned.transform.localScale = gameObject.transform.localScale;
@@ -29,6 +33,9 @@ public class DraggerInstantiater : Dragger
 
     }
 
+	/**
+		Gère le placement de l'objet quand il est reposé.
+	*/
     private new void OnMouseUp()
     {
         mouseDown = false;
@@ -48,6 +55,9 @@ public class DraggerInstantiater : Dragger
         }
     }
 
+	/**
+		Gère le déplacement de l'objet quand il n'est pas fixé.
+	*/
     private new void Update()
     {
         if (mouseDown)
