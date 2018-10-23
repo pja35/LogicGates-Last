@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Quitter : MonoBehaviour
 {
 
-    public void onClick()
+    public void OnClick()
     {
-        // Save game data
-
-        // Close game
-        Debug.Log("On as cliqué sur le bouton");
-        Application.Quit();
+        Debug.Log("On a cliqué sur le bouton");
+        
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                    Application.Quit();
+        #endif
+        
     }
 }

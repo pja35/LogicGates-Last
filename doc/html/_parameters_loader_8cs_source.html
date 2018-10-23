@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogicGate:  Fichier source de OurScripts/ParametersLoader.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LogicGate
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">Projet visant à pour but d&#39;initier les enfants aux portes logiques.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_87d0553f56772e5b374dbd6220a10cb3.html">OurScripts</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ParametersLoader.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_parameters_loader_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9">    5</a></span>&#160;<span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9">Platform</a>{<a class="code" href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9a88dba0c4e2af76447df43d1e31331a3d">PC</a>,<a class="code" href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9af9dd946cc89c1f3b41a0edbe0f36931d">PHONE</a>}</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_parameters_loader.html">    7</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_parameters_loader.html">ParametersLoader</a> : MonoBehaviour</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_parameters.html">Parameters</a> <a class="code" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">parameters</a> = <span class="keyword">new</span> <a class="code" href="class_parameters.html">Parameters</a>();</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">/*Load parameters from containing file and set application max fps to 60*/</span></div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_parameters_loader.html#a7150dc98b0bf3c29d6f0c2494314ab1f">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_parameters_loader.html#a7150dc98b0bf3c29d6f0c2494314ab1f">Start</a>()</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        Application.targetFrameRate = 60;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">parameters</a>.<a class="code" href="class_parameters.html#adeed4b45e120cbbba31153e7c8e2dc9a">LoadParameters</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Debug.Log(<span class="stringliteral">&quot;loaded = &quot;</span> + <a class="code" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">parameters</a>.<a class="code" href="class_parameters.html#a59453e68e6a3d176b82264ec4098ce2d">music_volume</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">parameters</a>.<a class="code" href="class_parameters.html#aa9c08ea71b0805eee7571d21a857afa4">snooze</a>);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        GameObject.Find(<span class="stringliteral">&quot;Speaker&quot;</span>).GetComponent&lt;AudioSource&gt;().volume = <a class="code" href="class_parameters_loader.html#afeda242af9632639661957a7a46c8a1a">GetMusicVolume</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_parameters_loader.html#afeda242af9632639661957a7a46c8a1a">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_parameters_loader.html#afeda242af9632639661957a7a46c8a1a">GetMusicVolume</a>() { <span class="keywordflow">return</span> <a class="code" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">parameters</a>.<a class="code" href="class_parameters.html#a59453e68e6a3d176b82264ec4098ce2d">music_volume</a>; }</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_parameters_loader.html#ad4e278bf9cc9a5aed98032241fb0c6b8">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_parameters_loader.html#ad4e278bf9cc9a5aed98032241fb0c6b8">SetMusicVolume</a>(<span class="keywordtype">float</span> music_volume) { <a class="code" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">parameters</a>.<a class="code" href="class_parameters.html#a59453e68e6a3d176b82264ec4098ce2d">music_volume</a> = music_volume; }</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_parameters_loader.html#a55ed144c6b0b938358265b1e5072e5dd">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_parameters_loader.html#a55ed144c6b0b938358265b1e5072e5dd">GetSnooze</a>() { <span class="keywordflow">return</span> <a class="code" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">parameters</a>.<a class="code" href="class_parameters.html#aa9c08ea71b0805eee7571d21a857afa4">snooze</a>; }</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_parameters_loader.html#a28c8d880037a4ee6b54eae165f6c11cb">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_parameters_loader.html#a28c8d880037a4ee6b54eae165f6c11cb">SetSnooze</a>(<span class="keywordtype">bool</span> snooze) { <a class="code" href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">parameters</a>.<a class="code" href="class_parameters.html#aa9c08ea71b0805eee7571d21a857afa4">snooze</a> = snooze; }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_parameters_loader.html#ab01abf8b5b1f436c3aa4ca9b6a8a9a78">   28</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9">Platform</a> <a class="code" href="class_parameters_loader.html#ab01abf8b5b1f436c3aa4ca9b6a8a9a78">getPlatform</a>(){</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">string</span> system = (SystemInfo.operatingSystem.Split(<span class="charliteral">&#39; &#39;</span>))[0];</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">switch</span>(system){</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Android&quot;</span>:<span class="keywordflow">case</span> <span class="stringliteral">&quot;iPhone&quot;</span>:</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9">Platform</a>.PHONE;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9">Platform</a>.PC;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="ttc" id="class_parameters_loader_html_ad4e278bf9cc9a5aed98032241fb0c6b8"><div class="ttname"><a href="class_parameters_loader.html#ad4e278bf9cc9a5aed98032241fb0c6b8">ParametersLoader.SetMusicVolume</a></div><div class="ttdeci">static void SetMusicVolume(float music_volume)</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00023">ParametersLoader.cs:23</a></div></div>
+<div class="ttc" id="class_parameters_loader_html_a55ed144c6b0b938358265b1e5072e5dd"><div class="ttname"><a href="class_parameters_loader.html#a55ed144c6b0b938358265b1e5072e5dd">ParametersLoader.GetSnooze</a></div><div class="ttdeci">static bool GetSnooze()</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00025">ParametersLoader.cs:25</a></div></div>
+<div class="ttc" id="class_parameters_loader_html"><div class="ttname"><a href="class_parameters_loader.html">ParametersLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00007">ParametersLoader.cs:7</a></div></div>
+<div class="ttc" id="class_parameters_loader_html_afeda242af9632639661957a7a46c8a1a"><div class="ttname"><a href="class_parameters_loader.html#afeda242af9632639661957a7a46c8a1a">ParametersLoader.GetMusicVolume</a></div><div class="ttdeci">static float GetMusicVolume()</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00022">ParametersLoader.cs:22</a></div></div>
+<div class="ttc" id="class_parameters_html"><div class="ttname"><a href="class_parameters.html">Parameters</a></div><div class="ttdef"><b>Definition:</b> <a href="_parameters_8cs_source.html#l00008">Parameters.cs:8</a></div></div>
+<div class="ttc" id="class_parameters_html_a59453e68e6a3d176b82264ec4098ce2d"><div class="ttname"><a href="class_parameters.html#a59453e68e6a3d176b82264ec4098ce2d">Parameters.music_volume</a></div><div class="ttdeci">float music_volume</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_8cs_source.html#l00010">Parameters.cs:10</a></div></div>
+<div class="ttc" id="_parameters_loader_8cs_html_a5be836f305c9cd8b44ffb7c964f4cbd9a88dba0c4e2af76447df43d1e31331a3d"><div class="ttname"><a href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9a88dba0c4e2af76447df43d1e31331a3d">Platform.PC</a></div></div>
+<div class="ttc" id="_parameters_loader_8cs_html_a5be836f305c9cd8b44ffb7c964f4cbd9"><div class="ttname"><a href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9">Platform</a></div><div class="ttdeci">Platform</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00005">ParametersLoader.cs:5</a></div></div>
+<div class="ttc" id="class_parameters_loader_html_a7150dc98b0bf3c29d6f0c2494314ab1f"><div class="ttname"><a href="class_parameters_loader.html#a7150dc98b0bf3c29d6f0c2494314ab1f">ParametersLoader.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00012">ParametersLoader.cs:12</a></div></div>
+<div class="ttc" id="class_parameters_loader_html_abebe48dd7b94d1efd572378cc299a743"><div class="ttname"><a href="class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743">ParametersLoader.parameters</a></div><div class="ttdeci">static Parameters parameters</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00009">ParametersLoader.cs:9</a></div></div>
+<div class="ttc" id="class_parameters_html_aa9c08ea71b0805eee7571d21a857afa4"><div class="ttname"><a href="class_parameters.html#aa9c08ea71b0805eee7571d21a857afa4">Parameters.snooze</a></div><div class="ttdeci">bool snooze</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_8cs_source.html#l00011">Parameters.cs:11</a></div></div>
+<div class="ttc" id="class_parameters_loader_html_a28c8d880037a4ee6b54eae165f6c11cb"><div class="ttname"><a href="class_parameters_loader.html#a28c8d880037a4ee6b54eae165f6c11cb">ParametersLoader.SetSnooze</a></div><div class="ttdeci">static void SetSnooze(bool snooze)</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00026">ParametersLoader.cs:26</a></div></div>
+<div class="ttc" id="class_parameters_loader_html_ab01abf8b5b1f436c3aa4ca9b6a8a9a78"><div class="ttname"><a href="class_parameters_loader.html#ab01abf8b5b1f436c3aa4ca9b6a8a9a78">ParametersLoader.getPlatform</a></div><div class="ttdeci">static Platform getPlatform()</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_loader_8cs_source.html#l00028">ParametersLoader.cs:28</a></div></div>
+<div class="ttc" id="class_parameters_html_adeed4b45e120cbbba31153e7c8e2dc9a"><div class="ttname"><a href="class_parameters.html#adeed4b45e120cbbba31153e7c8e2dc9a">Parameters.LoadParameters</a></div><div class="ttdeci">void LoadParameters()</div><div class="ttdef"><b>Definition:</b> <a href="_parameters_8cs_source.html#l00014">Parameters.cs:14</a></div></div>
+<div class="ttc" id="_parameters_loader_8cs_html_a5be836f305c9cd8b44ffb7c964f4cbd9af9dd946cc89c1f3b41a0edbe0f36931d"><div class="ttname"><a href="_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9af9dd946cc89c1f3b41a0edbe0f36931d">Platform.PHONE</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

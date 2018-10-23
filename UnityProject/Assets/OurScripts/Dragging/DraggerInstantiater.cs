@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DraggerInstantiater : Dragger
 {
-    private GameObject cloned;
+    private GameObject cloned = null;
 
     private new void OnMouseDown()
     {
@@ -17,7 +17,15 @@ public class DraggerInstantiater : Dragger
         cloned.transform.SetParent(gameObject.transform.parent);
         cloned.transform.localScale = gameObject.transform.localScale;
         Destroy(cloned.GetComponent<DraggerInstantiater>());
+
         cloned.AddComponent<Dragger>();
+
+        /* if (cloned.GetComponent<Dragger>().anchorPoint != null)
+         {
+             Debug.Log("Pas nul");
+             cloned.GetComponent<Dragger>().anchorPoint.free = true;
+             cloned.GetComponent<Dragger>().anchorPoint = null;
+         }*/
 
     }
 
@@ -25,8 +33,19 @@ public class DraggerInstantiater : Dragger
     {
         mouseDown = false;
         GameObject grid_holder = GameObject.Find("GridHolder");
-        Grid grid = grid_holder.GetComponent<Grid>();
-        cloned.transform.transform.position = FindNearest(grid.anchor_list, cloned);
+        GridCreater grid = grid_holder.GetComponent<GridCreater>();
+        AnchorState nearest = FindNearest(grid.anchor_list, cloned);
+        if (nearest == null)
+        {
+            Destroy(cloned);
+        }
+        else
+        {
+            DestroyOnBin(cloned);
+            cloned.GetComponent<Dragger>().anchorPoint = nearest;
+            cloned.GetComponent<Dragger>().anchorPoint.free = false;
+            cloned.transform.transform.position = nearest.position;
+        }
     }
 
     private new void Update()

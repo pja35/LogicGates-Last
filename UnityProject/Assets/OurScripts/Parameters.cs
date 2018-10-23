@@ -10,7 +10,7 @@ public class Parameters
     public float music_volume;
     public bool snooze;
     public float color;
-
+	
     public void LoadParameters()
     {
         if (File.Exists(Application.persistentDataPath + "/parameters.gd"))
