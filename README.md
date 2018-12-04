@@ -2,8 +2,8 @@
 LogicGate est un projet développé avec Unity. Le jeu a pour but d'apprendre aux enfants 
 le concept des portes logiques de manière ludique.
 
-#Pour contacter les dévellopeurs: devauxcedricarnaud@gmail.com
-##Créateur:
+# Pour contacter les Créateurs: devauxcedricarnaud@gmail.com
+## Créateur:
 * Clain Jordan
 * Devaux Cédric
 * Sefer William
