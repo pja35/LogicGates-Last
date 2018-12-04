@@ -2,6 +2,8 @@
 LogicGate est un projet développé avec Unity. Le jeu a pour but d'apprendre aux enfants 
 le concept des portes logiques de manière ludique.
 
+#Pour contacter les dévellopeurs: devauxcedricarnaud@gmail.com
+
 L'interface:
 
 ![](.menu.png)
