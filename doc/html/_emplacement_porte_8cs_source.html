@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogicGate:  Fichier source de F:/UnityProject/LogicGate3/UnityProject/Assets/OurScripts/Porte/EmplacementPorte.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LogicGate
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3a581ba30d25676e4b797b1f96d53b45.html">F:</a></li><li class="navelem"><a class="el" href="dir_ff691ed9900ecfd603f940cf67947cc6.html">UnityProject</a></li><li class="navelem"><a class="el" href="dir_b1714737d1a417b23c0cbe4594955c52.html">LogicGate3</a></li><li class="navelem"><a class="el" href="dir_3713ce88b652cc0f496daf097ec2e4eb.html">UnityProject</a></li><li class="navelem"><a class="el" href="dir_f54683c08a1ae4e3e2ece9175424c68a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_bf5b5039ec6d0fd1e71c47e4667c0585.html">OurScripts</a></li><li class="navelem"><a class="el" href="dir_5013b7cfff06813307a448838c0f8d35.html">Porte</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EmplacementPorte.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_emplacement_porte_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_emplacement_porte.html">    9</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_emplacement_porte.html">EmplacementPorte</a> : MonoBehaviour, <a class="code" href="interface_dev_obj_init.html">DevObjInit</a></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_emplacement_porte.html#a39da974b5c3c02848d33092ea0c6304b">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_emplacement_porte.html#a39da974b5c3c02848d33092ea0c6304b">Instantiate</a>()</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">return</span>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_emplacement_porte.html#a20cd8d68d3ceafc3ce59139ae1e9fdff">   16</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_emplacement_porte.html#a20cd8d68d3ceafc3ce59139ae1e9fdff">MakeInitialConnections</a>()</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//Fait aussi le trvail de Instantiate.</span></div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_emplacement_porte.html#a1379fdd8baeca30ca1fcbc48367df9be">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_emplacement_porte.html#a1379fdd8baeca30ca1fcbc48367df9be">PlaceOnGrid</a>()</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_anchor_state.html">AnchorState</a> choosen =  <a class="code" href="class_grid_util.html">GridUtil</a>.<a class="code" href="class_grid_util.html#a6d23385e21d0a009b0e2f48d67e1d9b3">TakeNearestAnchor</a>(gameObject);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (GameObject.Find(<span class="stringliteral">&quot;GridHolder&quot;</span>).GetComponent&lt;<a class="code" href="class_grid_creater.html">GridCreater</a>&gt;().initialState) {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            Debug.LogWarning(<span class="stringliteral">&quot;Vous essayez d&#39;utiliser un emplacement de porte alors que l&#39;etat initial de la grille n&#39;est pas à faux.&quot;</span> +</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="stringliteral">&quot; Le comportement normal des emplacement ne pourra pas avoir lieu.&quot;</span>);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">//On rajoute une ancre à la grille sur laquelle les portes pouront se fixer. Normalement ces ancres seront les seules disponibles.</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        List&lt;AnchorState&gt; gridAnchors = GameObject.Find(<span class="stringliteral">&quot;GridHolder&quot;</span>).GetComponent&lt;<a class="code" href="class_grid_creater.html">GridCreater</a>&gt;().anchor_list;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        gridAnchors.Add(<span class="keyword">new</span> <a class="code" href="class_anchor_state.html">AnchorState</a>(choosen.<a class="code" href="class_anchor_state.html#ac5526da5e290734a02e866c0261197cb">GetPosition</a>(), choosen.<a class="code" href="class_anchor_state.html#a926b8de9902e418038708445be27cccc">GetGridPos</a>(), <span class="keyword">true</span>));</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_emplacement_porte_html"><div class="ttname"><a href="class_emplacement_porte.html">EmplacementPorte</a></div><div class="ttdoc">Une clase pour gerer les emplacements de portes. </div><div class="ttdef"><b>Definition:</b> <a href="_emplacement_porte_8cs_source.html#l00009">EmplacementPorte.cs:9</a></div></div>
+<div class="ttc" id="class_grid_util_html_a6d23385e21d0a009b0e2f48d67e1d9b3"><div class="ttname"><a href="class_grid_util.html#a6d23385e21d0a009b0e2f48d67e1d9b3">GridUtil.TakeNearestAnchor</a></div><div class="ttdeci">static AnchorState TakeNearestAnchor(GameObject taker)</div><div class="ttdoc">Prend l&amp;#39;ancre la plus proche de l&amp;#39;objet qe celle-ci soit libre ou non. </div><div class="ttdef"><b>Definition:</b> <a href="_grid_util_8cs_source.html#l00127">GridUtil.cs:127</a></div></div>
+<div class="ttc" id="class_anchor_state_html_ac5526da5e290734a02e866c0261197cb"><div class="ttname"><a href="class_anchor_state.html#ac5526da5e290734a02e866c0261197cb">AnchorState.GetPosition</a></div><div class="ttdeci">Vector3 GetPosition()</div><div class="ttdef"><b>Definition:</b> <a href="_grid_util_8cs_source.html#l00029">GridUtil.cs:29</a></div></div>
+<div class="ttc" id="class_emplacement_porte_html_a39da974b5c3c02848d33092ea0c6304b"><div class="ttname"><a href="class_emplacement_porte.html#a39da974b5c3c02848d33092ea0c6304b">EmplacementPorte.Instantiate</a></div><div class="ttdeci">void Instantiate()</div><div class="ttdef"><b>Definition:</b> <a href="_emplacement_porte_8cs_source.html#l00011">EmplacementPorte.cs:11</a></div></div>
+<div class="ttc" id="class_anchor_state_html_a926b8de9902e418038708445be27cccc"><div class="ttname"><a href="class_anchor_state.html#a926b8de9902e418038708445be27cccc">AnchorState.GetGridPos</a></div><div class="ttdeci">Vector2 GetGridPos()</div><div class="ttdef"><b>Definition:</b> <a href="_grid_util_8cs_source.html#l00034">GridUtil.cs:34</a></div></div>
+<div class="ttc" id="class_grid_util_html"><div class="ttname"><a href="class_grid_util.html">GridUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="_grid_util_8cs_source.html#l00040">GridUtil.cs:40</a></div></div>
+<div class="ttc" id="class_grid_creater_html"><div class="ttname"><a href="class_grid_creater.html">GridCreater</a></div><div class="ttdoc">Crée une grille d&amp;#39;ancres pour y attacher les portes. </div><div class="ttdef"><b>Definition:</b> <a href="_grid_creater_8cs_source.html#l00011">GridCreater.cs:11</a></div></div>
+<div class="ttc" id="class_anchor_state_html"><div class="ttname"><a href="class_anchor_state.html">AnchorState</a></div><div class="ttdoc">Détaille les informations sur une ancre. </div><div class="ttdef"><b>Definition:</b> <a href="_grid_util_8cs_source.html#l00008">GridUtil.cs:8</a></div></div>
+<div class="ttc" id="class_emplacement_porte_html_a1379fdd8baeca30ca1fcbc48367df9be"><div class="ttname"><a href="class_emplacement_porte.html#a1379fdd8baeca30ca1fcbc48367df9be">EmplacementPorte.PlaceOnGrid</a></div><div class="ttdeci">void PlaceOnGrid()</div><div class="ttdef"><b>Definition:</b> <a href="_emplacement_porte_8cs_source.html#l00022">EmplacementPorte.cs:22</a></div></div>
+<div class="ttc" id="class_emplacement_porte_html_a20cd8d68d3ceafc3ce59139ae1e9fdff"><div class="ttname"><a href="class_emplacement_porte.html#a20cd8d68d3ceafc3ce59139ae1e9fdff">EmplacementPorte.MakeInitialConnections</a></div><div class="ttdeci">void MakeInitialConnections()</div><div class="ttdef"><b>Definition:</b> <a href="_emplacement_porte_8cs_source.html#l00016">EmplacementPorte.cs:16</a></div></div>
+<div class="ttc" id="interface_dev_obj_init_html"><div class="ttname"><a href="interface_dev_obj_init.html">DevObjInit</a></div><div class="ttdef"><b>Definition:</b> <a href="_dev_obj_init_8cs_source.html#l00001">DevObjInit.cs:1</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

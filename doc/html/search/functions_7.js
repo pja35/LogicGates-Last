@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['onchange',['OnChange',['../class_volume_changer.html#a2d5a85ac1481f094c08eb83cbadda336',1,'VolumeChanger']]],
-  ['onclick',['OnClick',['../class_load_scene.html#a14b31f2bd3ebd80e6561f17468892db3',1,'LoadScene.OnClick()'],['../class_load_scene_add.html#ab3265a9d67e26dbd627c339785eb8749',1,'LoadSceneAdd.OnClick()'],['../class_pop_up_close.html#a49e95ade990c0d89e175aa35c4f1213e',1,'PopUpClose.OnClick()'],['../class_quitter.html#af10a8e466768e82d4217df76d451268c',1,'Quitter.OnClick()'],['../class_remove_scene.html#af485f2d8ac0b9b72d539a2f2ce7143e6',1,'RemoveScene.OnClick()'],['../class_snooze_changer.html#a9ffaa0bbed0e72bfd0d76be47075e82e',1,'SnoozeChanger.OnClick()']]],
-  ['onmousedown',['OnMouseDown',['../class_dragger.html#a0c35e5fa5a41f5f0ba823ecc94d94801',1,'Dragger']]],
-  ['onmouseup',['OnMouseUp',['../class_dragger.html#a6fefaac4e505d917405736eafa051463',1,'Dragger']]]
+  ['loadnextlevel',['LoadNextLevel',['../class_button_util.html#ae2823648984bcc3a6792bee3c5189bdc',1,'ButtonUtil']]],
+  ['loadparameters',['LoadParameters',['../class_parameters.html#adeed4b45e120cbbba31153e7c8e2dc9a',1,'Parameters']]],
+  ['loadscene',['LoadScene',['../class_button_util.html#ae0ff65c8fd90b576cd96eff5a1674cf0',1,'ButtonUtil']]],
+  ['loadsceneadd',['LoadSceneAdd',['../class_button_util.html#afa70f2923c66210509888ab396da984e',1,'ButtonUtil']]],
+  ['locklevel',['lockLevel',['../class_parameters.html#a85e31a50334cf914869fbf41b1df4f09',1,'Parameters.lockLevel()'],['../class_parameters_loader.html#a84454e2f0f13953786d62f02b1bf4895',1,'ParametersLoader.LockLevel()'],['../class_button_util.html#a2ab7ae08ee4386dbfa4c163e16703d32',1,'ButtonUtil.LockLevel()']]],
+  ['logerror',['LogError',['../class_log_util.html#a080b5ab7a0c3b98c0c6c01aab81d8494',1,'LogUtil']]],
+  ['logstart',['LogStart',['../class_log_util.html#ab7ab0c7527964cbeafac50466ab5ae4c',1,'LogUtil']]],
+  ['logwarning',['LogWarning',['../class_log_util.html#a0027503f3e2193633e089475aabda08a',1,'LogUtil']]]
 ];

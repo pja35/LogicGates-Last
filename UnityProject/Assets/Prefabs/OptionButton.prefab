@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 222770174657003518}
   - component: {fileID: 114942972766133234}
   - component: {fileID: 114495394402666230}
-  - component: {fileID: 114569054488459972}
+  - component: {fileID: 114632859877873738}
   m_Layer: 5
   m_Name: OptionButton
   m_TagString: Untagged
@@ -67,12 +67,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 999ed9113ab77364b9449a941e15de29, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -119,20 +119,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114569054488459972}
-        m_MethodName: OnClick
-        m_Mode: 1
+      - m_Target: {fileID: 114632859877873738}
+        m_MethodName: LoadSceneAdd
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Settings
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114569054488459972
+--- !u!114 &114632859877873738
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,10 +140,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1887687107001220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edb12662c30eeb04ba3f401e6535613a, type: 3}
+  m_Script: {fileID: 11500000, guid: ea2d9ba8c3dc4dd4cb91a127ebed540f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Settings
 --- !u!114 &114942972766133234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,6 +218,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325, y: 696.11}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 300, y: 681.11}
+  m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -22,8 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
+   <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
  </tr>
  </tbody>
@@ -71,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Gestionnaire des déplacements et positionnement d'une porte.  
+<p>Permet de déplacer un objet à la souris. L'objet adère aux ancres de l'écran.  
  <a href="class_dragger.html#details">Plus de détails...</a></p>
 <div class="dynheader">
 Graphe d'héritage de Dragger:</div>
@@ -79,52 +80,45 @@ Graphe d'héritage de Dragger:</div>
  <div class="center">
   <img src="class_dragger.png" usemap="#Dragger_map" alt=""/>
   <map id="Dragger_map" name="Dragger_map">
-<area href="class_dragger_instantiater.html" title="Objet de base permettant de créer un dragger. " alt="DraggerInstantiater" shape="rect" coords="0,112,120,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a5ff1ad4684c5f1f6fb0c6eb66386c321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_anchor_state.html">AnchorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a5ff1ad4684c5f1f6fb0c6eb66386c321">FindNearest</a> (List&lt; <a class="el" href="class_anchor_state.html">AnchorState</a> &gt; anchor_list, GameObject to_move)</td></tr>
-<tr class="separator:a5ff1ad4684c5f1f6fb0c6eb66386c321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac88471862f06150a27622527978fc672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#ac88471862f06150a27622527978fc672">DestroyOnBin</a> (GameObject obj)</td></tr>
-<tr class="memdesc:ac88471862f06150a27622527978fc672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui va détruire l'objet qui lui est passée en argument.  <a href="#ac88471862f06150a27622527978fc672">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac88471862f06150a27622527978fc672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27974da258fc30c13db75302eee89b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#ae27974da258fc30c13db75302eee89b3">DestroyedOnBin</a> (GameObject obj)</td></tr>
+<tr class="memdesc:ae27974da258fc30c13db75302eee89b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruit obj si il entre en contact avec la poubelle  <a href="#ae27974da258fc30c13db75302eee89b3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae27974da258fc30c13db75302eee89b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c35e5fa5a41f5f0ba823ecc94d94801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a0c35e5fa5a41f5f0ba823ecc94d94801">OnMouseDown</a> ()</td></tr>
-<tr class="memdesc:a0c35e5fa5a41f5f0ba823ecc94d94801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet à l'objet d'être déplacé.  <a href="#a0c35e5fa5a41f5f0ba823ecc94d94801">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a0c35e5fa5a41f5f0ba823ecc94d94801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplace l'objet sur un appui de la souris.  <a href="#a0c35e5fa5a41f5f0ba823ecc94d94801">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0c35e5fa5a41f5f0ba823ecc94d94801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fefaac4e505d917405736eafa051463"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a6fefaac4e505d917405736eafa051463">OnMouseUp</a> ()</td></tr>
-<tr class="memdesc:a6fefaac4e505d917405736eafa051463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Essaie de placer l'objet sur l'ancre la plus proche, si elle n'existe pas l'objet est détruit.  <a href="#a6fefaac4e505d917405736eafa051463">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a6fefaac4e505d917405736eafa051463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tente de placer l'objet sur la grille et le détruit si on ne peut pas.  <a href="#a6fefaac4e505d917405736eafa051463">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6fefaac4e505d917405736eafa051463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad992b4962d200f6a323b4abf93206a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#ad992b4962d200f6a323b4abf93206a6f">Update</a> ()</td></tr>
-<tr class="memdesc:ad992b4962d200f6a323b4abf93206a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet à cet objet d'être déplacé par le curseur.  <a href="#ad992b4962d200f6a323b4abf93206a6f">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ad992b4962d200f6a323b4abf93206a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'objet suivra le curseur si il est cliqué.  <a href="#ad992b4962d200f6a323b4abf93206a6f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad992b4962d200f6a323b4abf93206a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:a1d16edf9f508d52493bda6130d9188d7"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a1d16edf9f508d52493bda6130d9188d7">initialObjMouseDistance</a></td></tr>
-<tr class="memdesc:a1d16edf9f508d52493bda6130d9188d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conserve la distance au centre de l'objet. Exemple: Si on clique dans un angle du carré le centre garde la distance qu'il a avec le pointeur.  <a href="#a1d16edf9f508d52493bda6130d9188d7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1d16edf9f508d52493bda6130d9188d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a916c768cb219dee4d24ab41d869f1b4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a916c768cb219dee4d24ab41d869f1b4b">mouseDown</a> = false</td></tr>
 <tr class="memdesc:a916c768cb219dee4d24ab41d869f1b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen indiquant l'état de la souris.  <a href="#a916c768cb219dee4d24ab41d869f1b4b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a916c768cb219dee4d24ab41d869f1b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6877a2d7c8622dbebad040d764cc70e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_anchor_state.html">AnchorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#ae6877a2d7c8622dbebad040d764cc70e">anchorPoint</a> = null</td></tr>
-<tr class="memdesc:ae6877a2d7c8622dbebad040d764cc70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ancre à laquel le dragger est attaché.  <a href="#ae6877a2d7c8622dbebad040d764cc70e">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae6877a2d7c8622dbebad040d764cc70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Gestionnaire des déplacements et positionnement d'une porte. </p>
+<div class="textblock"><p>Permet de déplacer un objet à la souris. L'objet adère aux ancres de l'écran. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00006">6</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00008">8</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="ac88471862f06150a27622527978fc672"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac88471862f06150a27622527978fc672">&#9670;&nbsp;</a></span>DestroyOnBin()</h2>
+<a id="ae27974da258fc30c13db75302eee89b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27974da258fc30c13db75302eee89b3">&#9670;&nbsp;</a></span>DestroyedOnBin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Dragger.DestroyOnBin </td>
+          <td class="memname">bool Dragger.DestroyedOnBin </td>
           <td>(</td>
           <td class="paramtype">GameObject&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
@@ -133,51 +127,17 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Fonction qui va détruire l'objet qui lui est passée en argument. </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00047">47</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00083">OnMouseUp()</a>.</p>
-
-</div>
-</div>
-<a id="a5ff1ad4684c5f1f6fb0c6eb66386c321"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ff1ad4684c5f1f6fb0c6eb66386c321">&#9670;&nbsp;</a></span>FindNearest()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_anchor_state.html">AnchorState</a> Dragger.FindNearest </td>
-          <td>(</td>
-          <td class="paramtype">List&lt; <a class="el" href="class_anchor_state.html">AnchorState</a> &gt;&#160;</td>
-          <td class="paramname"><em>anchor_list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">GameObject&#160;</td>
-          <td class="paramname"><em>to_move</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Trouve l'ancre la plus proche dans la liste qui lui est passée. </p><dl class="params"><dt>Paramètres</dt><dd>
+<p>Destruit obj si il entre en contact avec la poubelle </p>
+<dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">anchor_list</td><td>La liste des ancres à tester. </td></tr>
-    <tr><td class="paramname">to_move</td><td>L'objet qui servira de point de référence pour la distance </td></tr>
+    <tr><td class="paramname">obj</td><td>L'objet à détruire.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Avertissement</dt><dd>Cette fonction renvoie null si elle ne trouve pas d'ancre </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00026">26</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00024">24</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00083">OnMouseUp()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00070">OnMouseUp()</a>.</p>
 
 </div>
 </div>
@@ -196,9 +156,9 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet à l'objet d'être déplacé. </p>
+<p>Déplace l'objet sur un appui de la souris. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00067">67</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00048">48</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
 </div>
 </div>
@@ -217,9 +177,9 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Essaie de placer l'objet sur l'ancre la plus proche, si elle n'existe pas l'objet est détruit. </p>
+<p>Tente de placer l'objet sur la grille et le détruit si on ne peut pas. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00083">83</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00070">70</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
 </div>
 </div>
@@ -238,33 +198,13 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet à cet objet d'être déplacé par le curseur. </p>
+<p>L'objet suivra le curseur si il est cliqué. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00106">106</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00098">98</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
-<a id="ae6877a2d7c8622dbebad040d764cc70e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6877a2d7c8622dbebad040d764cc70e">&#9670;&nbsp;</a></span>anchorPoint</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_anchor_state.html">AnchorState</a> Dragger.anchorPoint = null</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ancre à laquel le dragger est attaché. </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00017">17</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00067">OnMouseDown()</a>, et <a class="el" href="_dragger_8cs_source.html#l00083">OnMouseUp()</a>.</p>
-
-</div>
-</div>
 <a id="a1d16edf9f508d52493bda6130d9188d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d16edf9f508d52493bda6130d9188d7">&#9670;&nbsp;</a></span>initialObjMouseDistance</h2>
 
@@ -277,11 +217,9 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Conserve la distance au centre de l'objet. Exemple: Si on clique dans un angle du carré le centre garde la distance qu'il a avec le pointeur. </p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00011">11</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00012">12</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00067">OnMouseDown()</a>, et <a class="el" href="_dragger_8cs_source.html#l00106">Update()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00048">OnMouseDown()</a>, et <a class="el" href="_dragger_8cs_source.html#l00098">Update()</a>.</p>
 
 </div>
 </div>
@@ -299,14 +237,14 @@ Attributs publics</h2></td></tr>
 
 <p>Booléen indiquant l'état de la souris. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00014">14</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00013">13</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00067">OnMouseDown()</a>, <a class="el" href="_dragger_8cs_source.html#l00083">OnMouseUp()</a>, et <a class="el" href="_dragger_8cs_source.html#l00106">Update()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00048">OnMouseDown()</a>, <a class="el" href="_dragger_8cs_source.html#l00070">OnMouseUp()</a>, et <a class="el" href="_dragger_8cs_source.html#l00098">Update()</a>.</p>
 
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>F:/LogicGate/LogicGate3/UnityProject/Assets/OurScripts/Dragging/<a class="el" href="_dragger_8cs_source.html">Dragger.cs</a></li>
+<li>F:/UnityProject/LogicGate3/UnityProject/Assets/OurScripts/Dragging/<a class="el" href="_dragger_8cs_source.html">Dragger.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

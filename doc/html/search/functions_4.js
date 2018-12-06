@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getmusicvolume',['GetMusicVolume',['../class_parameters_loader.html#afeda242af9632639661957a7a46c8a1a',1,'ParametersLoader']]],
-  ['getplatform',['getPlatform',['../class_parameters_loader.html#ab01abf8b5b1f436c3aa4ca9b6a8a9a78',1,'ParametersLoader']]],
-  ['getsnooze',['GetSnooze',['../class_parameters_loader.html#a55ed144c6b0b938358265b1e5072e5dd',1,'ParametersLoader']]]
+  ['findnearestfreeanchor',['FindNearestFreeAnchor',['../class_grid_util.html#ac4951e9c1ce42ba507ac3b0250aa1eb5',1,'GridUtil']]],
+  ['findnearesttanchor',['FindNearesttAnchor',['../class_grid_util.html#a1b07d2a32399a5737f91b80866759d2f',1,'GridUtil']]],
+  ['findnearsetanchor',['FindNearsetAnchor',['../class_grid_util.html#a433ad71ab5851d088d1795e9734e7884',1,'GridUtil']]]
 ];

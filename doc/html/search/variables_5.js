@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['manager',['manager',['../class_color_changer.html#a0a73a532b8ee1f26dbc3b8944f33b6e4',1,'ColorChanger']]],
-  ['material',['material',['../class_grid_creater.html#ade7062c5dca408381c99fd7ffe97428c',1,'GridCreater']]],
-  ['mousedown',['mouseDown',['../class_dragger.html#a916c768cb219dee4d24ab41d869f1b4b',1,'Dragger']]],
-  ['music_5fvolume',['music_volume',['../class_parameters.html#a59453e68e6a3d176b82264ec4098ce2d',1,'Parameters']]]
+  ['gatenbinputs',['gateNbInputs',['../class_toolbox.html#a463e62f5daeaec448f213776fa0ab5d0',1,'Toolbox']]],
+  ['gatenboutputs',['gateNbOutputs',['../class_toolbox.html#a1f2f6f1b64ab656e9984763f42558575',1,'Toolbox']]],
+  ['gatetype',['gateType',['../class_toolbox.html#a161cc4fabc7b30e5ea170c47be496ef8',1,'Toolbox']]],
+  ['grid_5fdivisions',['grid_divisions',['../class_grid_creater.html#a2e6b4a0cbfd8941b319385ad0b62b2b5',1,'GridCreater']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['volumechanger_2ecs',['VolumeChanger.cs',['../_volume_changer_8cs.html',1,'']]],
-  ['volumemanager_2ecs',['VolumeManager.cs',['../_volume_manager_8cs.html',1,'']]]
+  ['minigate_2ecs',['MiniGate.cs',['../_mini_gate_8cs.html',1,'']]]
 ];

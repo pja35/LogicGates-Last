@@ -1,14 +1,21 @@
 var searchData=
 [
-  ['save_5fparameters',['save_parameters',['../class_save_param.html#ae519af3046e225fef106733029d8b774',1,'SaveParam']]],
-  ['saveparam',['SaveParam',['../class_save_param.html',1,'']]],
-  ['saveparam_2ecs',['SaveParam.cs',['../_save_param_8cs.html',1,'']]],
-  ['scenetoload',['sceneToLoad',['../class_load_scene.html#a5b9aeb8ede8c3f3e65243edad89d9c1e',1,'LoadScene.sceneToLoad()'],['../class_load_scene_add.html#ae41b80a61d0923d997a6343e35355727',1,'LoadSceneAdd.sceneToLoad()']]],
-  ['scenetoremove',['sceneToRemove',['../class_remove_scene.html#a0a170dd96a9eebb94e0f9fbaeda7ad51',1,'RemoveScene']]],
-  ['setmusicvolume',['SetMusicVolume',['../class_parameters_loader.html#ad4e278bf9cc9a5aed98032241fb0c6b8',1,'ParametersLoader']]],
-  ['setsnooze',['SetSnooze',['../class_parameters_loader.html#a28c8d880037a4ee6b54eae165f6c11cb',1,'ParametersLoader']]],
-  ['snooze',['snooze',['../class_parameters.html#aa9c08ea71b0805eee7571d21a857afa4',1,'Parameters']]],
-  ['snoozechanger',['SnoozeChanger',['../class_snooze_changer.html',1,'']]],
-  ['snoozechanger_2ecs',['SnoozeChanger.cs',['../_snooze_changer_8cs.html',1,'']]],
-  ['start',['Start',['../class_color_changer.html#a46016ef7f87500d4730e1c0e3d1ff4cf',1,'ColorChanger.Start()'],['../class_dont_destroy_param.html#a5dbc883b3c8d950c52ec8d2184b8efbe',1,'DontDestroyParam.Start()'],['../class_door.html#a67f37254b23f6f8770549a7e5a51f15b',1,'Door.Start()'],['../class_grid_creater.html#aacb5cc1600c10fa065e48dfad3239a94',1,'GridCreater.Start()'],['../class_parameters_loader.html#a7150dc98b0bf3c29d6f0c2494314ab1f',1,'ParametersLoader.Start()'],['../class_snooze_changer.html#a24716e3c9890779c20464008605fd603',1,'SnoozeChanger.Start()'],['../class_volume_changer.html#a81d7924b367866554520282ca2c238c4',1,'VolumeChanger.Start()'],['../class_volume_manager.html#a611e15b11e9cbbf9d483b3d792cc97f5',1,'VolumeManager.Start()']]]
+  ['paddingbottom',['paddingBottom',['../class_levels_grid.html#a395feb1fbd86dd9bd7b018e4ec9f6a07',1,'LevelsGrid']]],
+  ['paddingleft',['paddingLeft',['../class_levels_grid.html#aa3b8deeec52c2f927db2bb862aa7e6b8',1,'LevelsGrid']]],
+  ['paddingright',['paddingRight',['../class_levels_grid.html#a0960fb3b58ea51dd6814d44ebe75366c',1,'LevelsGrid']]],
+  ['paddingtop',['paddingTop',['../class_levels_grid.html#a9782a8fbff4920e3eadc9810a80d0356',1,'LevelsGrid']]],
+  ['parameters',['Parameters',['../class_parameters.html',1,'Parameters'],['../class_parameters_loader.html#abebe48dd7b94d1efd572378cc299a743',1,'ParametersLoader.parameters()']]],
+  ['parameters_2ecs',['Parameters.cs',['../_parameters_8cs.html',1,'']]],
+  ['parametersloader',['ParametersLoader',['../class_parameters_loader.html',1,'']]],
+  ['parametersloader_2ecs',['ParametersLoader.cs',['../_parameters_loader_8cs.html',1,'']]],
+  ['pc',['PC',['../_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9a88dba0c4e2af76447df43d1e31331a3d',1,'ParametersLoader.cs']]],
+  ['phone',['PHONE',['../_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9af9dd946cc89c1f3b41a0edbe0f36931d',1,'ParametersLoader.cs']]],
+  ['placeongrid',['PlaceOnGrid',['../interface_dev_obj_init.html#a2d54ed5ea774bd81688e6deccda91768',1,'DevObjInit.PlaceOnGrid()'],['../class_lamp.html#a6c550be80155ba0c1e85708ce801631c',1,'Lamp.PlaceOnGrid()'],['../class_admin_script.html#aa46f01dba5bb3c681cdec0c0d6126d70',1,'AdminScript.PlaceOnGrid()'],['../class_emplacement_porte.html#a1379fdd8baeca30ca1fcbc48367df9be',1,'EmplacementPorte.PlaceOnGrid()'],['../class_switch_changer.html#a23d6cd8df6aaee135d4f028bd3117beb',1,'SwitchChanger.PlaceOnGrid()']]],
+  ['platform',['Platform',['../_parameters_loader_8cs.html#a5be836f305c9cd8b44ffb7c964f4cbd9',1,'ParametersLoader.cs']]],
+  ['playsound',['PlaySound',['../class_sound_util.html#a78925e3bb37e14b467f6714c0dfe33c3',1,'SoundUtil']]],
+  ['playvideo',['PlayVideo',['../class_play_video.html',1,'']]],
+  ['playvideo_2ecs',['PlayVideo.cs',['../_play_video_8cs.html',1,'']]],
+  ['popup',['popup',['../class_lamp.html#a5732c9b835bbf33e86fd3584ad7f3b7f',1,'Lamp']]],
+  ['power',['power',['../class_lamp.html#a49d7167b8ce28a29af719e68c56b63f4',1,'Lamp']]],
+  ['powered',['powered',['../class_fils.html#a8d2106b11bcb58dcc46186c46a5c6f2e',1,'Fils']]]
 ];

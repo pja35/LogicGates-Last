@@ -2,48 +2,87 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//!Gestion de l'affichage d'une liaison entre deux portes.
-public class Fils : MonoBehaviour
+public class Fils : MonoBehaviour, Notifiable
 {
-	private Door start;
-    private Door end;
-	//! État du cable 
+    private GameObject start;
+    private GameObject end;
+    private bool start_val;
     public bool powered = false;
     LineRenderer lineRenderer;
-    // Use this for initialization
-    void Start()
+
+    public void Init_Fils(GameObject end)
     {
-        //var Can = this.GetComponentInParent<Canvas>();
-        //start = Can.GetComponentsInChildren<Door>()[1];
-        
-       
-        
-    }
-	/**
-		Permet d'initialiser la porte qui va être traitée ainsi que  les caractéristique du fils de la lisaison.
-		\param start est la porte dont on gère l'affichage 
-	*/
-    public void Init(Door start)
-    {
-        this.start = start;
-        end = start.LinkedTo();
-        lineRenderer = this.gameObject.AddComponent<LineRenderer>();
-        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        lineRenderer.widthMultiplier = 0.8f;
-        lineRenderer.SetPosition(0, start.gameObject.transform.position);
-        lineRenderer.SetPosition(1, end.gameObject.transform.position);
+        this.start = gameObject;
+        this.end = end;
+        start_val = start.GetComponent<Obj_Output>().value;
+        end.GetComponent<Obj_Input>().connection = this;
+
+        lineRenderer = DrawUtil.DrawLine(start, end);
+
+        notify();
     }
 
-    //! Permet de changer l'état du cable et la position du cable si la porte est modifiée.
+    public void notify()
+    {
+        Debug.Log("Fils " + gameObject + " to " + end.gameObject);
+        start_val = start.GetComponent<Obj_Output>().value;
+        if (powered != start_val)
+        {
+            powered = start_val;
+            end.GetComponent<Obj_Input>().setValue(powered);
+        }
+
+        if (powered)
+        {
+            DrawUtil.SetLineColor(gameObject, Color.green);
+        }
+        else
+        {
+            DrawUtil.SetLineColor(gameObject, Color.red);
+        }
+
+        DrawUtil.UpdateLine(start, end, lineRenderer);
+        end.GetComponent<Notifiable>().notify();
+
+    }
+
+    //! Détruit le fil créé et supprime 
+    public void Destroy_Fils()
+    {
+        end.GetComponent<Obj_Input>().value = false;
+        DrawUtil.EraseLine(gameObject);
+        Destroy(this);
+    }
+    /*
     void Update()
     {
-        if (powered != start.power)
+        notify();
+    }*/
+
+    // Update is called once per frame
+    // La fin de Update est a modifié lorsque l'on fera des fils qui suivent la grille pour que ça soit propre.
+   /* void Update()
+    {
+        notify();*/
+        /*
+        start_val = start.GetComponent<Obj_Output>().value;
+        if (powered != start_val)
         {
-            powered = start.power;
-            end.power = powered;
+            powered = start_val;
+            end.GetComponent<Obj_Input>().setValue(powered);
         }
-        lineRenderer.SetPosition(0, start.gameObject.transform.position);
-        lineRenderer.SetPosition(1, end.gameObject.transform.position);
-       
-    }
+
+        if (powered)
+        {
+            DrawUtil.SetLineColor(gameObject, Color.green);
+        }
+        else
+        {
+            DrawUtil.SetLineColor(gameObject, Color.red);
+        }
+
+        DrawUtil.UpdateLine(start, end, lineRenderer);
+        */
+
+    //}
 }

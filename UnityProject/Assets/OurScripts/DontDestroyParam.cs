@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//! Protège un objet de la destruction
+/// <summary>Pour éviter la destruction des gestionnaires de paramètres. </summary> 
 public class DontDestroyParam : MonoBehaviour
 {
-	
-	// Booléen autorisant la destruction d'un objet
+
+    //Pour savoir si l'objet existe déjà.
     private static bool created = false;
 
-    //! Protège l'objet attaché
+    /// <summary>Défini l'objet attaché comme un objet non-destructible. </summary> 
     public void Start()
     {
         if (!created)
         {
-            Debug.Log("Speaker Should not be Destroyed");
             created = true;
             DontDestroyOnLoad(this.gameObject);
         }

@@ -2,73 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//! Gestionnaire des déplacements et positionnement d'une porte.
+/// <summary>
+/// Permet de déplacer un objet à la souris. L'objet adère aux ancres de l'écran.
+/// </summary>
 public class Dragger : MonoBehaviour
-{	
-	/** 
-		\brief Conserve la distance au centre de l'objet.
-		Exemple: Si on clique dans un angle du carré le centre garde la distance qu'il a avec le pointeur.
-	*/
+{
+    //Pour eviter que l'objet se positione juste en dessous de la souris.
     public Vector3 initialObjMouseDistance;
-	//! Booléen indiquant l'état de la souris
+    //! Booléen indiquant l'état de la souris
     public bool mouseDown = false;
-	
-	//! Ancre à laquel le dragger est attaché.
-    public AnchorState anchorPoint = null;
+    //! Ancre à laquel le dragger est attaché.
+    private AnchorState anchorPoint = null;
 
 
-    /** 
-		Trouve l'ancre la plus proche dans la liste qui lui est passée.
-		\param anchor_list La liste des ancres à tester.
-		\param to_move L'objet qui servira de point de référence pour la distance
-		\warning Cette fonction renvoie null si elle ne trouve pas d'ancre  		
-	*/
-    public AnchorState FindNearest(List<AnchorState> anchor_list, GameObject to_move)
-    {
 
-        Vector3 to_move_pos = to_move.transform.position;
-        AnchorState nearest = anchor_list[0];
-        float distance = float.MaxValue;
 
-        foreach (AnchorState act in anchor_list)
-        {
-            float dist_act = Vector3.Distance(act.position, to_move_pos);
-            if (dist_act < distance && act.free)
-            {
-                distance = dist_act;
-                nearest = act;
-            }
-        }
-
-        return (nearest.free) ? nearest : null;
-    }
-
-	//! Fonction qui va détruire l'objet qui lui est passée en argument.
-    public void DestroyOnBin(GameObject obj)
+    /// <summary>
+    /// Destruit obj si il entre en contact avec la poubelle
+    /// </summary>
+    /// <param name="obj">L'objet à détruire.</param>
+    public bool DestroyedOnBin(GameObject obj)
     {
         GameObject bin = GameObject.Find("Bin");
-        Vector3 binPos = bin.transform.localPosition;
-        Vector3 binSize = bin.transform.localScale;
-        Debug.Log(binSize.ToString());
+        Vector3 binPos = bin.transform.position;
+        Vector3 binSize = bin.transform.lossyScale;
 
-        Vector3 objPos = obj.transform.localPosition;
+        Vector3 objPos = obj.transform.position;
 
+        //Si on est dans la corbeille.
         if ((objPos.x > binPos.x - binSize.x)
             && (objPos.x < binPos.x + binSize.x)
             && (objPos.y < binPos.y + binSize.y)
             && (objPos.y > binPos.y - binSize.y))
         {
-            Destroy(obj);
+            gameObject.GetComponent<Gate>().Destroy();
+            return true;
         }
+        return false;
     }
 
-	
-	//! Permet à l'objet d'être déplacé.
+
+    /// <summary>
+    /// Déplace l'objet sur un appui de la souris.
+    /// </summary>
     public void OnMouseDown()
     {
         mouseDown = true;
-		
-        // To avoid the object going right under the mouse cursor
+        Component[] fixables = (gameObject.GetComponents(typeof(Fixable)));
+        foreach (Fixable f in fixables)
+        {
+            f.OnUnfix();
+        }
+        // Pour eviter que l'objet ne se place pile sous le curseur.
         initialObjMouseDistance = gameObject.transform.position
         - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (anchorPoint != null)
@@ -79,30 +64,37 @@ public class Dragger : MonoBehaviour
 
     }
 
-	//! Essaie de placer l'objet sur l'ancre la plus proche, si elle n'existe pas l'objet est détruit. 
+    /// <summary>
+    /// Tente de placer l'objet sur la grille et le détruit si on ne peut pas.
+    /// </summary>
     public void OnMouseUp()
     {
         mouseDown = false;
-		
+
         //Place the object on the nearest anchor
         GameObject grid_holder = GameObject.Find("GridHolder");
         GridCreater grid = grid_holder.GetComponent<GridCreater>();
-        AnchorState nearestAnchor = FindNearest(grid.anchor_list, gameObject);
-        if (nearestAnchor == null)
-        {
+        AnchorState nearestAnchor = GridUtil.FindNearestFreeAnchor(grid.anchor_list, gameObject);
+        if (nearestAnchor == null){
             Destroy(gameObject);
-
-        }
-        else
-        {
-            DestroyOnBin(gameObject);
+        }else if (DestroyedOnBin(gameObject)) {
+            return;
+        }else {
             anchorPoint = nearestAnchor;
             anchorPoint.free = false;
-            gameObject.transform.position = nearestAnchor.position;
+            gameObject.transform.position = nearestAnchor.GetPosition();
+            Component[] fixables = (gameObject.GetComponents(typeof(Fixable)));
+            foreach (Fixable f in fixables)
+            {
+                f.OnFix();
+            }
         }
+        SoundUtil.PlaySound("Sounds/clic");
     }
 
-    //! Permet à cet objet d'être déplacé par le curseur
+    /// <summary>
+    /// L'objet suivra le curseur si il est cliqué.
+    /// </summary>
     public void Update()
     {
         if (mouseDown)

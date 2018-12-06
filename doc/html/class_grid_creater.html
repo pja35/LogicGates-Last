@@ -22,8 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
+   <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
  </tr>
  </tbody>
@@ -65,13 +66,14 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pub-attribs">Attributs publics</a> &#124;
+<a href="#pub-static-attribs">Attributs publics statiques</a> &#124;
 <a href="class_grid_creater-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe GridCreater</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Création de la grille de jeu.  
+<p>Crée une grille d'ancres pour y attacher les portes.  
  <a href="class_grid_creater.html#details">Plus de détails...</a></p>
 <div class="dynheader">
 Graphe d'héritage de GridCreater:</div>
@@ -84,7 +86,11 @@ Graphe d'héritage de GridCreater:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a168454bed2526f1ae42e1b23e7bfd73e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_anchor_state.html">AnchorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#a168454bed2526f1ae42e1b23e7bfd73e">GetAnchorNear</a> (<a class="el" href="class_anchor_state.html">AnchorState</a> start, int distx, int disty)</td></tr>
+<tr class="memdesc:a168454bed2526f1ae42e1b23e7bfd73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rècupére une ancre dans la grille.  <a href="#a168454bed2526f1ae42e1b23e7bfd73e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a168454bed2526f1ae42e1b23e7bfd73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacb5cc1600c10fa065e48dfad3239a94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#aacb5cc1600c10fa065e48dfad3239a94">Start</a> ()</td></tr>
+<tr class="memdesc:aacb5cc1600c10fa065e48dfad3239a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génré une grille d'ancres dans un canvas en attachant les ancre au bouton possedant le script.  <a href="#aacb5cc1600c10fa065e48dfad3239a94">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aacb5cc1600c10fa065e48dfad3239a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -93,27 +99,70 @@ Attributs publics</h2></td></tr>
 <tr class="separator:a2e6b4a0cbfd8941b319385ad0b62b2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade7062c5dca408381c99fd7ffe97428c"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#ade7062c5dca408381c99fd7ffe97428c">material</a></td></tr>
 <tr class="separator:ade7062c5dca408381c99fd7ffe97428c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b96eaac4e4622871415c70ee7933ee9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#a1b96eaac4e4622871415c70ee7933ee9">xLeft</a></td></tr>
-<tr class="memdesc:a1b96eaac4e4622871415c70ee7933ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position des différent points de référence de la grille.  <a href="#a1b96eaac4e4622871415c70ee7933ee9">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a1b96eaac4e4622871415c70ee7933ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd450558c47b141e6ca647c577afc01b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#acd450558c47b141e6ca647c577afc01b">xRight</a></td></tr>
-<tr class="memdesc:acd450558c47b141e6ca647c577afc01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position des différent points de référence de la grille.  <a href="#acd450558c47b141e6ca647c577afc01b">Plus de détails...</a><br /></td></tr>
-<tr class="separator:acd450558c47b141e6ca647c577afc01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6ccca1c9c4ac6afaa5e294f0795ef55"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#ab6ccca1c9c4ac6afaa5e294f0795ef55">yBottom</a></td></tr>
-<tr class="memdesc:ab6ccca1c9c4ac6afaa5e294f0795ef55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position des différent points de référence de la grille.  <a href="#ab6ccca1c9c4ac6afaa5e294f0795ef55">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ab6ccca1c9c4ac6afaa5e294f0795ef55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a982daa5a2b4ee0afff04ca99328a30f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#a982daa5a2b4ee0afff04ca99328a30f2">yTop</a></td></tr>
-<tr class="memdesc:a982daa5a2b4ee0afff04ca99328a30f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position des différent points de référence de la grille.  <a href="#a982daa5a2b4ee0afff04ca99328a30f2">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a982daa5a2b4ee0afff04ca99328a30f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b15b7573e2d7e115aa468b1768f4fe9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#a8b15b7573e2d7e115aa468b1768f4fe9">initialState</a> = true</td></tr>
+<tr class="separator:a8b15b7573e2d7e115aa468b1768f4fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae889352fee8745fdea823238abc580c6"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_anchor_state.html">AnchorState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#ae889352fee8745fdea823238abc580c6">anchor_list</a> = new List&lt;<a class="el" href="class_anchor_state.html">AnchorState</a>&gt;()</td></tr>
-<tr class="memdesc:ae889352fee8745fdea823238abc580c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des ancres auquel on pourra accrocher les portes.  <a href="#ae889352fee8745fdea823238abc580c6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae889352fee8745fdea823238abc580c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf96c6201f145977588c37f2817bcff0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_anchor_state.html">AnchorState</a> [,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#acf96c6201f145977588c37f2817bcff0">anchor_mat</a></td></tr>
+<tr class="separator:acf96c6201f145977588c37f2817bcff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Attributs publics statiques</h2></td></tr>
+<tr class="memitem:abf0f44762fe74d5c6993e9deea855a8c"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#abf0f44762fe74d5c6993e9deea855a8c">dstBetAnch</a></td></tr>
+<tr class="separator:abf0f44762fe74d5c6993e9deea855a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Création de la grille de jeu. </p>
+<div class="textblock"><p>Crée une grille d'ancres pour y attacher les portes. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00021">21</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00011">11</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a168454bed2526f1ae42e1b23e7bfd73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a168454bed2526f1ae42e1b23e7bfd73e">&#9670;&nbsp;</a></span>GetAnchorNear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_anchor_state.html">AnchorState</a> GridCreater.GetAnchorNear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_anchor_state.html">AnchorState</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>distx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>disty</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rècupére une ancre dans la grille. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>L'ancré de départ.</td></tr>
+    <tr><td class="paramname">distx</td><td>Le nombre d'ancres de distance en x</td></tr>
+    <tr><td class="paramname">disty</td><td>Le nombre d'ancres de distance en y</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd></dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00067">67</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+</div>
+</div>
 <a id="aacb5cc1600c10fa065e48dfad3239a94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aacb5cc1600c10fa065e48dfad3239a94">&#9670;&nbsp;</a></span>Start()</h2>
 
@@ -128,9 +177,10 @@ Attributs publics</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Cette fonction va permettre définir les points de références et remplir la liste d'ancres qui seront toutes espacées d'une taille définie. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00062">62</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p>Génré une grille d'ancres dans un canvas en attachant les ancre au bouton possedant le script. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00080">80</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
 
 </div>
 </div>
@@ -147,11 +197,53 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Liste des ancres auquel on pourra accrocher les portes. </p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00031">31</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00040">40</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00070">Dragger.OnMouseUp()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00083">Dragger.OnMouseUp()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00062">Start()</a>.</p>
+</div>
+</div>
+<a id="acf96c6201f145977588c37f2817bcff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf96c6201f145977588c37f2817bcff0">&#9670;&nbsp;</a></span>anchor_mat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_anchor_state.html">AnchorState</a> [,] GridCreater.anchor_mat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00033">33</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00067">GetAnchorNear()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
+
+</div>
+</div>
+<a id="abf0f44762fe74d5c6993e9deea855a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0f44762fe74d5c6993e9deea855a8c">&#9670;&nbsp;</a></span>dstBetAnch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 GridCreater.dstBetAnch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00036">36</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00080">Gate.createIOGate()</a>, <a class="el" href="_gate_8cs_source.html#l00131">Gate.replaceGameObject()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
 
 </div>
 </div>
@@ -167,9 +259,27 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00025">25</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00015">15</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00062">Start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
+
+</div>
+</div>
+<a id="a8b15b7573e2d7e115aa468b1768f4fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b15b7573e2d7e115aa468b1768f4fe9">&#9670;&nbsp;</a></span>initialState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GridCreater.initialState = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00019">19</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
 
 </div>
 </div>
@@ -185,94 +295,14 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00026">26</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00017">17</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00062">Start()</a>.</p>
-
-</div>
-</div>
-<a id="a1b96eaac4e4622871415c70ee7933ee9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b96eaac4e4622871415c70ee7933ee9">&#9670;&nbsp;</a></span>xLeft</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GridCreater.xLeft</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Position des différent points de référence de la grille. </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00030">30</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00062">Start()</a>.</p>
-
-</div>
-</div>
-<a id="acd450558c47b141e6ca647c577afc01b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd450558c47b141e6ca647c577afc01b">&#9670;&nbsp;</a></span>xRight</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GridCreater.xRight</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Position des différent points de référence de la grille. </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00032">32</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00062">Start()</a>.</p>
-
-</div>
-</div>
-<a id="ab6ccca1c9c4ac6afaa5e294f0795ef55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6ccca1c9c4ac6afaa5e294f0795ef55">&#9670;&nbsp;</a></span>yBottom</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GridCreater.yBottom</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Position des différent points de référence de la grille. </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00034">34</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00062">Start()</a>.</p>
-
-</div>
-</div>
-<a id="a982daa5a2b4ee0afff04ca99328a30f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a982daa5a2b4ee0afff04ca99328a30f2">&#9670;&nbsp;</a></span>yTop</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GridCreater.yTop</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Position des différent points de référence de la grille. </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00036">36</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00062">Start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
 
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>F:/LogicGate/LogicGate3/UnityProject/Assets/OurScripts/<a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a></li>
+<li>F:/UnityProject/LogicGate3/UnityProject/Assets/OurScripts/Grid/<a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

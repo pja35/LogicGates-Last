@@ -7,6 +7,12 @@ TagManager:
   - Parameters
   - Speaker
   - Anchor
+  - Input
+  - Output
+  - Switch
+  - Lamp
+  - DevPlaced
+  - PopUp
   layers:
   - Default
   - TransparentFX

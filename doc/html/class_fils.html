@@ -22,8 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
+   <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
  </tr>
  </tbody>
@@ -70,59 +71,98 @@ $(function() {
 <div class="title">Référence de la classe Fils</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Gestion de l'affichage d'une liaison entre deux portes.  
- <a href="class_fils.html#details">Plus de détails...</a></p>
 <div class="dynheader">
 Graphe d'héritage de Fils:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_fils.png" usemap="#Fils_map" alt=""/>
   <map id="Fils_map" name="Fils_map">
+<area href="interface_notifiable.html" alt="Notifiable" shape="rect" coords="112,0,214,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ae3942c83fa9d524b70348ee782c7c01c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fils.html#ae3942c83fa9d524b70348ee782c7c01c">Init</a> (<a class="el" href="class_door.html">Door</a> start)</td></tr>
-<tr class="separator:ae3942c83fa9d524b70348ee782c7c01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda291b79cbe8da29bff7d44c3d70501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fils.html#afda291b79cbe8da29bff7d44c3d70501">Init_Fils</a> (GameObject end)</td></tr>
+<tr class="separator:afda291b79cbe8da29bff7d44c3d70501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4fd45c80b5de000406a413e95a567c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fils.html#ae4fd45c80b5de000406a413e95a567c8">notify</a> ()</td></tr>
+<tr class="separator:ae4fd45c80b5de000406a413e95a567c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9057ba2bceaafd1792a44dc9150574b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fils.html#ad9057ba2bceaafd1792a44dc9150574b">Destroy_Fils</a> ()</td></tr>
+<tr class="memdesc:ad9057ba2bceaafd1792a44dc9150574b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruit le fil créé et supprime.  <a href="#ad9057ba2bceaafd1792a44dc9150574b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad9057ba2bceaafd1792a44dc9150574b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:a8d2106b11bcb58dcc46186c46a5c6f2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fils.html#a8d2106b11bcb58dcc46186c46a5c6f2e">powered</a> = false</td></tr>
-<tr class="memdesc:a8d2106b11bcb58dcc46186c46a5c6f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">État du cable.  <a href="#a8d2106b11bcb58dcc46186c46a5c6f2e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8d2106b11bcb58dcc46186c46a5c6f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Gestion de l'affichage d'une liaison entre deux portes. </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="_fils_8cs_source.html#l00006">6</a> du fichier <a class="el" href="_fils_8cs_source.html">Fils.cs</a>.</p>
+<div class="textblock">
+<p class="definition">Définition à la ligne <a class="el" href="_fils_8cs_source.html#l00005">5</a> du fichier <a class="el" href="_fils_8cs_source.html">Fils.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="ae3942c83fa9d524b70348ee782c7c01c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3942c83fa9d524b70348ee782c7c01c">&#9670;&nbsp;</a></span>Init()</h2>
+<a id="ad9057ba2bceaafd1792a44dc9150574b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9057ba2bceaafd1792a44dc9150574b">&#9670;&nbsp;</a></span>Destroy_Fils()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Fils.Init </td>
+          <td class="memname">void Fils.Destroy_Fils </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_door.html">Door</a>&#160;</td>
-          <td class="paramname"><em>start</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Permet d'initialiser la porte qui va être traitée ainsi que les caractéristique du fils de la lisaison. </p><dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">start</td><td>est la porte dont on gère l'affichage </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_fils_8cs_source.html#l00026">26</a> du fichier <a class="el" href="_fils_8cs_source.html">Fils.cs</a>.</p>
+<p>Détruit le fil créé et supprime. </p>
 
-<p class="reference">Référencé par <a class="el" href="_door_8cs_source.html#l00014">Door.Start()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_fils_8cs_source.html#l00050">50</a> du fichier <a class="el" href="_fils_8cs_source.html">Fils.cs</a>.</p>
+
+</div>
+</div>
+<a id="afda291b79cbe8da29bff7d44c3d70501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afda291b79cbe8da29bff7d44c3d70501">&#9670;&nbsp;</a></span>Init_Fils()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Fils.Init_Fils </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>end</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_fils_8cs_source.html#l00013">13</a> du fichier <a class="el" href="_fils_8cs_source.html">Fils.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00181">Obj_Output.MakeInitialConnection()</a>.</p>
+
+</div>
+</div>
+<a id="ae4fd45c80b5de000406a413e95a567c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fd45c80b5de000406a413e95a567c8">&#9670;&nbsp;</a></span>notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Fils.notify </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implémente <a class="el" href="interface_notifiable.html#a96b1feb3c4b642f7762a94fad9ac62a7">Notifiable</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_fils_8cs_source.html#l00025">25</a> du fichier <a class="el" href="_fils_8cs_source.html">Fils.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00013">Init_Fils()</a>, <a class="el" href="_obj___output_8cs_source.html#l00181">Obj_Output.MakeInitialConnection()</a>, <a class="el" href="_obj___output_8cs_source.html#l00114">Obj_Output.notify()</a>, <a class="el" href="_grid_creater_8cs_source.html#l00080">GridCreater.Start()</a>, et <a class="el" href="_obj___output_8cs_source.html#l00082">Obj_Output.TryToConnect()</a>.</p>
 
 </div>
 </div>
@@ -139,14 +179,14 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>État du cable. </p>
+<p class="definition">Définition à la ligne <a class="el" href="_fils_8cs_source.html#l00010">10</a> du fichier <a class="el" href="_fils_8cs_source.html">Fils.cs</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_fils_8cs_source.html#l00011">11</a> du fichier <a class="el" href="_fils_8cs_source.html">Fils.cs</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00025">notify()</a>.</p>
 
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>F:/LogicGate/LogicGate3/UnityProject/Assets/OurScripts/<a class="el" href="_fils_8cs_source.html">Fils.cs</a></li>
+<li>F:/UnityProject/LogicGate3/UnityProject/Assets/OurScripts/<a class="el" href="_fils_8cs_source.html">Fils.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

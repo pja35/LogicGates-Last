@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogicGate:  Fichier source de F:/UnityProject/LogicGate3/UnityProject/Assets/OurScripts/Porte/Comportement/NOR.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LogicGate
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3a581ba30d25676e4b797b1f96d53b45.html">F:</a></li><li class="navelem"><a class="el" href="dir_ff691ed9900ecfd603f940cf67947cc6.html">UnityProject</a></li><li class="navelem"><a class="el" href="dir_b1714737d1a417b23c0cbe4594955c52.html">LogicGate3</a></li><li class="navelem"><a class="el" href="dir_3713ce88b652cc0f496daf097ec2e4eb.html">UnityProject</a></li><li class="navelem"><a class="el" href="dir_f54683c08a1ae4e3e2ece9175424c68a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_bf5b5039ec6d0fd1e71c47e4667c0585.html">OurScripts</a></li><li class="navelem"><a class="el" href="dir_5013b7cfff06813307a448838c0f8d35.html">Porte</a></li><li class="navelem"><a class="el" href="dir_6b7dee64cf51eda1f2ab7423e0c6d541.html">Comportement</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NOR.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_n_o_r_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_n_o_r.html">    5</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_n_o_r.html">NOR</a> : <a class="code" href="class_comportement.html">Comportement</a></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_n_o_r.html#a1bb109f18fa6988bd83a613cc17731c6">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_n_o_r.html#a1bb109f18fa6988bd83a613cc17731c6">execute</a>(<a class="code" href="class_obj___input.html">Obj_Input</a>[] inputs)</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">int</span> len = inputs.Length;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment">//Permet de vérifier si la porte est relier à au moins une autre porte.</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">bool</span> existingWiring = <span class="keyword">false</span>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; len; i++)</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span>(inputs[i].connection == null) { <span class="keywordflow">continue</span>; }</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            result = result || inputs[i].<a class="code" href="class_obj___input.html#aa1925db9d68b4de1102e50aa13c8811a">value</a>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            existingWiring = <span class="keyword">true</span>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> (existingWiring) ? !result : <span class="keyword">false</span>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="ttc" id="class_obj___input_html"><div class="ttname"><a href="class_obj___input.html">Obj_Input</a></div><div class="ttdoc">Gere les objets se comportant comme des inputs de porte logique. </div><div class="ttdef"><b>Definition:</b> <a href="_obj___input_8cs_source.html#l00008">Obj_Input.cs:8</a></div></div>
+<div class="ttc" id="class_n_o_r_html"><div class="ttname"><a href="class_n_o_r.html">NOR</a></div><div class="ttdef"><b>Definition:</b> <a href="_n_o_r_8cs_source.html#l00005">NOR.cs:5</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_comportement_html"><div class="ttname"><a href="class_comportement.html">Comportement</a></div><div class="ttdoc">Cette interface permet de mettre en place le patron de conception Stratégie car les portes ont le mêm...</div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00006">Gate.cs:6</a></div></div>
+<div class="ttc" id="class_n_o_r_html_a1bb109f18fa6988bd83a613cc17731c6"><div class="ttname"><a href="class_n_o_r.html#a1bb109f18fa6988bd83a613cc17731c6">NOR.execute</a></div><div class="ttdeci">override bool execute(Obj_Input[] inputs)</div><div class="ttdoc">Verifie que toutes les entrées ne sont pas fausses. </div><div class="ttdef"><b>Definition:</b> <a href="_n_o_r_8cs_source.html#l00008">NOR.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_obj___input_html_aa1925db9d68b4de1102e50aa13c8811a"><div class="ttname"><a href="class_obj___input.html#aa1925db9d68b4de1102e50aa13c8811a">Obj_Input.value</a></div><div class="ttdeci">bool value</div><div class="ttdef"><b>Definition:</b> <a href="_obj___input_8cs_source.html#l00011">Obj_Input.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

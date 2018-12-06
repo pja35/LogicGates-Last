@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialobjmousedistance',['initialObjMouseDistance',['../class_dragger.html#a1d16edf9f508d52493bda6130d9188d7',1,'Dragger']]]
+  ['free',['free',['../class_anchor_state.html#af84faa58def0c07ce1deae74bf137b94',1,'AnchorState']]]
 ];
