@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public class DrawUtil : MonoBehaviour
     ///  <returns>Le line renderer crée.</returns>
     public static LineRenderer DrawLine(GameObject start, Vector3 end, Color color)
     {
-        //On recycle le line renderer.
+        //On recicle le line renderer.
         LineRenderer renderer = start.GetComponent<LineRenderer>();
         if (renderer == null)
         {
@@ -25,8 +26,10 @@ public class DrawUtil : MonoBehaviour
         renderer.widthMultiplier = 0.8f;
         start.GetComponent<LineRenderer>().endColor = color;
         start.GetComponent<LineRenderer>().startColor = color;
+
         renderer.SetPosition(0, start.gameObject.transform.position);
         renderer.SetPosition(1, end);
+
         return renderer;
     }
 
@@ -45,7 +48,7 @@ public class DrawUtil : MonoBehaviour
     ///  <param name="end">un objet d'arrivé</param>
     public static LineRenderer DrawLine(GameObject start, GameObject end)
     {
-        return DrawLine(start, end, Color.white);
+        return DrawLine(start, end, Color.gray);
     }
 
 
@@ -121,6 +124,48 @@ public class DrawUtil : MonoBehaviour
         myText.horizontalOverflow = HorizontalWrapMode.Overflow;
         myText.verticalOverflow = VerticalWrapMode.Overflow;
         myText.text = text;
+    }
+
+
+
+    /// <summary>Permet de tracer une ligne.</summary>
+    ///  <param name="start">l'objet de départ</param>
+    ///  <param name="end">un point d'arrivé</param>
+    ///  <param name="color">la couleur de la ligne</param>
+    ///  <returns>Le line renderer crée.</returns>
+    public static LineRenderer DrawFil(GameObject start, GameObject end)
+    {
+        //On recicle le line renderer.
+        LineRenderer renderer = start.GetComponent<LineRenderer>();
+        if (renderer == null)
+        {
+            renderer = start.AddComponent<LineRenderer>();
+        }
+        renderer.material = new Material(Shader.Find("Sprites/Default"));
+        renderer.widthMultiplier = 0.8f;
+        start.GetComponent<LineRenderer>().endColor = Color.gray;
+        start.GetComponent<LineRenderer>().startColor = Color.gray;
+
+        List<Vector3> list = AlgoCable.resolve(start, end.transform.position);
+        Vector3[] arr = AlgoCable.listToArray(list);
+        renderer.positionCount = arr.Length;
+        renderer.SetPositions(arr);
+
+        return renderer;
+    }
+
+
+    /// <summary>Actualise le tracé d'une ligne.</summary>
+    ///  <param name="start">l'objet de départ</param>
+    ///  <param name="end">un point d'arrivée</param>
+    /// <param name="renderer">le line renderer à actualliser. </param>
+    public static void UpdateFil(GameObject start, GameObject end)
+    {
+        LineRenderer renderer = start.GetComponent<LineRenderer>();
+        List<Vector3> list = AlgoCable.resolve(start, end.transform.position);
+        Vector3[] arr = AlgoCable.listToArray(list);
+        renderer.positionCount = arr.Length;
+        renderer.SetPositions(arr);
     }
 
 }

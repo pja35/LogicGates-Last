@@ -17,7 +17,7 @@ public class Fils : MonoBehaviour, Notifiable
         start_val = start.GetComponent<Obj_Output>().value;
         end.GetComponent<Obj_Input>().connection = this;
 
-        lineRenderer = DrawUtil.DrawLine(start, end);
+        lineRenderer = DrawUtil.DrawFil(start, end);
 
         notify();
     }
@@ -41,7 +41,7 @@ public class Fils : MonoBehaviour, Notifiable
             DrawUtil.SetLineColor(gameObject, Color.red);
         }
 
-        DrawUtil.UpdateLine(start, end, lineRenderer);
+        DrawUtil.UpdateFil(start, end);
         end.GetComponent<Notifiable>().notify();
 
     }
@@ -53,36 +53,4 @@ public class Fils : MonoBehaviour, Notifiable
         DrawUtil.EraseLine(gameObject);
         Destroy(this);
     }
-    /*
-    void Update()
-    {
-        notify();
-    }*/
-
-    // Update is called once per frame
-    // La fin de Update est a modifié lorsque l'on fera des fils qui suivent la grille pour que ça soit propre.
-   /* void Update()
-    {
-        notify();*/
-        /*
-        start_val = start.GetComponent<Obj_Output>().value;
-        if (powered != start_val)
-        {
-            powered = start_val;
-            end.GetComponent<Obj_Input>().setValue(powered);
-        }
-
-        if (powered)
-        {
-            DrawUtil.SetLineColor(gameObject, Color.green);
-        }
-        else
-        {
-            DrawUtil.SetLineColor(gameObject, Color.red);
-        }
-
-        DrawUtil.UpdateLine(start, end, lineRenderer);
-        */
-
-    //}
 }

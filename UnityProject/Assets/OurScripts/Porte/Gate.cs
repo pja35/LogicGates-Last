@@ -29,18 +29,6 @@ public class Gate : MonoBehaviour, Fixable, Notifiable
             outputs[i].notify();
         }
     }
-    /*
-    void Update()
-    {
-        notify();
-        if (test)
-        {
-            Debug.Log("a-");
-            Debug.Log(gameObject.name);
-            Debug.Log(inputs);
-            Debug.Log(outputs);
-        }
-    }*/
 
     /// <summary>
     /// Replace la porte et reactive les entrées sorties.

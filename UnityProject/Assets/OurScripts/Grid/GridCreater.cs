@@ -101,7 +101,7 @@ public class GridCreater : MonoBehaviour
                 anchor.tag = "Anchor";
                 anchor.GetComponent<Renderer>().material = material;
                 //Place la sphère au bon endroit sur l'écran.
-                anchor.transform.localPosition = new Vector3(anchor.transform.localPosition.x, anchor.transform.localPosition.y, 0);
+                anchor.transform.localPosition = new Vector3(anchor.transform.localPosition.x, anchor.transform.localPosition.y, -5f);
                 
                 // Crée un objet modèlisant cette ancre.
                 AnchorState state = new AnchorState(anchor.transform.position, new Vector2(x - xLeft, y - yBottom), initialState);

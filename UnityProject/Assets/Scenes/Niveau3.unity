@@ -1415,7 +1415,7 @@ Prefab:
     - target: {fileID: 114110023281723504, guid: 14306435fa54fee429f7d2d3504d313c,
         type: 2}
       propertyPath: grid_divisions
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114110023281723504, guid: 14306435fa54fee429f7d2d3504d313c,
         type: 2}
@@ -2039,6 +2039,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 412471002}
     m_Modifications:
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateType.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbInputs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbOutputs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224127597110301020, guid: e870976affaf8e64b8ca1d92a6b83186,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -2163,6 +2178,66 @@ Prefab:
       propertyPath: material
       value: 
       objectReference: {fileID: 2100000, guid: 1f228e61acb1c434686dbec4b73065ab, type: 2}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbInputs.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbInputs.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbInputs.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbInputs.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateType.Array.data[0]
+      value: ID
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateType.Array.data[1]
+      value: XOR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateType.Array.data[2]
+      value: NAND
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateType.Array.data[3]
+      value: NOR
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbOutputs.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbOutputs.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbOutputs.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171934555082414, guid: e870976affaf8e64b8ca1d92a6b83186,
+        type: 2}
+      propertyPath: gateNbOutputs.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e870976affaf8e64b8ca1d92a6b83186, type: 2}
   m_IsPrefabAsset: 0
@@ -2823,12 +2898,12 @@ Prefab:
     - target: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -40
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 265
+      value: 322
       objectReference: {fileID: 0}
     - target: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
         type: 2}

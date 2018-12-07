@@ -197,8 +197,8 @@ public class Obj_Output : MonoBehaviour, Notifiable
         }
 
         connecting = true;
-        //Initialise la ligne.
-        DrawUtil.DrawLine(gameObject, gameObject, Color.gray);
+        //Initalise la ligne
+        DrawUtil.DrawLine(gameObject, gameObject);
 
         possiblesConnections = GameObject.FindGameObjectsWithTag("Input");
 
@@ -221,7 +221,7 @@ public class Obj_Output : MonoBehaviour, Notifiable
 
         if (nearInput != null)
         {
-            DrawUtil.UpdateLine(gameObject, nearInput);
+            DrawUtil.UpdateFil(gameObject, nearInput);
         }
     }
 
@@ -247,17 +247,4 @@ public class Obj_Output : MonoBehaviour, Notifiable
         Disconnect();
         Destroy(gameObject);
     }
-
-    /// <summary>
-    /// se connecte à un input donnée seulement si la connection est valide.
-    /// </summary>
-    /// <param name="input">L'input auquel se connecter.</param>
-    /// <returns>Vrai si on as pu se connecter sinon faux.</returns>
-    /*private bool tryToConnect(GameObject input){
-		if(!connectionIsValid(input)){return false;}
-		
-		connection = gameObject.AddComponent<Fils>();
-        connection.Init_Fils(input);
-		return true;
-	}*/
 }
