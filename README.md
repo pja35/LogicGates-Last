@@ -4,6 +4,7 @@ le concept des portes logiques de manière ludique.
 
 # Pour contacter les Créateurs: 
 devauxcedricarnaud@gmail.com
+Tout retours ou avis sur notre porjet est le bienvenu.
 
 ## Créateurs:
 * Clain Jordan
