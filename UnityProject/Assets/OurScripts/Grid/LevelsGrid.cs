@@ -7,17 +7,30 @@ using UnityEngine.UI;
 /// </summary>
 public class LevelsGrid : MonoBehaviour
 {
-    //ed. Nombre de colones et de lignes du tableau de niveaux.
+    /// <summary>
+    /// ed. Nombre de colones du tableau de niveaux.
+    /// </summary>
     public int nbCols = 2;
+    /// <summary>
+    /// ed. Nombre de lignes du tableau de niveaux.
+    /// </summary>
     public int nbRows = 4;
 
-    //ed. Modifie l'espace disponible pour placer les boutons et autres elements
+    /// <summary>
+    /// ed. Modifie l'espace disponible pour placer les boutons et autres elements
+    /// </summary>
     public int paddingLeft = 150;
-    //ed. Modifie l'espace disponible pour placer les boutons et autres elements
+    /// <summary>
+    /// ed. Modifie l'espace disponible pour placer les boutons et autres elements
+    /// </summary>
     public int paddingRight = 150;
-    //ed. Modifie l'espace disponible pour placer les boutons et autres elements
+    /// <summary>
+    /// ed. Modifie l'espace disponible pour placer les boutons et autres elements
+    /// </summary>
     public int paddingBottom = 200;
-    //ed. Modifie l'espace disponible pour placer les boutons et autres elements
+    /// <summary>
+    /// ed. Modifie l'espace disponible pour placer les boutons et autres elements
+    /// </summary>
     public int paddingTop = 100;
 
 

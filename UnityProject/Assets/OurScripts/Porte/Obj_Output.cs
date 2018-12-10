@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -7,19 +6,31 @@ using UnityEngine;
 /// </summary>
 public class Obj_Output : MonoBehaviour, Notifiable
 {
-    //ed. Si le cable peut être détruit ou non. (Utilisé pour les connections initiales des portes dévellopeurs.)
+    /// <summary>
+    /// ed. Si le cable peut être détruit ou non. (Utilisé pour les connections initiales des portes dévellopeurs.)
+    /// </summary>
     public bool disconectable;
 
-    //La valeur de l'output.
+    /// <summary>
+    /// La valeur de l'output.
+    /// </summary>
     public bool value;
-    //La connection avec un input si elle existe.
+    /// <summary>
+    /// La connection avec un input si elle existe.
+    /// </summary>
     public Fils connection;
 
-    //Si on est en train de tenter de se connecter.
+    /// <summary>
+    /// Si on est en train de tenter de se connecter.
+    /// </summary>
     private bool connecting = false;
-    //Les inputs auquel on peut possiblement se connecter.
+    /// <summary>
+    /// Les inputs auquel on peut possiblement se connecter.
+    /// </summary>
     private GameObject[] possiblesConnections = null;
-    //L'input auquel se connecter.
+    /// <summary>
+    /// Les inputs auquel on peut possiblement se connecter.
+    /// </summary>
     private GameObject nearInput = null;
 
 
@@ -42,7 +53,7 @@ public class Obj_Output : MonoBehaviour, Notifiable
 
         inst.AddComponent<CircleCollider2D>(); // On ajoute les collisions pour le OnMouseDown
 
-        inst.transform.SetParent(g.transform);
+        inst.transform.SetParent(g.transform); //Attache les Output à la porte
         inst.name = "Output " + num;
 
         Obj_Output output = (Obj_Output)inst.GetComponent(typeof(Obj_Output));
@@ -104,13 +115,16 @@ public class Obj_Output : MonoBehaviour, Notifiable
                 "n'ayant pas d'input ou avec un mauvais numéro d'input");
             return false;
         }
-
+        //Si la connection est valide on se connecte.
         output.MakeInitialConnection(
             input);
         output.connection.notify();
         return true;
     }
 
+    /// <summary>
+    /// Préviens le fil d'une connection.
+    /// </summary>
     public void notify()
     {
         Debug.Log("Output "+gameObject);
@@ -155,7 +169,7 @@ public class Obj_Output : MonoBehaviour, Notifiable
     /// <summary>Retourne la connection valide la plus proche de start parmis les input possibles.
     /// <param name="start">start</param>
     /// <param name="possiblesInputs">input possibles</param></summary>
-    private GameObject NearestInput(Vector3 start, GameObject[] possiblesInputs)
+    private GameObject NearestValindInput(Vector3 start, GameObject[] possiblesInputs)
     {
         GameObject nearest = null;
         float distance = -1;
@@ -206,7 +220,7 @@ public class Obj_Output : MonoBehaviour, Notifiable
 
 
 
-    /// <summary>On trace un trait entre la soi-même et la connection valide la plus proche du curseur. Si aucune n'est trouvée on ne trace rien.</summary>
+    /// <summary>On trace un trait entre soi-même et la connection valide la plus proche du curseur. Si aucune n'est trouvée on ne trace rien.</summary>
     private void Update()
     {
         if (possiblesConnections == null || !connecting)
@@ -216,11 +230,11 @@ public class Obj_Output : MonoBehaviour, Notifiable
 
         }
 
-        //On utilise comme point de départ la position du curseur.
-        nearInput = NearestInput(Camera.main.ScreenToWorldPoint(Input.mousePosition), possiblesConnections);
+        //On récupère l'input le plus proche de la souris.
+        nearInput = NearestValindInput(Camera.main.ScreenToWorldPoint(Input.mousePosition), possiblesConnections);
 
         if (nearInput != null)
-        {
+        { //Trace un fil en utilisant l'algorithme de tracage
             DrawUtil.UpdateFil(gameObject, nearInput);
         }
     }

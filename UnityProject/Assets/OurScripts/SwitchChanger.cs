@@ -8,17 +8,35 @@ using UnityEngine;
 /// </summary>
 public class SwitchChanger : MonoBehaviour, DevObjInit
 {
-    //ed. Pour creer une connection à une autre porte.
+    /// <summary>
+    /// ed. Pour creer une connection à une autre porte.
+    /// </summary>
     public GameObject initialConnection = null;
-    //ed. L'input auquel se connecter.
+    /// <summary>
+    /// ed. L'input auquel se connecter.
+    /// </summary>
     public int inputNumber = 0;
 
-    //ed. Pour changer l'apparence du switch.
+    /// <summary>
+    /// ed. Pour changer l'apparence du switch.
+    /// </summary>
     public Sprite textureOn;
+    /// <summary>
+    /// ed. Pour changer l'apparence du switch.
+    /// </summary>
     public Sprite textureOff;
 
+    /// <summary>
+    /// L'etat du switch
+    /// </summary>
     private bool power = false;
+    /// <summary>
+    /// Pour changer la texture du switch
+    /// </summary>
     private Image image;
+    /// <summary>
+    /// L'output du switch
+    /// </summary>
     private Obj_Output output;
 
     
@@ -41,6 +59,9 @@ public class SwitchChanger : MonoBehaviour, DevObjInit
         output.transform.localScale = new Vector3(v.x * 50f, v.y * 50f, 1);
     }
 
+    /// <summary>
+    /// On se connecte à une portes placée par les Dev
+    /// </summary>
     public void MakeInitialConnections()
     {
          if( initialConnection != null)
@@ -49,6 +70,9 @@ public class SwitchChanger : MonoBehaviour, DevObjInit
         }
     }
 
+    /// <summary>
+    /// Place le switch sur la grille
+    /// </summary>
     public void PlaceOnGrid()
     {
         GridUtil.TakeNearestAnchor(gameObject);

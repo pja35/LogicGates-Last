@@ -6,12 +6,24 @@ using System.IO;
 
 public class Toolbox : MonoBehaviour
 {
+    /// <summary>
+    ///ed. Le materiel des portes
+    /// </summary>
     public Material material;
+    
+    /// <summary>
+    ///ed. Le type de portes à creer
+    /// </summary>
     public List<string> gateType;
+    /// <summary>
+    ///ed. Le nombre d'entrées de la porte
+    /// </summary>
     public List<int> gateNbInputs;
+    /// <summary>
+    ///ed. Le nombre de sorties de la porte
+    /// </summary>
     public List<int> gateNbOutputs;
 	
-	//public List<MiniGate> gatesToAdd;
 	
     public void Start()
     {
@@ -55,12 +67,14 @@ public class Toolbox : MonoBehaviour
 
         for (int i = 0; i < gates.Count; i++)
         {
+            //Attache la portes à la toolbox, rajoute un numéro au nom de l'objet et la place dans le sprite de la toolbox
             gates[i].transform.SetParent(this.transform);
             gates[i].name += i;
             float X = (gates.Count > 1) ? (i) * (0.8f / (gates.Count - 1)) - 0.4f : 0;
             Vector3 a = new Vector3(X, 0, -99);
             gates[i].transform.localPosition = a;
 
+            //Ajuste la taille de la porte et change son materiel.
             Vector3 gLoc = gates[i].transform.localScale;
             gates[i].transform.localScale = new Vector3(gLoc.x * 7.5f, gLoc.y * 7.5f, 1f);
             gates[i].GetComponent<Renderer>().material = material;

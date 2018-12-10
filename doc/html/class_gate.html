@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -78,15 +78,15 @@ Graphe d'héritage de Gate:</div>
  <div class="center">
   <img src="class_gate.png" usemap="#Gate_map" alt=""/>
   <map id="Gate_map" name="Gate_map">
-<area href="interface_fixable.html" alt="Fixable" shape="rect" coords="112,0,214,24"/>
-<area href="interface_notifiable.html" alt="Notifiable" shape="rect" coords="224,0,326,24"/>
+<area href="interface_fixable.html" title="Permet de gerer les objets fixable sur la grille pas l&#39;utilisateur comme les portes. " alt="Fixable" shape="rect" coords="112,0,214,24"/>
+<area href="interface_notifiable.html" title="Utilisé pour notifier les objets du jeu d&#39;un changement d&#39;état dans le circuit. " alt="Notifiable" shape="rect" coords="224,0,326,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a819353e4deaa41cbbfa51e8f365950b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a819353e4deaa41cbbfa51e8f365950b7">notify</a> ()</td></tr>
-<tr class="memdesc:a819353e4deaa41cbbfa51e8f365950b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet à la porte de lancer une vérification de l'état lorsqu'une de ses entrées utilise cette méthode.  <a href="#a819353e4deaa41cbbfa51e8f365950b7">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a819353e4deaa41cbbfa51e8f365950b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet à la porte de lancer une vérification de l'état lorsqu'une de ses entrées utilise cette méthode. <a href="#a819353e4deaa41cbbfa51e8f365950b7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a819353e4deaa41cbbfa51e8f365950b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54c71aba6e5446ee5f84fc5e3311666f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a54c71aba6e5446ee5f84fc5e3311666f">OnFix</a> ()</td></tr>
 <tr class="memdesc:a54c71aba6e5446ee5f84fc5e3311666f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace la porte et reactive les entrées sorties.  <a href="#a54c71aba6e5446ee5f84fc5e3311666f">Plus de détails...</a><br /></td></tr>
@@ -95,6 +95,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:a73035e0fa4fe919341373214ff67f1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconnecte toutes les entrées et sorties afin d'éviter que l'on puisse créer des boucles dans les liaisons en deplacant une porte plus bas que la porte à qui une de ses entrées est connecté.  <a href="#a73035e0fa4fe919341373214ff67f1df">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a73035e0fa4fe919341373214ff67f1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab72a3792d404ca5430c453df97f60cb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#ab72a3792d404ca5430c453df97f60cb4">Destroy</a> ()</td></tr>
+<tr class="memdesc:ab72a3792d404ca5430c453df97f60cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruit la porte et les objets qui luis sont attaché.  <a href="#ab72a3792d404ca5430c453df97f60cb4">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab72a3792d404ca5430c453df97f60cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -112,13 +113,13 @@ Fonctions membres publiques statiques</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:a5b708007e50a667718d1d396c18e8a66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_obj___input.html">Obj_Input</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a5b708007e50a667718d1d396c18e8a66">inputs</a></td></tr>
-<tr class="memdesc:a5b708007e50a667718d1d396c18e8a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toutes les entrées de la porte.  <a href="#a5b708007e50a667718d1d396c18e8a66">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a5b708007e50a667718d1d396c18e8a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toutes les entrées de la porte. <a href="#a5b708007e50a667718d1d396c18e8a66">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5b708007e50a667718d1d396c18e8a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dcc40539b0e5d9c57a49ee2c0c450b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_obj___output.html">Obj_Output</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a5dcc40539b0e5d9c57a49ee2c0c450b7">outputs</a></td></tr>
-<tr class="memdesc:a5dcc40539b0e5d9c57a49ee2c0c450b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toutes les sorties de la porte.  <a href="#a5dcc40539b0e5d9c57a49ee2c0c450b7">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a5dcc40539b0e5d9c57a49ee2c0c450b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toutes les sorties de la porte. <a href="#a5dcc40539b0e5d9c57a49ee2c0c450b7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5dcc40539b0e5d9c57a49ee2c0c450b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23095b7e521242e393e04c58b167b473"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_comportement.html">Comportement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a23095b7e521242e393e04c58b167b473">exec</a></td></tr>
-<tr class="memdesc:a23095b7e521242e393e04c58b167b473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette variable permet de mettre en place le patron stratégie.  <a href="#a23095b7e521242e393e04c58b167b473">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a23095b7e521242e393e04c58b167b473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette variable permet de mettre en place le patron stratégie. <a href="#a23095b7e521242e393e04c58b167b473">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a23095b7e521242e393e04c58b167b473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75e9b16dcc4c8f1225af0b5326bba909"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a75e9b16dcc4c8f1225af0b5326bba909">test</a> = false</td></tr>
 <tr class="separator:a75e9b16dcc4c8f1225af0b5326bba909"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,9 +185,9 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00080">80</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00068">68</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_admin_script_8cs_source.html#l00018">AdminScript.Instantiate()</a>, et <a class="el" href="_gate_instantiater_8cs_source.html#l00026">GateInstantiater.OnMouseDown()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_admin_script_8cs_source.html#l00016">AdminScript.Instantiate()</a>, et <a class="el" href="_gate_instantiater_8cs_source.html#l00044">GateInstantiater.OnMouseDown()</a>.</p>
 
 </div>
 </div>
@@ -205,7 +206,9 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00139">139</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+<p>Détruit la porte et les objets qui luis sont attaché. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00130">130</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
 </div>
 </div>
@@ -224,13 +227,13 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet à la porte de lancer une vérification de l'état lorsqu'une de ses entrées utilise cette méthode. </p>
+<p>Permet à la porte de lancer une vérification de l'état lorsqu'une de ses entrées utilise cette méthode.</p>
 
 <p>Implémente <a class="el" href="interface_notifiable.html#a96b1feb3c4b642f7762a94fad9ac62a7">Notifiable</a>.</p>
 
 <p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00023">23</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00058">OnUnfix()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00046">OnUnfix()</a>.</p>
 
 </div>
 </div>
@@ -253,9 +256,9 @@ Attributs publics</h2></td></tr>
 
 <p>Implémente <a class="el" href="interface_fixable.html#aebeb9bc0a3934a19fd607ed95f50ae26">Fixable</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00048">48</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00036">36</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_admin_script_8cs_source.html#l00018">AdminScript.Instantiate()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_admin_script_8cs_source.html#l00016">AdminScript.Instantiate()</a>.</p>
 
 </div>
 </div>
@@ -278,7 +281,7 @@ Attributs publics</h2></td></tr>
 
 <p>Implémente <a class="el" href="interface_fixable.html#a53a671e7a6dbee3ad48a778bf7c52508">Fixable</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00058">58</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00046">46</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
 </div>
 </div>
@@ -325,9 +328,9 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00131">131</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00119">119</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00048">OnFix()</a>, et <a class="el" href="_admin_script_8cs_source.html#l00029">AdminScript.PlaceOnGrid()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00036">OnFix()</a>, et <a class="el" href="_admin_script_8cs_source.html#l00027">AdminScript.PlaceOnGrid()</a>.</p>
 
 </div>
 </div>
@@ -374,9 +377,9 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00119">119</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00107">107</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_admin_script_8cs_source.html#l00018">AdminScript.Instantiate()</a>, et <a class="el" href="_gate_instantiater_8cs_source.html#l00026">GateInstantiater.OnMouseDown()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_admin_script_8cs_source.html#l00016">AdminScript.Instantiate()</a>, et <a class="el" href="_gate_instantiater_8cs_source.html#l00044">GateInstantiater.OnMouseDown()</a>.</p>
 
 </div>
 </div>
@@ -393,11 +396,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Cette variable permet de mettre en place le patron stratégie. </p>
+<p>Cette variable permet de mettre en place le patron stratégie.</p>
 
 <p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00018">18</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00080">createIOGate()</a>, et <a class="el" href="_gate_8cs_source.html#l00023">notify()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00068">createIOGate()</a>, et <a class="el" href="_gate_8cs_source.html#l00023">notify()</a>.</p>
 
 </div>
 </div>
@@ -413,11 +416,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Toutes les entrées de la porte. </p>
+<p>Toutes les entrées de la porte.</p>
 
 <p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00014">14</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00080">createIOGate()</a>, <a class="el" href="_gate_8cs_source.html#l00139">Destroy()</a>, <a class="el" href="_gate_8cs_source.html#l00023">notify()</a>, <a class="el" href="_gate_8cs_source.html#l00048">OnFix()</a>, et <a class="el" href="_gate_8cs_source.html#l00058">OnUnfix()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00068">createIOGate()</a>, <a class="el" href="_gate_8cs_source.html#l00130">Destroy()</a>, <a class="el" href="_gate_8cs_source.html#l00023">notify()</a>, <a class="el" href="_gate_8cs_source.html#l00036">OnFix()</a>, et <a class="el" href="_gate_8cs_source.html#l00046">OnUnfix()</a>.</p>
 
 </div>
 </div>
@@ -433,11 +436,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Toutes les sorties de la porte. </p>
+<p>Toutes les sorties de la porte.</p>
 
 <p class="definition">Définition à la ligne <a class="el" href="_gate_8cs_source.html#l00016">16</a> du fichier <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00080">createIOGate()</a>, <a class="el" href="_gate_8cs_source.html#l00139">Destroy()</a>, <a class="el" href="_admin_script_8cs_source.html#l00040">AdminScript.MakeInitialConnections()</a>, <a class="el" href="_gate_8cs_source.html#l00023">notify()</a>, <a class="el" href="_gate_8cs_source.html#l00048">OnFix()</a>, et <a class="el" href="_gate_8cs_source.html#l00058">OnUnfix()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00068">createIOGate()</a>, <a class="el" href="_gate_8cs_source.html#l00130">Destroy()</a>, <a class="el" href="_admin_script_8cs_source.html#l00038">AdminScript.MakeInitialConnections()</a>, <a class="el" href="_gate_8cs_source.html#l00023">notify()</a>, <a class="el" href="_gate_8cs_source.html#l00036">OnFix()</a>, et <a class="el" href="_gate_8cs_source.html#l00046">OnUnfix()</a>.</p>
 
 </div>
 </div>

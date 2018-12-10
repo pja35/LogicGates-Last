@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -81,7 +81,7 @@ Graphe d'héritage de Obj_Input:</div>
  <div class="center">
   <img src="class_obj___input.png" usemap="#Obj_5FInput_map" alt=""/>
   <map id="Obj_5FInput_map" name="Obj_5FInput_map">
-<area href="interface_notifiable.html" alt="Notifiable" shape="rect" coords="112,0,214,24"/>
+<area href="interface_notifiable.html" title="Utilisé pour notifier les objets du jeu d&#39;un changement d&#39;état dans le circuit. " alt="Notifiable" shape="rect" coords="112,0,214,24"/>
 <area href="class_interrupteur.html" alt="Interrupteur" shape="rect" coords="56,112,158,136"/>
 </map>
  </div></div>
@@ -94,6 +94,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:a3db6a24cbb167f02549bc0656615cb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déconnecte l'input.  <a href="#a3db6a24cbb167f02549bc0656615cb47">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3db6a24cbb167f02549bc0656615cb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee26117b566f4055d8fdb838df5e11ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___input.html#aee26117b566f4055d8fdb838df5e11ee">notify</a> ()</td></tr>
+<tr class="memdesc:aee26117b566f4055d8fdb838df5e11ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Préviens le posseseur de l'objet d'un changement dans son input  <a href="#aee26117b566f4055d8fdb838df5e11ee">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aee26117b566f4055d8fdb838df5e11ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90624029e895383c377fa30fd1741c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___input.html#ac90624029e895383c377fa30fd1741c2">DestroyIn</a> ()</td></tr>
 <tr class="memdesc:ac90624029e895383c377fa30fd1741c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déconnecte l'input puis le détruit.  <a href="#ac90624029e895383c377fa30fd1741c2">Plus de détails...</a><br /></td></tr>
@@ -108,14 +109,16 @@ Fonctions membres publiques statiques</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:aa1925db9d68b4de1102e50aa13c8811a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___input.html#aa1925db9d68b4de1102e50aa13c8811a">value</a></td></tr>
+<tr class="memdesc:aa1925db9d68b4de1102e50aa13c8811a"><td class="mdescLeft">&#160;</td><td class="mdescRight">La valeur de l'input.  <a href="#aa1925db9d68b4de1102e50aa13c8811a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa1925db9d68b4de1102e50aa13c8811a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa09bff41d82a0445ea9a3e57cc34644f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fils.html">Fils</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___input.html#aa09bff41d82a0445ea9a3e57cc34644f">connection</a></td></tr>
+<tr class="memdesc:aa09bff41d82a0445ea9a3e57cc34644f"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'eventuelle connection à un output.  <a href="#aa09bff41d82a0445ea9a3e57cc34644f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa09bff41d82a0445ea9a3e57cc34644f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Gere les objets se comportant comme des inputs de porte logique. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00008">8</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00006">6</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="a06b199c67159b9dc17e6a3c7fd384a69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a06b199c67159b9dc17e6a3c7fd384a69">&#9670;&nbsp;</a></span>createInput()</h2>
@@ -161,9 +164,9 @@ Attributs publics</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd></dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00040">40</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00042">42</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00080">Gate.createIOGate()</a>, et <a class="el" href="_lamp_8cs_source.html#l00022">Lamp.Instantiate()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00068">Gate.createIOGate()</a>, et <a class="el" href="_lamp_8cs_source.html#l00038">Lamp.Instantiate()</a>.</p>
 
 </div>
 </div>
@@ -184,9 +187,9 @@ Attributs publics</h2></td></tr>
 
 <p>Déconnecte l'input puis le détruit. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00064">64</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00068">68</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00139">Gate.Destroy()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00130">Gate.Destroy()</a>.</p>
 
 </div>
 </div>
@@ -207,9 +210,9 @@ Attributs publics</h2></td></tr>
 
 <p>Déconnecte l'input. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00023">23</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00025">25</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_obj___input_8cs_source.html#l00064">DestroyIn()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_obj___input_8cs_source.html#l00068">DestroyIn()</a>.</p>
 
 </div>
 </div>
@@ -228,11 +231,13 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Préviens le posseseur de l'objet d'un changement dans son input </p>
+
 <p>Implémente <a class="el" href="interface_notifiable.html#a96b1feb3c4b642f7762a94fad9ac62a7">Notifiable</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00053">53</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00057">57</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_obj___input_8cs_source.html#l00023">Disconnect()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_obj___input_8cs_source.html#l00025">Disconnect()</a>.</p>
 
 </div>
 </div>
@@ -252,9 +257,9 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00015">15</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00017">17</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_obj___input_8cs_source.html#l00023">Disconnect()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_obj___input_8cs_source.html#l00025">Disconnect()</a>.</p>
 
 </div>
 </div>
@@ -271,9 +276,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00013">13</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
+<p>L'eventuelle connection à un output. </p>
 
-<p class="reference">Référencé par <a class="el" href="_obj___input_8cs_source.html#l00023">Disconnect()</a>, et <a class="el" href="_obj___output_8cs_source.html#l00082">Obj_Output.TryToConnect()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00015">15</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_obj___input_8cs_source.html#l00025">Disconnect()</a>, et <a class="el" href="_obj___output_8cs_source.html#l00093">Obj_Output.TryToConnect()</a>.</p>
 
 </div>
 </div>
@@ -289,9 +296,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>La valeur de l'input. </p>
+
 <p class="definition">Définition à la ligne <a class="el" href="_obj___input_8cs_source.html#l00011">11</a> du fichier <a class="el" href="_obj___input_8cs_source.html">Obj_Input.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_a_d_d_8cs_source.html#l00007">ADD.execute()</a>, <a class="el" href="_o_r_8cs_source.html#l00007">OR.execute()</a>, <a class="el" href="_n_a_n_d_8cs_source.html#l00008">NAND.execute()</a>, <a class="el" href="_x_o_r_8cs_source.html#l00008">XOR.execute()</a>, <a class="el" href="_i_d_8cs_source.html#l00008">ID.execute()</a>, <a class="el" href="_n_o_r_8cs_source.html#l00008">NOR.execute()</a>, <a class="el" href="_n_o_t_8cs_source.html#l00008">NOT.execute()</a>, <a class="el" href="_universal_8cs_source.html#l00022">Universal.execute()</a>, <a class="el" href="_lamp_8cs_source.html#l00037">Lamp.notify()</a>, et <a class="el" href="_obj___input_8cs_source.html#l00015">setValue()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_a_d_d_8cs_source.html#l00010">ADD.execute()</a>, <a class="el" href="_i_d_8cs_source.html#l00011">ID.execute()</a>, <a class="el" href="_n_o_t_8cs_source.html#l00011">NOT.execute()</a>, <a class="el" href="_o_r_8cs_source.html#l00011">OR.execute()</a>, <a class="el" href="_n_a_n_d_8cs_source.html#l00012">NAND.execute()</a>, <a class="el" href="_x_o_r_8cs_source.html#l00012">XOR.execute()</a>, <a class="el" href="_n_o_r_8cs_source.html#l00012">NOR.execute()</a>, <a class="el" href="_universal_8cs_source.html#l00022">Universal.execute()</a>, <a class="el" href="_lamp_8cs_source.html#l00054">Lamp.notify()</a>, et <a class="el" href="_obj___input_8cs_source.html#l00017">setValue()</a>.</p>
 
 </div>
 </div>

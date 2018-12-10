@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -96,19 +96,24 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:a2e6b4a0cbfd8941b319385ad0b62b2b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#a2e6b4a0cbfd8941b319385ad0b62b2b5">grid_divisions</a> = 10</td></tr>
+<tr class="memdesc:a2e6b4a0cbfd8941b319385ad0b62b2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ed. Le nombre d'ancres par ligne et colonnes. <a href="#a2e6b4a0cbfd8941b319385ad0b62b2b5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2e6b4a0cbfd8941b319385ad0b62b2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade7062c5dca408381c99fd7ffe97428c"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#ade7062c5dca408381c99fd7ffe97428c">material</a></td></tr>
+<tr class="memdesc:ade7062c5dca408381c99fd7ffe97428c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ed. Le matériel des ancres.  <a href="#ade7062c5dca408381c99fd7ffe97428c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ade7062c5dca408381c99fd7ffe97428c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b15b7573e2d7e115aa468b1768f4fe9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#a8b15b7573e2d7e115aa468b1768f4fe9">initialState</a> = true</td></tr>
+<tr class="memdesc:a8b15b7573e2d7e115aa468b1768f4fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ed. Etat inital des ancres. (A utiliser avec des emplacements de portes)  <a href="#a8b15b7573e2d7e115aa468b1768f4fe9">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8b15b7573e2d7e115aa468b1768f4fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae889352fee8745fdea823238abc580c6"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_anchor_state.html">AnchorState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#ae889352fee8745fdea823238abc580c6">anchor_list</a> = new List&lt;<a class="el" href="class_anchor_state.html">AnchorState</a>&gt;()</td></tr>
 <tr class="separator:ae889352fee8745fdea823238abc580c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf96c6201f145977588c37f2817bcff0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_anchor_state.html">AnchorState</a> [,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#acf96c6201f145977588c37f2817bcff0">anchor_mat</a></td></tr>
+<tr class="memdesc:acf96c6201f145977588c37f2817bcff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des ancres auquel on pourra accrocher les portes sous forme de tableau  <a href="#acf96c6201f145977588c37f2817bcff0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:acf96c6201f145977588c37f2817bcff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Attributs publics statiques</h2></td></tr>
 <tr class="memitem:abf0f44762fe74d5c6993e9deea855a8c"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid_creater.html#abf0f44762fe74d5c6993e9deea855a8c">dstBetAnch</a></td></tr>
+<tr class="memdesc:abf0f44762fe74d5c6993e9deea855a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance séparant chaque ancre.  <a href="#abf0f44762fe74d5c6993e9deea855a8c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abf0f44762fe74d5c6993e9deea855a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -159,7 +164,7 @@ Attributs publics statiques</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd></dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00067">67</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00085">85</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
 
 </div>
 </div>
@@ -180,7 +185,7 @@ Attributs publics statiques</h2></td></tr>
 
 <p>Génré une grille d'ancres dans un canvas en attachant les ancre au bouton possedant le script. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00080">80</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00098">98</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
 
 </div>
 </div>
@@ -197,9 +202,11 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00031">31</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p></p>
 
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00070">Dragger.OnMouseUp()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00045">45</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00077">Dragger.OnMouseUp()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00098">Start()</a>.</p>
 
 </div>
 </div>
@@ -215,9 +222,11 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00033">33</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p>Liste des ancres auquel on pourra accrocher les portes sous forme de tableau </p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00067">GetAnchorNear()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00049">49</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00085">GetAnchorNear()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00098">Start()</a>.</p>
 
 </div>
 </div>
@@ -241,9 +250,11 @@ Attributs publics statiques</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00036">36</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p>Distance séparant chaque ancre. </p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00080">Gate.createIOGate()</a>, <a class="el" href="_gate_8cs_source.html#l00131">Gate.replaceGameObject()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00054">54</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00068">Gate.createIOGate()</a>, <a class="el" href="_gate_8cs_source.html#l00119">Gate.replaceGameObject()</a>, et <a class="el" href="_grid_creater_8cs_source.html#l00098">Start()</a>.</p>
 
 </div>
 </div>
@@ -259,9 +270,11 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>ed. Le nombre d'ancres par ligne et colonnes.</p>
+
 <p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00015">15</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00098">Start()</a>.</p>
 
 </div>
 </div>
@@ -277,9 +290,11 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00019">19</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p>ed. Etat inital des ancres. (A utiliser avec des emplacements de portes) </p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00023">23</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00098">Start()</a>.</p>
 
 </div>
 </div>
@@ -295,9 +310,11 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00017">17</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+<p>ed. Le matériel des ancres. </p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">Start()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_grid_creater_8cs_source.html#l00019">19</a> du fichier <a class="el" href="_grid_creater_8cs_source.html">GridCreater.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00098">Start()</a>.</p>
 
 </div>
 </div>

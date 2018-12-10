@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Gere les objets se comportant comme des inputs de porte logique.
 /// </summary>
 public class Obj_Input : MonoBehaviour, Notifiable
 {
-    //La valeur de l'input.
+    /// <summary>
+    /// La valeur de l'input.
+    /// </summary>
     public bool value;
-    //L'eventuelle connection à un output.
+    /// <summary>
+    /// L'eventuelle connection à un output.
+    /// </summary>
     public Fils connection;
 
     public void setValue(bool newVal)
@@ -39,7 +41,6 @@ public class Obj_Input : MonoBehaviour, Notifiable
     /// <returns></returns>
     public static Obj_Input createInput(GameObject g, int num)
     {
-
         GameObject go = (GameObject)Instantiate(Resources.Load("InputPrefab"), g.transform);
         go.transform.localPosition = new Vector3(num * 1.5f, -1f, 0f);
         go.name = "Input " + num;
@@ -50,6 +51,9 @@ public class Obj_Input : MonoBehaviour, Notifiable
         return input;
     }
 
+    /// <summary>
+    /// Préviens le posseseur de l'objet d'un changement dans son input
+    /// </summary>
     public void notify()
     {
         Debug.Log("Input " + gameObject);

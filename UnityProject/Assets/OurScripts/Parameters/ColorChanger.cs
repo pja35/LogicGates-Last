@@ -8,9 +8,13 @@ using UnityEngine.UI;
 /// </summary>
 public class ColorChanger : MonoBehaviour
 {
-    //! Paramètre contenant la gestion de la couleur
+    /// <summary>
+    ///  Paramètre contenant la gestion de la couleur
+    /// </summary>
     public Parameters manager;
-    //! Initialise la couleur comme celle qu'elle était lors de la dernière sauvegarde 
+    /// <summary>
+    /// Initialise la couleur comme celle qu'elle était lors de la dernière sauvegarde 
+    /// </summary>
     public void Start()
     {
         GetComponent<Image>().color = new Color(manager.color, manager.color, manager.color);

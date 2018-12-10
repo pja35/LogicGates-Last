@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -101,9 +101,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:a1d16edf9f508d52493bda6130d9188d7"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a1d16edf9f508d52493bda6130d9188d7">initialObjMouseDistance</a></td></tr>
+<tr class="memdesc:a1d16edf9f508d52493bda6130d9188d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pour eviter que l'objet se positione juste en dessous de la souris.  <a href="#a1d16edf9f508d52493bda6130d9188d7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1d16edf9f508d52493bda6130d9188d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a916c768cb219dee4d24ab41d869f1b4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dragger.html#a916c768cb219dee4d24ab41d869f1b4b">mouseDown</a> = false</td></tr>
-<tr class="memdesc:a916c768cb219dee4d24ab41d869f1b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen indiquant l'état de la souris.  <a href="#a916c768cb219dee4d24ab41d869f1b4b">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a916c768cb219dee4d24ab41d869f1b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen indiquant l'état de la souris  <a href="#a916c768cb219dee4d24ab41d869f1b4b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a916c768cb219dee4d24ab41d869f1b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -135,9 +136,9 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00024">24</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00030">30</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00070">OnMouseUp()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00077">OnMouseUp()</a>.</p>
 
 </div>
 </div>
@@ -158,7 +159,7 @@ Attributs publics</h2></td></tr>
 
 <p>Déplace l'objet sur un appui de la souris. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00048">48</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00054">54</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
 </div>
 </div>
@@ -179,7 +180,7 @@ Attributs publics</h2></td></tr>
 
 <p>Tente de placer l'objet sur la grille et le détruit si on ne peut pas. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00070">70</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00077">77</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
 </div>
 </div>
@@ -200,7 +201,7 @@ Attributs publics</h2></td></tr>
 
 <p>L'objet suivra le curseur si il est cliqué. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00098">98</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00105">105</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
 </div>
 </div>
@@ -217,9 +218,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00011">11</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p>Pour eviter que l'objet se positione juste en dessous de la souris. </p>
 
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00048">OnMouseDown()</a>, et <a class="el" href="_dragger_8cs_source.html#l00098">Update()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00013">13</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00054">OnMouseDown()</a>, et <a class="el" href="_dragger_8cs_source.html#l00105">Update()</a>.</p>
 
 </div>
 </div>
@@ -235,11 +238,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Booléen indiquant l'état de la souris. </p>
+<p>Booléen indiquant l'état de la souris </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00013">13</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_dragger_8cs_source.html#l00017">17</a> du fichier <a class="el" href="_dragger_8cs_source.html">Dragger.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00048">OnMouseDown()</a>, <a class="el" href="_dragger_8cs_source.html#l00070">OnMouseUp()</a>, et <a class="el" href="_dragger_8cs_source.html#l00098">Update()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_dragger_8cs_source.html#l00054">OnMouseDown()</a>, <a class="el" href="_dragger_8cs_source.html#l00077">OnMouseUp()</a>, et <a class="el" href="_dragger_8cs_source.html#l00105">Update()</a>.</p>
 
 </div>
 </div>

@@ -11,28 +11,46 @@ using UnityEngine;
 public class GridCreater : MonoBehaviour
 {
     [Range(10, 100)]
-    //ed. Le nombre d'ancres par ligne et colonnes.
+    ///<summary>ed. Le nombre d'ancres par ligne et colonnes.</summary>
     public int grid_divisions = 10;
-    //ed. Le matériel des ancres.
+    /// <summary>
+    /// ed. Le matériel des ancres.
+    /// </summary>
     public Material material;
-    //ed. Etat inital des ancres. (A utiliser avec des emplacements de portes)
+    /// <summary>
+    /// ed. Etat inital des ancres. (A utiliser avec des emplacements de portes)
+    /// </summary>
     public bool initialState = true;
 
-    //Position des différent points de référence de la grille
+    /// <summary>
+    /// Position des différent points de référence de la grille
+    /// </summary>
     private int xLeft;
-    //Position des différent points de référence de la grille
+    /// <summary>
+    /// Position des différent points de référence de la grille
+    /// </summary>
     private int xRight;
-    //Position des différent points de référence de la grille
+    /// <summary>
+    /// Position des différent points de référence de la grille
+    /// </summary>
     private int yBottom;
-    //Position des différent points de référence de la grille
+    /// <summary>
+    /// Position des différent points de référence de la grille
+    /// </summary>
     private int yTop;
 
-    // Liste des ancres auquel on pourra accrocher les portes. (Utile pour placer les portes)
+    /// <summary>
+    /// 
+    /// </summary>
     public List<AnchorState> anchor_list = new List<AnchorState>();
-    //Sous forme de tableau
+    /// <summary>
+    ///  Liste des ancres auquel on pourra accrocher les portes sous forme de tableau
+    /// </summary>
     public AnchorState[,] anchor_mat;
 
-    //Distance séparant chaque ancre.
+    /// <summary>
+    /// Distance séparant chaque ancre.
+    /// </summary>
 	public static Vector3 dstBetAnch;
 	
     /// <summary>

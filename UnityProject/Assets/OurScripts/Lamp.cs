@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine.Events;
+﻿using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
@@ -11,20 +8,39 @@ using System;
 /// </summary>
 public class Lamp : MonoBehaviour, DevObjInit, Notifiable
 {
+    /// <summary>
+    /// Pour gerer l'apparence de la lampe
+    /// </summary>
     Image image;
-    Obj_Input oi;
-    public bool power = false;
+    /// <summary>
+    ///ed. L'image de la lampe alumée
+    /// </summary>
     public Sprite textureOn;
+    /// <summary>
+    ///ed. L'image de la lampe éteinte.
+    /// </summary>
     public Sprite textureOff;
+
+    /// <summary>
+    /// L'input de la lampe
+    /// </summary>
+    Obj_Input input;
+    /// <summary>
+    /// Si la lampe reçois du courant
+    /// </summary>
+    public bool power = false;
+
+    /// <summary>
+    /// Le pop up de victoire.
+    /// </summary>
     public GameObject popup;
 
-    // Use this for initialization
     public void Instantiate()
     {
         image = GetComponent<Image>();
-        oi = Obj_Input.createInput(gameObject, 0);
-        oi.gameObject.transform.localPosition = new Vector3(0f, -70f, -99f);
-        oi.gameObject.transform.localScale = new Vector3(800f, 800f, 1f);
+        input = Obj_Input.createInput(gameObject, 0);
+        input.gameObject.transform.localPosition = new Vector3(0f, -70f, -99f);
+        input.gameObject.transform.localScale = new Vector3(800f, 800f, 1f);
 		gameObject.tag = "Lamp";
     }
 
@@ -34,9 +50,10 @@ public class Lamp : MonoBehaviour, DevObjInit, Notifiable
         return;
     }
 
+    //En cas de changement de valeur on change l'etat de la lampe et on affiche le pop-up de victoire
     public void notify()
     {
-        power = oi.value;
+        power = input.value;
 
         if (!power)
         {
@@ -53,21 +70,14 @@ public class Lamp : MonoBehaviour, DevObjInit, Notifiable
         }
     }
 
-    /// <summary>
-    /// On change la texture de la lampe si elle reçoit ou pas du courant. Si la lampe a une fenetre de victoire assignee on arrete alors le rafraichissement.
-    /// </summary>
-   /* void Update()
-    {
-        notify();
-    }*/
-
     public void PlaceOnGrid()
     {
         GridUtil.TakeNearestAnchor(gameObject);
     }
 
     /// <summary>
-    /// On affiche la fenetre de victoire qui est desactivee au lancement du niveau. On lance le son correspondant a la reussite du niveau et si le niveau a ete fini pour la premiere fois on debloque le suivant.
+    /// On affiche la fenetre de victoire qui est desactivee au lancement du niveau. 
+    /// On lance le son correspondant a la reussite du niveau et si le niveau a ete fini pour la premiere fois on debloque le suivant.
     /// </summary>
     public void activatePopUp()
     {

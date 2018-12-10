@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -18,7 +17,9 @@ public class EmplacementPorte : MonoBehaviour, DevObjInit
         return;
     }
 
-    //Fait aussi le trvail de Instantiate.
+    /// <summary>
+    /// Fait aussi le trvail de Instantiate.
+    /// </summary>
     public void PlaceOnGrid()
     {
         AnchorState choosen =  GridUtil.TakeNearestAnchor(gameObject);

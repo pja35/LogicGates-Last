@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -76,7 +76,7 @@ Graphe d'héritage de Interrupteur:</div>
   <img src="class_interrupteur.png" usemap="#Interrupteur_map" alt=""/>
   <map id="Interrupteur_map" name="Interrupteur_map">
 <area href="class_obj___input.html" title="Gere les objets se comportant comme des inputs de porte logique. " alt="Obj_Input" shape="rect" coords="56,56,158,80"/>
-<area href="interface_notifiable.html" alt="Notifiable" shape="rect" coords="112,0,214,24"/>
+<area href="interface_notifiable.html" title="Utilisé pour notifier les objets du jeu d&#39;un changement d&#39;état dans le circuit. " alt="Notifiable" shape="rect" coords="112,0,214,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -89,6 +89,7 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memdesc:a3db6a24cbb167f02549bc0656615cb47 inherit pub_methods_class_obj___input"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déconnecte l'input.  <a href="class_obj___input.html#a3db6a24cbb167f02549bc0656615cb47">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3db6a24cbb167f02549bc0656615cb47 inherit pub_methods_class_obj___input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee26117b566f4055d8fdb838df5e11ee inherit pub_methods_class_obj___input"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___input.html#aee26117b566f4055d8fdb838df5e11ee">notify</a> ()</td></tr>
+<tr class="memdesc:aee26117b566f4055d8fdb838df5e11ee inherit pub_methods_class_obj___input"><td class="mdescLeft">&#160;</td><td class="mdescRight">Préviens le posseseur de l'objet d'un changement dans son input  <a href="class_obj___input.html#aee26117b566f4055d8fdb838df5e11ee">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aee26117b566f4055d8fdb838df5e11ee inherit pub_methods_class_obj___input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90624029e895383c377fa30fd1741c2 inherit pub_methods_class_obj___input"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___input.html#ac90624029e895383c377fa30fd1741c2">DestroyIn</a> ()</td></tr>
 <tr class="memdesc:ac90624029e895383c377fa30fd1741c2 inherit pub_methods_class_obj___input"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déconnecte l'input puis le détruit.  <a href="class_obj___input.html#ac90624029e895383c377fa30fd1741c2">Plus de détails...</a><br /></td></tr>
@@ -99,13 +100,15 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="separator:a06b199c67159b9dc17e6a3c7fd384a69 inherit pub_static_methods_class_obj___input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_obj___input"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_obj___input')"><img src="closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="class_obj___input.html">Obj_Input</a></td></tr>
 <tr class="memitem:aa1925db9d68b4de1102e50aa13c8811a inherit pub_attribs_class_obj___input"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___input.html#aa1925db9d68b4de1102e50aa13c8811a">value</a></td></tr>
+<tr class="memdesc:aa1925db9d68b4de1102e50aa13c8811a inherit pub_attribs_class_obj___input"><td class="mdescLeft">&#160;</td><td class="mdescRight">La valeur de l'input.  <a href="class_obj___input.html#aa1925db9d68b4de1102e50aa13c8811a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa1925db9d68b4de1102e50aa13c8811a inherit pub_attribs_class_obj___input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa09bff41d82a0445ea9a3e57cc34644f inherit pub_attribs_class_obj___input"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fils.html">Fils</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___input.html#aa09bff41d82a0445ea9a3e57cc34644f">connection</a></td></tr>
+<tr class="memdesc:aa09bff41d82a0445ea9a3e57cc34644f inherit pub_attribs_class_obj___input"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'eventuelle connection à un output.  <a href="class_obj___input.html#aa09bff41d82a0445ea9a3e57cc34644f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa09bff41d82a0445ea9a3e57cc34644f inherit pub_attribs_class_obj___input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock">
-<p class="definition">Définition à la ligne <a class="el" href="_interrupteur_8cs_source.html#l00005">5</a> du fichier <a class="el" href="_interrupteur_8cs_source.html">Interrupteur.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_interrupteur_8cs_source.html#l00001">1</a> du fichier <a class="el" href="_interrupteur_8cs_source.html">Interrupteur.cs</a>.</p>
 </div><hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>F:/UnityProject/LogicGate3/UnityProject/Assets/OurScripts/Porte/<a class="el" href="_interrupteur_8cs_source.html">Interrupteur.cs</a></li>
 </ul>

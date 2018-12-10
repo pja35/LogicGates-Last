@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -80,21 +80,24 @@ Graphe d'héritage de Lamp:</div>
  <div class="center">
   <img src="class_lamp.png" usemap="#Lamp_map" alt=""/>
   <map id="Lamp_map" name="Lamp_map">
-<area href="interface_dev_obj_init.html" alt="DevObjInit" shape="rect" coords="112,0,214,24"/>
-<area href="interface_notifiable.html" alt="Notifiable" shape="rect" coords="224,0,326,24"/>
+<area href="interface_dev_obj_init.html" title="Permet de gerer les objets placé par les dévellopeurs. " alt="DevObjInit" shape="rect" coords="112,0,214,24"/>
+<area href="interface_notifiable.html" title="Utilisé pour notifier les objets du jeu d&#39;un changement d&#39;état dans le circuit. " alt="Notifiable" shape="rect" coords="224,0,326,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:abd21ad4f0346af398a49786efd455b58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#abd21ad4f0346af398a49786efd455b58">Instantiate</a> ()</td></tr>
+<tr class="memdesc:abd21ad4f0346af398a49786efd455b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantie les objets.  <a href="#abd21ad4f0346af398a49786efd455b58">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abd21ad4f0346af398a49786efd455b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ae54e2f982f5c612368fe1689860fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#a3ae54e2f982f5c612368fe1689860fd8">MakeInitialConnections</a> ()</td></tr>
+<tr class="memdesc:a3ae54e2f982f5c612368fe1689860fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée une connection avec un autre objet au démarrage du jeu.  <a href="#a3ae54e2f982f5c612368fe1689860fd8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3ae54e2f982f5c612368fe1689860fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2afe3884fe1f58b1c78e720876515a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#a2afe3884fe1f58b1c78e720876515a50">notify</a> ()</td></tr>
+<tr class="memdesc:a2afe3884fe1f58b1c78e720876515a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Préviens un objet d'un changement.  <a href="#a2afe3884fe1f58b1c78e720876515a50">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2afe3884fe1f58b1c78e720876515a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c550be80155ba0c1e85708ce801631c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#a6c550be80155ba0c1e85708ce801631c">PlaceOnGrid</a> ()</td></tr>
-<tr class="memdesc:a6c550be80155ba0c1e85708ce801631c"><td class="mdescLeft">&#160;</td><td class="mdescRight">On change la texture de la lampe si elle reçoit ou pas du courant. Si la lampe a une fenetre de victoire assignee on arrete alors le rafraichissement.  <a href="#a6c550be80155ba0c1e85708ce801631c">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a6c550be80155ba0c1e85708ce801631c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Place les objets des déveuloppeurs sur la grille.  <a href="#a6c550be80155ba0c1e85708ce801631c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6c550be80155ba0c1e85708ce801631c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcfbdebdde5791bb9027d30f8d97de1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#afcfbdebdde5791bb9027d30f8d97de1c">activatePopUp</a> ()</td></tr>
 <tr class="memdesc:afcfbdebdde5791bb9027d30f8d97de1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">On affiche la fenetre de victoire qui est desactivee au lancement du niveau. On lance le son correspondant a la reussite du niveau et si le niveau a ete fini pour la premiere fois on debloque le suivant.  <a href="#afcfbdebdde5791bb9027d30f8d97de1c">Plus de détails...</a><br /></td></tr>
@@ -102,19 +105,23 @@ Fonctions membres publiques</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
-<tr class="memitem:a49d7167b8ce28a29af719e68c56b63f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#a49d7167b8ce28a29af719e68c56b63f4">power</a> = false</td></tr>
-<tr class="separator:a49d7167b8ce28a29af719e68c56b63f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a06211b87852159158fb505b798f158"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#a6a06211b87852159158fb505b798f158">textureOn</a></td></tr>
+<tr class="memdesc:a6a06211b87852159158fb505b798f158"><td class="mdescLeft">&#160;</td><td class="mdescRight">ed. L'image de la lampe alumée  <a href="#a6a06211b87852159158fb505b798f158">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6a06211b87852159158fb505b798f158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b3c96f73ec0cbc53f711bf0a71b081"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#a98b3c96f73ec0cbc53f711bf0a71b081">textureOff</a></td></tr>
+<tr class="memdesc:a98b3c96f73ec0cbc53f711bf0a71b081"><td class="mdescLeft">&#160;</td><td class="mdescRight">ed. L'image de la lampe éteinte.  <a href="#a98b3c96f73ec0cbc53f711bf0a71b081">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a98b3c96f73ec0cbc53f711bf0a71b081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d7167b8ce28a29af719e68c56b63f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#a49d7167b8ce28a29af719e68c56b63f4">power</a> = false</td></tr>
+<tr class="memdesc:a49d7167b8ce28a29af719e68c56b63f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Si la lampe reçois du courant  <a href="#a49d7167b8ce28a29af719e68c56b63f4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a49d7167b8ce28a29af719e68c56b63f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5732c9b835bbf33e86fd3584ad7f3b7f"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lamp.html#a5732c9b835bbf33e86fd3584ad7f3b7f">popup</a></td></tr>
+<tr class="memdesc:a5732c9b835bbf33e86fd3584ad7f3b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le pop up de victoire.  <a href="#a5732c9b835bbf33e86fd3584ad7f3b7f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5732c9b835bbf33e86fd3584ad7f3b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Permet de changer l'apparence de la lampe en fonction du courant et d'afficher la fenetre de victoire si elle est allumee. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00012">12</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00009">9</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="afcfbdebdde5791bb9027d30f8d97de1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afcfbdebdde5791bb9027d30f8d97de1c">&#9670;&nbsp;</a></span>activatePopUp()</h2>
@@ -133,9 +140,9 @@ Attributs publics</h2></td></tr>
 
 <p>On affiche la fenetre de victoire qui est desactivee au lancement du niveau. On lance le son correspondant a la reussite du niveau et si le niveau a ete fini pour la premiere fois on debloque le suivant. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00072">72</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00082">82</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00037">notify()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00054">notify()</a>.</p>
 
 </div>
 </div>
@@ -154,9 +161,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Instantie les objets. </p>
+
 <p>Implémente <a class="el" href="interface_dev_obj_init.html#aeb773dda865017d5ede94b292ac0b573">DevObjInit</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00022">22</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00038">38</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
 
 </div>
 </div>
@@ -175,9 +184,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Crée une connection avec un autre objet au démarrage du jeu. </p>
+
 <p>Implémente <a class="el" href="interface_dev_obj_init.html#ae39f16c2377767fcdcd96ef2d6e48c8c">DevObjInit</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00031">31</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00047">47</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
 
 </div>
 </div>
@@ -196,9 +207,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Préviens un objet d'un changement. </p>
+
 <p>Implémente <a class="el" href="interface_notifiable.html#a96b1feb3c4b642f7762a94fad9ac62a7">Notifiable</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00037">37</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00054">54</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
 
 </div>
 </div>
@@ -217,11 +230,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>On change la texture de la lampe si elle reçoit ou pas du courant. Si la lampe a une fenetre de victoire assignee on arrete alors le rafraichissement. </p>
+<p>Place les objets des déveuloppeurs sur la grille. </p>
 
 <p>Implémente <a class="el" href="interface_dev_obj_init.html#a2d54ed5ea774bd81688e6deccda91768">DevObjInit</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00064">64</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00073">73</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
 
 </div>
 </div>
@@ -238,9 +251,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00019">19</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p>Le pop up de victoire. </p>
 
-<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00072">activatePopUp()</a>, et <a class="el" href="_lamp_8cs_source.html#l00037">notify()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00036">36</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00082">activatePopUp()</a>, et <a class="el" href="_lamp_8cs_source.html#l00054">notify()</a>.</p>
 
 </div>
 </div>
@@ -256,9 +271,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00016">16</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p>Si la lampe reçois du courant </p>
 
-<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00037">notify()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00031">31</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00054">notify()</a>.</p>
 
 </div>
 </div>
@@ -274,9 +291,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00018">18</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p>ed. L'image de la lampe éteinte. </p>
 
-<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00037">notify()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00022">22</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00054">notify()</a>.</p>
 
 </div>
 </div>
@@ -292,9 +311,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00017">17</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+<p>ed. L'image de la lampe alumée </p>
 
-<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00037">notify()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_lamp_8cs_source.html#l00018">18</a> du fichier <a class="el" href="_lamp_8cs_source.html">Lamp.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_lamp_8cs_source.html#l00054">notify()</a>.</p>
 
 </div>
 </div>

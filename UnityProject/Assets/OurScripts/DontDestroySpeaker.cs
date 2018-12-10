@@ -5,7 +5,9 @@ using UnityEngine;
 /// <summary>Pour éviter la destruction des haut-parleurs. </summary> 
 public class DontDestroySpeaker : MonoBehaviour
 {
-    // Pour savoir si l'objet existe déjà
+    /// <summary>
+    /// Pour savoir si l'objet existe déjà
+    /// </summary>
     private static bool created = false;
 
     /// <summary>Défini l'objet attaché comme un objet non-destructible. </summary> 

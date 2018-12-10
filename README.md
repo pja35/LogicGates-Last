@@ -13,9 +13,9 @@ devauxcedricarnaud@gmail.com
 
 L'interface:
 
-![](.menu.png)
-![](.jeu.PNG)
-![](.options.PNG)
+![](./Screenshot/menu.png)
+![](./Screenshot/jeu.png)
+![](./Screenshot/options.png)
    
 ## Installer le jeu
 Pour installer le jeu il suffit de télécharger:

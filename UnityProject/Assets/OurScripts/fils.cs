@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class Fils : MonoBehaviour, Notifiable
 {
+    /// <summary>
+    /// L'objet de départ du fils (porte le line renderer).
+    /// </summary>
     private GameObject start;
+    /// <summary>
+    /// L'objet de fin du fils.
+    /// </summary>
     private GameObject end;
+    /// <summary>
+    /// La valeur de l'entrée
+    /// </summary>
     private bool start_val;
+    /// <summary>
+    /// La valeur du fil
+    /// </summary>
     public bool powered = false;
-    LineRenderer lineRenderer;
 
+
+    /// <summary>
+    /// On se connecte aux I/O on instantie la valeur du fil et on notifie
+    /// </summary>
+    /// <param name="end">La connection de fin.</param>
     public void Init_Fils(GameObject end)
     {
         this.start = gameObject;
@@ -17,11 +33,14 @@ public class Fils : MonoBehaviour, Notifiable
         start_val = start.GetComponent<Obj_Output>().value;
         end.GetComponent<Obj_Input>().connection = this;
 
-        lineRenderer = DrawUtil.DrawFil(start, end);
+        DrawUtil.DrawFil(start, end);
 
         notify();
     }
 
+    /// <summary>
+    /// En cas de changement de l'entrée le fil actualise la valeur de sa sortie et change sa couleur.
+    /// </summary>
     public void notify()
     {
         Debug.Log("Fils " + gameObject + " to " + end.gameObject);

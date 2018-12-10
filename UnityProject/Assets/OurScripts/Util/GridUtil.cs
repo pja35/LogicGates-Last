@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -51,7 +50,7 @@ public class GridUtil : MonoBehaviour
     {
 
         Vector3 toMovePos = toMove.transform.position;
-        //On initialise avec le premier element pour faciliet le calcul.
+        //On initialise avec le premier element pour facilier le calcul.
         AnchorState nearest = anchorList[0];
         float distance = float.MaxValue;
 

@@ -1,10 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
+/// <summary>
+/// Reproduit le comportement d'un Ou Exclusif
+/// </summary>
 public class XOR : Comportement
 {
-    //! Si les deux entrees ont des valeurs differentes.
+    /// <summary>
+    /// Renvoie vrai Si les deux entrees ont des valeurs differentes.
+    /// </summary>
+    /// <param name="inputs">Liste des entréees de la porte</param>
+    /// <returns>Retourne vrai si leur nombre est impair</returns>
     public override bool execute(Obj_Input[] inputs)
     {
         int len = inputs.Length;
@@ -14,11 +18,5 @@ public class XOR : Comportement
             result = result ^ inputs[i].value;
         }
         return result;
-        //if (len == 2)
-        //    return inputs[0].value ^ inputs[1].value;
-        //else
-        //{
-        //    return false;
-        //}
     }
 }

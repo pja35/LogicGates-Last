@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -114,11 +114,17 @@ Fonctions membres publiques statiques</h2></td></tr>
 <tr class="memitem:ad6de4ae295273fe62c1124f561d43816"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_util.html#ad6de4ae295273fe62c1124f561d43816">addText</a> (GameObject g, string text)</td></tr>
 <tr class="memdesc:ad6de4ae295273fe62c1124f561d43816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pour ajouter du texte à un gameObject centré au millieu <a href="#ad6de4ae295273fe62c1124f561d43816">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad6de4ae295273fe62c1124f561d43816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1bb7a79f9c7387aee7fd81c5adaa2cc"><td class="memItemLeft" align="right" valign="top">static LineRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_util.html#aa1bb7a79f9c7387aee7fd81c5adaa2cc">DrawFil</a> (GameObject start, GameObject end)</td></tr>
+<tr class="memdesc:aa1bb7a79f9c7387aee7fd81c5adaa2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de tracer une ligne. <a href="#aa1bb7a79f9c7387aee7fd81c5adaa2cc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa1bb7a79f9c7387aee7fd81c5adaa2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef21e42d1f7ba9a6b221257f4134f4af"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_util.html#aef21e42d1f7ba9a6b221257f4134f4af">UpdateFil</a> (GameObject start, GameObject end)</td></tr>
+<tr class="memdesc:aef21e42d1f7ba9a6b221257f4134f4af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualise le tracé d'une ligne. <a href="#aef21e42d1f7ba9a6b221257f4134f4af">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aef21e42d1f7ba9a6b221257f4134f4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Un ensemble d'outils pour tracer des lignes avec Unity. Le line renderer est attaché à l'objet de départ. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00009">9</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00008">8</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="ad6de4ae295273fe62c1124f561d43816"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6de4ae295273fe62c1124f561d43816">&#9670;&nbsp;</a></span>addText()</h2>
@@ -163,9 +169,60 @@ Fonctions membres publiques statiques</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00107">107</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00108">108</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_instantiater_8cs_source.html#l00011">GateInstantiater.CACGameObject()</a>, et <a class="el" href="_admin_script_8cs_source.html#l00018">AdminScript.Instantiate()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_instantiater_8cs_source.html#l00026">GateInstantiater.CACGameObject()</a>, et <a class="el" href="_admin_script_8cs_source.html#l00016">AdminScript.Instantiate()</a>.</p>
+
+</div>
+</div>
+<a id="aa1bb7a79f9c7387aee7fd81c5adaa2cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1bb7a79f9c7387aee7fd81c5adaa2cc">&#9670;&nbsp;</a></span>DrawFil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LineRenderer DrawUtil.DrawFil </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet de tracer une ligne.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>l'objet de départ</td></tr>
+    <tr><td class="paramname">end</td><td>un point d'arrivé</td></tr>
+    <tr><td class="paramname">color</td><td>la couleur de la ligne</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le line renderer crée.</dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00134">134</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00029">Fils.Init_Fils()</a>.</p>
 
 </div>
 </div>
@@ -220,9 +277,9 @@ Fonctions membres publiques statiques</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Le line renderer crée.</dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00016">16</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00015">15</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_draw_util_8cs_source.html#l00038">DrawLine()</a>, et <a class="el" href="_fils_8cs_source.html#l00013">Fils.Init_Fils()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_draw_util_8cs_source.html#l00039">DrawLine()</a>.</p>
 
 </div>
 </div>
@@ -277,7 +334,7 @@ Fonctions membres publiques statiques</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Le line renderer crée.</dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00038">38</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00039">39</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
 </div>
 </div>
@@ -324,7 +381,7 @@ Fonctions membres publiques statiques</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00046">46</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00047">47</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
 </div>
 </div>
@@ -360,9 +417,9 @@ Fonctions membres publiques statiques</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00089">89</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00090">90</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00050">Fils.Destroy_Fils()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00069">Fils.Destroy_Fils()</a>.</p>
 
 </div>
 </div>
@@ -409,9 +466,59 @@ Fonctions membres publiques statiques</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00097">97</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00098">98</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00025">Fils.notify()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00044">Fils.notify()</a>.</p>
+
+</div>
+</div>
+<a id="aef21e42d1f7ba9a6b221257f4134f4af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef21e42d1f7ba9a6b221257f4134f4af">&#9670;&nbsp;</a></span>UpdateFil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void DrawUtil.UpdateFil </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Actualise le tracé d'une ligne.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>l'objet de départ</td></tr>
+    <tr><td class="paramname">end</td><td>un point d'arrivée</td></tr>
+    <tr><td class="paramname">renderer</td><td>le line renderer à actualliser. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00160">160</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00044">Fils.notify()</a>.</p>
 
 </div>
 </div>
@@ -465,9 +572,9 @@ Fonctions membres publiques statiques</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00056">56</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00057">57</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_fils_8cs_source.html#l00025">Fils.notify()</a>, et <a class="el" href="_draw_util_8cs_source.html#l00065">UpdateLine()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_draw_util_8cs_source.html#l00066">UpdateLine()</a>.</p>
 
 </div>
 </div>
@@ -514,7 +621,7 @@ Fonctions membres publiques statiques</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00065">65</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00066">66</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
 </div>
 </div>
@@ -568,7 +675,7 @@ Fonctions membres publiques statiques</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00074">74</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00075">75</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
 </div>
 </div>
@@ -615,7 +722,7 @@ Fonctions membres publiques statiques</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00082">82</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_draw_util_8cs_source.html#l00083">83</a> du fichier <a class="el" href="_draw_util_8cs_source.html">DrawUtil.cs</a>.</p>
 
 </div>
 </div>

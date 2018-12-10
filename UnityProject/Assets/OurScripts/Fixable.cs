@@ -1,8 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
+/// <summary>
+/// Permet de gerer les objets fixable sur la grille pas l'utilisateur comme les portes.
+/// </summary>
 public interface Fixable {
+    /// <summary>
+    /// Quand l'objet est attaché.
+    /// </summary>
 	void OnFix();
+    /// <summary>
+    /// Quand l'objet est détaché.
+    /// </summary>
 	void OnUnfix();
 }

@@ -218,6 +218,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224845360153128552, guid: 209be5d5b8ac75640815dfbbcb614af9,
     type: 2}
   m_PrefabInternal: {fileID: 18905330}
+--- !u!1 &78082421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
+    type: 2}
+  m_PrefabInternal: {fileID: 2083425000}
 --- !u!224 &271492862 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
@@ -350,12 +355,12 @@ Prefab:
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
@@ -387,34 +392,19 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: initialConnection
-      value: 
-      objectReference: {fileID: 1140214657}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000355
-      objectReference: {fileID: 0}
     - target: {fileID: 1547790265247824, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
       propertyPath: m_Name
       value: Switch (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 58096247566858274, guid: b70680e832683e14f9ac5440fa6dac77,
+    - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
-      propertyPath: m_Radius
-      value: 20
+      propertyPath: initialConnection
+      value: 
+      objectReference: {fileID: 827223795}
+    - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
+        type: 2}
+      propertyPath: inputNumber
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
@@ -830,6 +820,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
     type: 2}
   m_PrefabInternal: {fileID: 852601134}
+--- !u!1 &827223795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
+    type: 2}
+  m_PrefabInternal: {fileID: 2073142157}
 --- !u!1001 &852601134
 Prefab:
   m_ObjectHideFlags: 0
@@ -1030,12 +1025,12 @@ Prefab:
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
@@ -1067,35 +1062,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: initialConnection
-      value: 
-      objectReference: {fileID: 1825821857}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000355
-      objectReference: {fileID: 0}
     - target: {fileID: 1547790265247824, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
       propertyPath: m_Name
       value: Switch (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 58096247566858274, guid: b70680e832683e14f9ac5440fa6dac77,
+    - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
-      propertyPath: m_Radius
-      value: 20
-      objectReference: {fileID: 0}
+      propertyPath: initialConnection
+      value: 
+      objectReference: {fileID: 78082421}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
   m_IsPrefabAsset: 0
@@ -1413,11 +1388,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
     type: 2}
   m_PrefabInternal: {fileID: 896334244}
---- !u!1 &1140214657 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
-    type: 2}
-  m_PrefabInternal: {fileID: 2073142157}
 --- !u!1001 &1183907033
 Prefab:
   m_ObjectHideFlags: 0
@@ -1587,12 +1557,12 @@ Prefab:
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
@@ -1628,27 +1598,7 @@ Prefab:
         type: 2}
       propertyPath: initialConnection
       value: 
-      objectReference: {fileID: 1965849447}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 58096247566858274, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_Radius
-      value: 20
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1584146475}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
   m_IsPrefabAsset: 0
@@ -1802,6 +1752,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
     type: 2}
   m_PrefabInternal: {fileID: 1522306594}
+--- !u!1 &1584146475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
+    type: 2}
+  m_PrefabInternal: {fileID: 852601134}
 --- !u!1001 &1600776179
 Prefab:
   m_ObjectHideFlags: 0
@@ -2260,11 +2215,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1537401057266752, guid: 334f66be95711484ab1a866d211a82d7,
     type: 2}
   m_PrefabInternal: {fileID: 1783775887}
---- !u!1 &1825821857 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
-    type: 2}
-  m_PrefabInternal: {fileID: 2083425000}
 --- !u!1001 &1894992929
 Prefab:
   m_ObjectHideFlags: 0
@@ -2325,12 +2275,12 @@ Prefab:
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
@@ -2362,48 +2312,23 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: initialConnection
-      value: 
-      objectReference: {fileID: 1965849447}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000355
-      objectReference: {fileID: 0}
     - target: {fileID: 1547790265247824, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
       propertyPath: m_Name
       value: Switch (1)
       objectReference: {fileID: 0}
     - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
+      propertyPath: initialConnection
+      value: 
+      objectReference: {fileID: 1584146475}
+    - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
+        type: 2}
       propertyPath: inputNumber
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 58096247566858274, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_Radius
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1965849447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
-    type: 2}
-  m_PrefabInternal: {fileID: 852601134}
 --- !u!224 &2059862035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,

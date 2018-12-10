@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -70,6 +70,9 @@ $(function() {
 <div class="title">Référence de l'interface DevObjInit</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Permet de gerer les objets placé par les dévellopeurs.  
+ <a href="interface_dev_obj_init.html#details">Plus de détails...</a></p>
 <div class="dynheader">
 Graphe d'héritage de DevObjInit:</div>
 <div class="dyncontent">
@@ -86,15 +89,19 @@ Graphe d'héritage de DevObjInit:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a2d54ed5ea774bd81688e6deccda91768"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_dev_obj_init.html#a2d54ed5ea774bd81688e6deccda91768">PlaceOnGrid</a> ()</td></tr>
+<tr class="memdesc:a2d54ed5ea774bd81688e6deccda91768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Place les objets des déveuloppeurs sur la grille.  <a href="#a2d54ed5ea774bd81688e6deccda91768">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2d54ed5ea774bd81688e6deccda91768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb773dda865017d5ede94b292ac0b573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_dev_obj_init.html#aeb773dda865017d5ede94b292ac0b573">Instantiate</a> ()</td></tr>
+<tr class="memdesc:aeb773dda865017d5ede94b292ac0b573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantie les objets.  <a href="#aeb773dda865017d5ede94b292ac0b573">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aeb773dda865017d5ede94b292ac0b573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39f16c2377767fcdcd96ef2d6e48c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_dev_obj_init.html#ae39f16c2377767fcdcd96ef2d6e48c8c">MakeInitialConnections</a> ()</td></tr>
+<tr class="memdesc:ae39f16c2377767fcdcd96ef2d6e48c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée une connection avec un autre objet au démarrage du jeu.  <a href="#ae39f16c2377767fcdcd96ef2d6e48c8c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae39f16c2377767fcdcd96ef2d6e48c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock">
-<p class="definition">Définition à la ligne <a class="el" href="_dev_obj_init_8cs_source.html#l00001">1</a> du fichier <a class="el" href="_dev_obj_init_8cs_source.html">DevObjInit.cs</a>.</p>
+<div class="textblock"><p>Permet de gerer les objets placé par les dévellopeurs. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_dev_obj_init_8cs_source.html#l00004">4</a> du fichier <a class="el" href="_dev_obj_init_8cs_source.html">DevObjInit.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="aeb773dda865017d5ede94b292ac0b573"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb773dda865017d5ede94b292ac0b573">&#9670;&nbsp;</a></span>Instantiate()</h2>
@@ -111,9 +118,11 @@ Fonctions membres publiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Instantie les objets. </p>
+
 <p>Implémenté dans <a class="el" href="class_switch_changer.html#a12a87249cac03e29fc47621544a8d699">SwitchChanger</a>, <a class="el" href="class_lamp.html#abd21ad4f0346af398a49786efd455b58">Lamp</a>, <a class="el" href="class_admin_script.html#ac8df03ee4f5ae4aa69e0a7350171662a">AdminScript</a>, et <a class="el" href="class_emplacement_porte.html#a39da974b5c3c02848d33092ea0c6304b">EmplacementPorte</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">GridCreater.Start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00098">GridCreater.Start()</a>.</p>
 
 </div>
 </div>
@@ -132,9 +141,11 @@ Fonctions membres publiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implémenté dans <a class="el" href="class_switch_changer.html#ae26287b0ba3ea9ecc8191132be5fc5eb">SwitchChanger</a>, <a class="el" href="class_admin_script.html#aba390fcf02a4f66a5019dc327817afdf">AdminScript</a>, <a class="el" href="class_lamp.html#a3ae54e2f982f5c612368fe1689860fd8">Lamp</a>, et <a class="el" href="class_emplacement_porte.html#a20cd8d68d3ceafc3ce59139ae1e9fdff">EmplacementPorte</a>.</p>
+<p>Crée une connection avec un autre objet au démarrage du jeu. </p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">GridCreater.Start()</a>.</p>
+<p>Implémenté dans <a class="el" href="class_switch_changer.html#ae26287b0ba3ea9ecc8191132be5fc5eb">SwitchChanger</a>, <a class="el" href="class_lamp.html#a3ae54e2f982f5c612368fe1689860fd8">Lamp</a>, <a class="el" href="class_admin_script.html#aba390fcf02a4f66a5019dc327817afdf">AdminScript</a>, et <a class="el" href="class_emplacement_porte.html#a20cd8d68d3ceafc3ce59139ae1e9fdff">EmplacementPorte</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00098">GridCreater.Start()</a>.</p>
 
 </div>
 </div>
@@ -153,9 +164,11 @@ Fonctions membres publiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implémenté dans <a class="el" href="class_lamp.html#a6c550be80155ba0c1e85708ce801631c">Lamp</a>, <a class="el" href="class_switch_changer.html#a23d6cd8df6aaee135d4f028bd3117beb">SwitchChanger</a>, <a class="el" href="class_admin_script.html#aa46f01dba5bb3c681cdec0c0d6126d70">AdminScript</a>, et <a class="el" href="class_emplacement_porte.html#a1379fdd8baeca30ca1fcbc48367df9be">EmplacementPorte</a>.</p>
+<p>Place les objets des déveuloppeurs sur la grille. </p>
 
-<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00080">GridCreater.Start()</a>.</p>
+<p>Implémenté dans <a class="el" href="class_switch_changer.html#a23d6cd8df6aaee135d4f028bd3117beb">SwitchChanger</a>, <a class="el" href="class_lamp.html#a6c550be80155ba0c1e85708ce801631c">Lamp</a>, <a class="el" href="class_admin_script.html#aa46f01dba5bb3c681cdec0c0d6126d70">AdminScript</a>, et <a class="el" href="class_emplacement_porte.html#a1379fdd8baeca30ca1fcbc48367df9be">EmplacementPorte</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_grid_creater_8cs_source.html#l00098">GridCreater.Start()</a>.</p>
 
 </div>
 </div>

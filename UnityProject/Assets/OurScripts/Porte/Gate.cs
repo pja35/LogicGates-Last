@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
 /// Cette interface permet de mettre en place le patron de conception Stratégie car les portes ont le même comportement exepté aux moment de la verification. 
+/// </summary>
 public abstract class Comportement : MonoBehaviour
 {
     public virtual bool execute(Obj_Input[] inputs){return false;}
@@ -10,16 +10,16 @@ public abstract class Comportement : MonoBehaviour
 
 public class Gate : MonoBehaviour, Fixable, Notifiable
 {
-    /// Toutes les entrées de la porte. 
+    /// <summary>Toutes les entrées de la porte.</summary> 
     public Obj_Input[] inputs;
-    /// Toutes les sorties de la porte. 
+    /// <summary>Toutes les sorties de la porte.</summary> 
     public Obj_Output[] outputs;
-    /// Cette variable permet de mettre en place le patron stratégie.
+    /// <summary>Cette variable permet de mettre en place le patron stratégie.</summary>
     public Comportement exec;
 
     public bool test = false;
 
-    /// Permet à la porte de lancer une vérification de l'état lorsqu'une de ses entrées utilise cette méthode.
+    /// <summary>Permet à la porte de lancer une vérification de l'état lorsqu'une de ses entrées utilise cette méthode.</summary>
     public void notify()
     {
         Debug.Log("Gate " + gameObject);
@@ -124,6 +124,9 @@ public class Gate : MonoBehaviour, Fixable, Notifiable
         go.transform.position = new Vector3(vec2.x + (dstx * (nb_IO - 1f)) / 2f, vec2.y + dsty / 2, vec2.z);
     }
 
+    /// <summary>
+    /// Détruit la porte et les objets qui luis sont attaché.
+    /// </summary>
     public void Destroy()
     {
         foreach (Obj_Input inact in inputs)

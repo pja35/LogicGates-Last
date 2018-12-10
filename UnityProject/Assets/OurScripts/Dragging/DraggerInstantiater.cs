@@ -7,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class DraggerInstantiater : MonoBehaviour
 {
+    /// <summary>
+    /// La porte nouvellement crée
+    /// </summary>
     public GameObject cloned = null;
 
     /// <summary>
@@ -14,7 +17,7 @@ public class DraggerInstantiater : MonoBehaviour
     /// </summary>
     public void OnMouseDown()
     {
-        //Create a new object wich cant't multiply and will follow the cursor
+        //Crée un clone de l'ojet qui ne pourra pas se dupliquer et que l'on va dragger
         cloned = Instantiate(gameObject);
         cloned.transform.SetParent(gameObject.transform.parent);
         cloned.transform.localScale = gameObject.transform.localScale;
@@ -22,7 +25,7 @@ public class DraggerInstantiater : MonoBehaviour
 
         cloned.AddComponent<Dragger>();
 
-        //Emulate the OnMouseDown of dragger but with correct values for this specific case
+        //Emule le mouse down du drag mais avec un distance recalculée.
         cloned.GetComponent<Dragger>().mouseDown = true;
         cloned.GetComponent<Dragger>().initialObjMouseDistance = gameObject.transform.position
             - Camera.main.ScreenToWorldPoint(Input.mousePosition);

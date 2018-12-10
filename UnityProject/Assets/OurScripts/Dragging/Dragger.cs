@@ -7,11 +7,17 @@ using UnityEngine;
 /// </summary>
 public class Dragger : MonoBehaviour
 {
-    //Pour eviter que l'objet se positione juste en dessous de la souris.
+    /// <summary>
+    /// Pour eviter que l'objet se positione juste en dessous de la souris.
+    /// </summary>
     public Vector3 initialObjMouseDistance;
-    //! Booléen indiquant l'état de la souris
+    /// <summary>
+    ///  Booléen indiquant l'état de la souris
+    /// </summary>
     public bool mouseDown = false;
-    //! Ancre à laquel le dragger est attaché.
+    /// <summary>
+    /// Ancre à laquel le dragger est attaché.
+    /// </summary>
     private AnchorState anchorPoint = null;
 
 
@@ -48,6 +54,7 @@ public class Dragger : MonoBehaviour
     public void OnMouseDown()
     {
         mouseDown = true;
+        //Défixe tous les objets mouvants de l'objet cliqué
         Component[] fixables = (gameObject.GetComponents(typeof(Fixable)));
         foreach (Fixable f in fixables)
         {
@@ -71,18 +78,18 @@ public class Dragger : MonoBehaviour
     {
         mouseDown = false;
 
-        //Place the object on the nearest anchor
+        //Récupère l'ancre libre la plus proche.
         GameObject grid_holder = GameObject.Find("GridHolder");
         GridCreater grid = grid_holder.GetComponent<GridCreater>();
         AnchorState nearestAnchor = GridUtil.FindNearestFreeAnchor(grid.anchor_list, gameObject);
-        if (nearestAnchor == null){
+
+        if (nearestAnchor == null){ //Si on ne trouve pas d'ancre.
             Destroy(gameObject);
-        }else if (DestroyedOnBin(gameObject)) {
+        }else if (DestroyedOnBin(gameObject)) {//Si la porte etait au dessus de la pubelle
             return;
-        }else {
+        }else {//Prend l'ancre et place la porte dessus.
+            GridUtil.TakeAnchor(nearestAnchor, gameObject);
             anchorPoint = nearestAnchor;
-            anchorPoint.free = false;
-            gameObject.transform.position = nearestAnchor.GetPosition();
             Component[] fixables = (gameObject.GetComponents(typeof(Fixable)));
             foreach (Fixable f in fixables)
             {

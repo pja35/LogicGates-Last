@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -135,7 +133,7 @@ public class DrawUtil : MonoBehaviour
     ///  <returns>Le line renderer crée.</returns>
     public static LineRenderer DrawFil(GameObject start, GameObject end)
     {
-        //On recicle le line renderer.
+        //On recycle le line renderer.
         LineRenderer renderer = start.GetComponent<LineRenderer>();
         if (renderer == null)
         {

@@ -1,15 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
+/// <summary>
+/// Reproduit le comportement d'une porte Non Et
+/// </summary>
 public class NAND : Comportement
 {
-    //! Verifie que toutes les entrées ne sont pas vraies
+    /// <summary>
+    /// Verifie que toutes les entrées ne sont pas vraies
+    /// </summary>
+    /// <param name="inputs">Liste des entréees de la porte</param>
+    /// <returns>Retourne vrai si toutes les entrées sont ne sont pas à vrai</returns>
     public override bool execute(Obj_Input[] inputs)
     {
         int len = inputs.Length;
         bool result = true;
-        //Permet de vérifier si la porte est relier à au moins une autre porte.
+        //Permet de vérifier si la porte est reliée à au moins une autre porte.
         bool existingWiring = false;
         for (int i = 0; i < len; i++)
         {

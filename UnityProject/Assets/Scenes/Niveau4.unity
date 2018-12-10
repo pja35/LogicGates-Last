@@ -555,12 +555,12 @@ Prefab:
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
@@ -596,12 +596,7 @@ Prefab:
         type: 2}
       propertyPath: initialConnection
       value: 
-      objectReference: {fileID: 487180241}
-    - target: {fileID: 58096247566858274, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_Radius
-      value: 20
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1118404916}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
   m_IsPrefabAsset: 0
@@ -989,12 +984,12 @@ Prefab:
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
@@ -1030,31 +1025,11 @@ Prefab:
       propertyPath: m_Name
       value: Switch (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000355
-      objectReference: {fileID: 0}
     - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: initialConnection
       value: 
-      objectReference: {fileID: 1707883705}
-    - target: {fileID: 58096247566858274, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_Radius
-      value: 20
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1119757041}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
   m_IsPrefabAsset: 0
@@ -1134,21 +1109,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14306435fa54fee429f7d2d3504d313c, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &487180241 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
-    type: 2}
-  m_PrefabInternal: {fileID: 398329780}
 --- !u!224 &487180242 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
     type: 2}
   m_PrefabInternal: {fileID: 398329780}
---- !u!1 &535198244 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
-    type: 2}
-  m_PrefabInternal: {fileID: 942593129}
 --- !u!224 &535198245 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
@@ -1683,6 +1648,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224720179072440666, guid: 439333198cf7241489e95510380c1f3f,
     type: 2}
   m_PrefabInternal: {fileID: 1019352234}
+--- !u!1 &1118404916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
+    type: 2}
+  m_PrefabInternal: {fileID: 398329780}
+--- !u!1 &1119757041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
+    type: 2}
+  m_PrefabInternal: {fileID: 835866441}
+--- !u!1 &1126989453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
+    type: 2}
+  m_PrefabInternal: {fileID: 942593129}
 --- !u!1001 &1131952981
 Prefab:
   m_ObjectHideFlags: 0
@@ -1743,12 +1723,12 @@ Prefab:
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
@@ -1788,12 +1768,7 @@ Prefab:
         type: 2}
       propertyPath: initialConnection
       value: 
-      objectReference: {fileID: 535198244}
-    - target: {fileID: 58096247566858274, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_Radius
-      value: 20
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1126989453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}
   m_IsPrefabAsset: 0
@@ -2515,11 +2490,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224129260511979118, guid: c55c1717ec8ab1f45ab895a30f5cefc1,
     type: 2}
   m_PrefabInternal: {fileID: 276729859}
---- !u!1 &1707883705 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1364184341205212, guid: 86f0ab0411ddc2641b619fa240827919,
-    type: 2}
-  m_PrefabInternal: {fileID: 835866441}
 --- !u!224 &1707883706 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922624734732368, guid: 86f0ab0411ddc2641b619fa240827919,
@@ -2585,12 +2555,12 @@ Prefab:
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
@@ -2626,35 +2596,15 @@ Prefab:
       propertyPath: m_Name
       value: Switch (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.0000355
-      objectReference: {fileID: 0}
-    - target: {fileID: 224958393499415026, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000355
-      objectReference: {fileID: 0}
     - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: initialConnection
       value: 
-      objectReference: {fileID: 1707883705}
+      objectReference: {fileID: 1119757041}
     - target: {fileID: 114266388924018116, guid: b70680e832683e14f9ac5440fa6dac77,
         type: 2}
       propertyPath: inputNumber
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 58096247566858274, guid: b70680e832683e14f9ac5440fa6dac77,
-        type: 2}
-      propertyPath: m_Radius
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70680e832683e14f9ac5440fa6dac77, type: 2}

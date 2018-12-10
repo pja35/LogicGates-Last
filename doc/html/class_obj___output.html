@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LogicGate
-   &#160;<span id="projectnumber">0.2</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">LogicGate est un projet ayant pour but d&#39;initier les enfants aux portes logiques.</div>
   </td>
@@ -81,13 +81,14 @@ Graphe d'héritage de Obj_Output:</div>
  <div class="center">
   <img src="class_obj___output.png" usemap="#Obj_5FOutput_map" alt=""/>
   <map id="Obj_5FOutput_map" name="Obj_5FOutput_map">
-<area href="interface_notifiable.html" alt="Notifiable" shape="rect" coords="112,0,214,24"/>
+<area href="interface_notifiable.html" title="Utilisé pour notifier les objets du jeu d&#39;un changement d&#39;état dans le circuit. " alt="Notifiable" shape="rect" coords="112,0,214,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:aeda4f829f462c41ba100829f75b18a98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___output.html#aeda4f829f462c41ba100829f75b18a98">notify</a> ()</td></tr>
+<tr class="memdesc:aeda4f829f462c41ba100829f75b18a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Préviens le fil d'une connection.  <a href="#aeda4f829f462c41ba100829f75b18a98">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aeda4f829f462c41ba100829f75b18a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0adf4332dd4ee47ff44ead5c0fe1ea0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___output.html#a0adf4332dd4ee47ff44ead5c0fe1ea0d">Disconnect</a> ()</td></tr>
 <tr class="memdesc:a0adf4332dd4ee47ff44ead5c0fe1ea0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprimer la connection de l'output.  <a href="#a0adf4332dd4ee47ff44ead5c0fe1ea0d">Plus de détails...</a><br /></td></tr>
@@ -113,16 +114,19 @@ Fonctions membres publiques statiques</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:ac30ba2bc8e766badf81524287dbda595"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___output.html#ac30ba2bc8e766badf81524287dbda595">disconectable</a></td></tr>
+<tr class="memdesc:ac30ba2bc8e766badf81524287dbda595"><td class="mdescLeft">&#160;</td><td class="mdescRight">ed. Si le cable peut être détruit ou non. (Utilisé pour les connections initiales des portes dévellopeurs.)  <a href="#ac30ba2bc8e766badf81524287dbda595">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac30ba2bc8e766badf81524287dbda595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accbc14dcaf6c8b0344a0c3f93d3efc7a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___output.html#accbc14dcaf6c8b0344a0c3f93d3efc7a">value</a></td></tr>
+<tr class="memdesc:accbc14dcaf6c8b0344a0c3f93d3efc7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">La valeur de l'output.  <a href="#accbc14dcaf6c8b0344a0c3f93d3efc7a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:accbc14dcaf6c8b0344a0c3f93d3efc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8a92df4f728d3100cab368e72fd876f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fils.html">Fils</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj___output.html#aa8a92df4f728d3100cab368e72fd876f">connection</a></td></tr>
+<tr class="memdesc:aa8a92df4f728d3100cab368e72fd876f"><td class="mdescLeft">&#160;</td><td class="mdescRight">La connection avec un input si elle existe.  <a href="#aa8a92df4f728d3100cab368e72fd876f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa8a92df4f728d3100cab368e72fd876f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Pour gerer l'objet comme un Output pouvant se connecter à un Input valide. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00008">8</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00007">7</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="abb90de82f7c8e8dbf43708a38443e781"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb90de82f7c8e8dbf43708a38443e781">&#9670;&nbsp;</a></span>createOutput() <span class="overload">[1/2]</span></h2>
@@ -158,9 +162,9 @@ Attributs publics</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00027">27</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00038">38</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00080">Gate.createIOGate()</a>, et <a class="el" href="_switch_changer_8cs_source.html#l00028">SwitchChanger.Instantiate()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00068">Gate.createIOGate()</a>, et <a class="el" href="_switch_changer_8cs_source.html#l00046">SwitchChanger.Instantiate()</a>.</p>
 
 </div>
 </div>
@@ -215,7 +219,7 @@ Attributs publics</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>L'output crée.</dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00039">39</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00050">50</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
 
 </div>
 </div>
@@ -236,9 +240,9 @@ Attributs publics</h2></td></tr>
 
 <p>Déconnect l'output et le détruit</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00245">245</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00259">259</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00139">Gate.Destroy()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00130">Gate.Destroy()</a>.</p>
 
 </div>
 </div>
@@ -260,9 +264,9 @@ Attributs publics</h2></td></tr>
 <p>Supprimer la connection de l'output. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Vrai si une connection as été supprimée.</dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00126">126</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00140">140</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00245">DestroyOut()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00259">DestroyOut()</a>.</p>
 
 </div>
 </div>
@@ -290,9 +294,9 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00181">181</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00195">195</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00082">TryToConnect()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00093">TryToConnect()</a>.</p>
 
 </div>
 </div>
@@ -311,11 +315,13 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Préviens le fil d'une connection. </p>
+
 <p>Implémente <a class="el" href="interface_notifiable.html#a96b1feb3c4b642f7762a94fad9ac62a7">Notifiable</a>.</p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00114">114</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00128">128</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00023">Gate.notify()</a>, et <a class="el" href="_switch_changer_8cs_source.html#l00070">SwitchChanger.OnMouseUp()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00023">Gate.notify()</a>, et <a class="el" href="_switch_changer_8cs_source.html#l00094">SwitchChanger.OnMouseUp()</a>.</p>
 
 </div>
 </div>
@@ -369,9 +375,9 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00082">82</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00093">93</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="_admin_script_8cs_source.html#l00040">AdminScript.MakeInitialConnections()</a>, et <a class="el" href="_switch_changer_8cs_source.html#l00044">SwitchChanger.MakeInitialConnections()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="_admin_script_8cs_source.html#l00038">AdminScript.MakeInitialConnections()</a>, et <a class="el" href="_switch_changer_8cs_source.html#l00065">SwitchChanger.MakeInitialConnections()</a>.</p>
 
 </div>
 </div>
@@ -388,9 +394,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00016">16</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p>La connection avec un input si elle existe. </p>
 
-<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00126">Disconnect()</a>, <a class="el" href="_obj___output_8cs_source.html#l00181">MakeInitialConnection()</a>, <a class="el" href="_obj___output_8cs_source.html#l00114">notify()</a>, et <a class="el" href="_obj___output_8cs_source.html#l00082">TryToConnect()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00021">21</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00140">Disconnect()</a>, <a class="el" href="_obj___output_8cs_source.html#l00195">MakeInitialConnection()</a>, <a class="el" href="_obj___output_8cs_source.html#l00128">notify()</a>, et <a class="el" href="_obj___output_8cs_source.html#l00093">TryToConnect()</a>.</p>
 
 </div>
 </div>
@@ -406,9 +414,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00011">11</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p>ed. Si le cable peut être détruit ou non. (Utilisé pour les connections initiales des portes dévellopeurs.) </p>
 
-<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00039">createOutput()</a>, <a class="el" href="_obj___output_8cs_source.html#l00126">Disconnect()</a>, et <a class="el" href="_admin_script_8cs_source.html#l00040">AdminScript.MakeInitialConnections()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00012">12</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_obj___output_8cs_source.html#l00050">createOutput()</a>, <a class="el" href="_obj___output_8cs_source.html#l00140">Disconnect()</a>, et <a class="el" href="_admin_script_8cs_source.html#l00038">AdminScript.MakeInitialConnections()</a>.</p>
 
 </div>
 </div>
@@ -424,9 +434,11 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00014">14</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+<p>La valeur de l'output. </p>
 
-<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00023">Gate.notify()</a>, et <a class="el" href="_switch_changer_8cs_source.html#l00070">SwitchChanger.OnMouseUp()</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_obj___output_8cs_source.html#l00017">17</a> du fichier <a class="el" href="_obj___output_8cs_source.html">Obj_Output.cs</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="_gate_8cs_source.html#l00023">Gate.notify()</a>, et <a class="el" href="_switch_changer_8cs_source.html#l00094">SwitchChanger.OnMouseUp()</a>.</p>
 
 </div>
 </div>
