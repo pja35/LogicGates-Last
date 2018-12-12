@@ -25,3 +25,6 @@ Pour installer le jeu il suffit de télécharger:
 
 ## Editer le jeu
 Pour pouvoir modifier le jeu avec Unity il faut télécharger le dossier LogicGateDev et ouvrir celui-ci comme un nouveau projet Unity.
+
+## Documentation
+Un manuel est disponible dans le wiki et la documentation sous format doxygen est disponible dans le dossier doc (le plus simple est de le telecharger et d'ouvrir ses fichiers avec votre navigateur).
