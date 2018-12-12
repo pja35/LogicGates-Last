@@ -24,7 +24,7 @@ Pour installer le jeu il suffit de télécharger:
 * Pour PC: Il faut télécharger le fichier contenu dans le dossier LogicGatePC il contient un exécutable qu'il suffit de lancer pour démarrer le jeu. (Version non réalisée un portage sera nécsessaire.)
 
 ## Editer le jeu
-Pour pouvoir modifier le jeu avec Unity il faut télécharger le dossier LogicGateDev et ouvrir celui-ci comme un nouveau projet Unity.
+Pour pouvoir modifier le jeu avec Unity il faut télécharger le dossier UnityProject et ouvrir celui-ci comme un nouveau projet Unity.
 
 ## Documentation
 Un manuel est disponible dans le wiki et la documentation sous format doxygen est disponible dans le dossier doc (le plus simple est de le telecharger et d'ouvrir ses fichiers avec votre navigateur).
