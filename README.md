@@ -15,7 +15,7 @@ Tout retour ou avis sur notre projet est le bienvenu.
 
 ## L'interface:
 
-![512x397](./Screenshot/menu.png )
+![5x5](./Screenshot/menu.png )
 ![](./Screenshot/jeu.png)
 ![](./Screenshot/options.png)
    
