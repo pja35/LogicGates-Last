@@ -15,7 +15,7 @@ Tout retour ou avis sur notre projet est le bienvenu.
 
 ## L'interface:
 
-![5x5](./Screenshot/menu.png )
+![fat-city-apple-ii|60x40](./Screenshot/menu.png )
 ![](./Screenshot/jeu.png)
 ![](./Screenshot/options.png)
    
