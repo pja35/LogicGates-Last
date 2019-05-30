@@ -14,8 +14,8 @@ Tout retour ou avis sur notre projet est le bienvenu.
 * Mokadader Nouman
 
 ## L'interface:
-
-![fat-city-apple-ii|60x40](./Screenshot/menu.png )
+<img src="./Screenshot/menu.png" width="200" height="400" />
+![](./Screenshot/menu.png )
 ![](./Screenshot/jeu.png)
 ![](./Screenshot/options.png)
    
