@@ -16,8 +16,8 @@ Tout retour ou avis sur notre projet est le bienvenu.
 ## L'interface:
 
 ![](./Screenshot/menu.png)
-![](./Screenshot/jeu.PNG)
-![](./Screenshot/options.PNG)
+![](./Screenshot/jeu.png)
+![](./Screenshot/options.png)
    
 ## Installer le jeu
 Pour installer le jeu il suffit de télécharger:
