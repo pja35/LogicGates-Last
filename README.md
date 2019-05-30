@@ -14,9 +14,7 @@ Tout retour ou avis sur notre projet est le bienvenu.
 * Mokadader Nouman
 
 ## L'interface:
-<img src="./Screenshot/menu.png" width="200" height="400" />
-<img src="./Screenshot/jeu.png" width="200" height="400" />
-<img src="./Screenshot/options.png" width="200" height="400" />
+<img src="./Screenshot/menu.png" width="250" height="500" /><img src="./Screenshot/jeu.png" width="250" height="500" /><img src="./Screenshot/options.png" width="250" height="500" />
    
 ## Installer le jeu
 Pour installer le jeu il suffit de télécharger:
