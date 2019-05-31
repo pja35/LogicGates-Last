@@ -25,4 +25,4 @@ Pour installer le jeu il suffit de télécharger:
 Pour pouvoir modifier le jeu avec Unity il faut télécharger le dossier UnityProject et ouvrir celui-ci comme un nouveau projet Unity.
 
 ## Documentation
-Un manuel est disponible dans le wiki et la documentation sous format doxygen est disponible dans le dossier doc (le plus simple est de le telecharger et d'ouvrir ses fichiers avec votre navigateur).
+Un manuel est disponible dans le wiki (https://github.com/pja35/LogicGate3/wiki) et la documentation sous format doxygen est disponible dans le dossier doc (le plus simple est de le telecharger et d'ouvrir ses fichiers avec votre navigateur).
