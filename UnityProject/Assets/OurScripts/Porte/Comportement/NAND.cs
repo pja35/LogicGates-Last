@@ -9,7 +9,7 @@ public class NAND : Comportement
     /// </summary>
     /// <param name="inputs">Liste des entréees de la porte</param>
     /// <returns>Retourne vrai si toutes les entrées sont ne sont pas à vrai</returns>
-    public override bool execute(Obj_Input[] inputs)
+    public override bool CalculateOut(Obj_Input[] inputs)
     {
         int len = inputs.Length;
         bool result = true;

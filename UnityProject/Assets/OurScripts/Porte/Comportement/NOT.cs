@@ -8,7 +8,7 @@ public class NOT : Comportement
     /// </summary>
     /// <param name="inputs">Liste des entréees de la porte</param>
     /// <returns>Retourne l'inverse de la valeur de la première entrée connectée</returns>
-    public override bool execute(Obj_Input[] inputs)
+    public override bool CalculateOut(Obj_Input[] inputs)
     {
         if (inputs[0] == null) { return false; }
         return !inputs[0].value;

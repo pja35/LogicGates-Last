@@ -1,83 +1,73 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+
 /// <summary>
-/// Détaille les informations sur une ancre.
+/// Un ensemble de fonction pour faciliter l'utilisation de la grille d'ancres
 /// </summary>
-public class AnchorState
-{
-    //! Si l'ancre est libre ou non.
-    public bool free;
-    //! Position de l'ancre
-    private Vector3 position;
-    //! Position de l'ancre dans la matrice d'ancres
-    private Vector2 grid_pos;
-
-    /// <summary>
-    /// Crée une ancre
-    /// </summary>
-    /// <param name="position">La position absolue de l'ancre.</param>
-    /// <param name="grid_pos">La position de l'ancre dans la grille.</param>
-    public AnchorState(Vector3 position, Vector2 grid_pos, bool free)
-    {
-        this.position = position;
-        this.grid_pos = grid_pos;
-        this.free = free;
-    }
-
-    public Vector3 GetPosition()
-    {
-        return position;
-    }
-
-    public Vector2 GetGridPos()
-    {
-        return grid_pos;
-    }
-}
-
 public class GridUtil : MonoBehaviour
 {
 
-
     /// <summary>
-    /// Trouve l'ancre libre la plus proche de to_move.
+    /// Prend l'ancre la plus proche de l'objet qe celle-ci soit libre ou non.
     /// </summary>
-    /// <param name="anchorList">La liste des ancres.</param>
-    /// <param name="toMove">L'objet donnant la distance.</param>
-    /// <returns>L'ancre libre la plus proche. Ou null si aucune n'est libre.</returns>
-    public static AnchorState FindNearestFreeAnchor(List<AnchorState> anchorList, GameObject toMove)
+    /// <param name="taker">L'objet prenant une ancre.</param>
+    /// <returns>L'ancre prise.</returns>
+    public static IAnchor TakeNearestAnchor(GameObject taker)
     {
-
-        Vector3 toMovePos = toMove.transform.position;
-        //On initialise avec le premier element pour facilier le calcul.
-        AnchorState nearest = anchorList[0];
-        float distance = float.MaxValue;
-
-        foreach (AnchorState act in anchorList)
-        {
-            float dist_act = Vector3.Distance(act.GetPosition(), toMovePos);
-            if (dist_act < distance && act.free)
-            {
-                distance = dist_act;
-                nearest = act;
-            }
-        }
-        //si aucune ancre libre n'as été trouvée.
-        return (nearest.free) ? nearest : null;
+        IAnchor choosen = GridUtil.FindNearestAnchor(taker);
+        choosen.TakeAnchor(taker);
+        return choosen;
     }
-	
 
-	
     /// <summary>
-    /// Récupère la liste des ancres du de GridHolder et trouve la plus proche de toMove.
+    /// Récupère la liste des ancres du de GridHolder et trouve la plus proche de from.
     /// </summary>
-    /// <param name="toMove">L'objet donnant la distance.</param>
+    /// <param name="from">L'objet donnant la distance.</param>
     /// <returns>L'ancre la plus proche.</returns>
-    public static AnchorState FindNearsetAnchor(GameObject toMove)
+    public static IAnchor FindNearestAnchor(GameObject from)
     {
-        List<AnchorState> anchors = GameObject.Find("GridHolder").GetComponent<GridCreater>().anchor_list;
-        return FindNearesttAnchor(anchors, toMove);
+        return FindNearestAnchor(from.transform.position);
+    }
+
+    /// <summary>
+    /// Récupère la liste des ancres du de GridHolder et trouve la plus proche de from.
+    /// </summary>
+    /// <param name="from">L'objet donnant la distance.</param>
+    /// <returns>L'ancre la plus proche.</returns>
+    public static IAnchor FindNearestAnchor(Vector3 from)
+    {
+        IAnchor nearestFromMat = NearestAnchorOfAnchorMat(from);
+        float distanceForMat = Vector3.Distance(nearestFromMat.GetPosition(), from);
+
+        List<IAnchor> additionalAnchors = GameObject.Find("GridHolder").GetComponent<GridCreater>().GetAdditionalAnchors();
+        if(additionalAnchors.Count != 0)
+        {
+            IAnchor nearestFromAdditional = FindNearestAnchor(additionalAnchors, from);
+            float distanceForAdditional = Vector3.Distance(nearestFromAdditional.GetPosition(), from);  
+            return (distanceForAdditional < distanceForMat) ? nearestFromAdditional : nearestFromMat;
+
+        } else
+        {
+            return nearestFromMat;
+        }
+
+    }
+
+    /// <summary>
+    /// Trouve l'ancre la plus proche que l'objet peut prendre
+    /// </summary>
+    /// <param name="from">L'objet à placer (doit avoir un comportement de porte attaché)</param>
+    /// <returns></returns>
+    public static IAnchor FindNearestPlacableAnchor(GameObject from)
+    {
+        GridCreater grid = GameObject.Find("GridHolder").GetComponent<GridCreater>();
+        // On donne la priorité aux ancres additionelles
+        if (! grid.anchorsCanBeTaken)
+        {
+            return FindNearestAnchor(grid.GetAdditionalAnchors(), from.transform.position);
+        }
+        else return FindNearestAnchor(from.transform.position);
     }
 
 
@@ -85,49 +75,162 @@ public class GridUtil : MonoBehaviour
     /// Trouve l'ancre la plus proche de to_move.
     /// </summary>
     /// <param name="anchor_list">La liste des ancres.</param>
-    /// <param name="to_move">L'objet donnant la distance.</param>
+    /// <param name="from">L'objet donnant la distance.</param>
     /// <returns>L'ancre prise.</returns>
-    public static AnchorState FindNearesttAnchor(List<AnchorState> anchor_list, GameObject to_move)
+    public static IAnchor FindNearestAnchor(List<IAnchor> anchor_list, Vector3 from)
     {
-        Vector3 to_move_pos = to_move.transform.position;
-        AnchorState nearest = anchor_list[0];
-        float distance = -1;
+        IAnchor nearest = anchor_list[0];
+        float distanceTo = -1;
 
-        foreach (AnchorState act in anchor_list)
+        foreach (IAnchor AnchorAct in anchor_list)
         {
-            float dist_act = Vector3.Distance(act.GetPosition(), to_move_pos);
-            if (dist_act < distance || distance == -1)
+            float distAct = Vector3.Distance(AnchorAct.GetPosition(), from);
+            if (distAct < distanceTo || distanceTo == -1)
             {
-                distance = dist_act;
-                nearest = act;
+                distanceTo = distAct;
+                nearest = AnchorAct;
             }
         }
 
         return nearest;
     }
 
-    /// <summary>
-    ///Prend une ancre et place le preneur dessus.
-    /// Cette fonction doit être utilisée avec des objets inamovibles.
-    /// </summary>
-    /// <param name="anchor">L'ancre à prendre.</param>
-    /// <param name="taker">L'objet prenant l'ancre.</param>
-    public static void TakeAnchor(AnchorState anchor, GameObject taker)
+
+
+    private static int GetNearestXCoordinate(Vector3 from, IAnchor[,] anchorMat)
     {
-        anchor.free = false;
-        taker.transform.position = anchor.GetPosition();
+        int nearestAnchorXcoord = 0;
+        float bestDistance = Vector3.Distance(from, anchorMat[0, 0].GetPosition());
+
+        for (int i = 0; i < anchorMat.GetLength(0); i++)
+        {
+            float actualDistance = Vector3.Distance(from, anchorMat[i, 0].GetPosition());
+            if (actualDistance < bestDistance)
+            {
+                nearestAnchorXcoord = i;
+                bestDistance = actualDistance;
+            }
+        }
+        return nearestAnchorXcoord;
+    }
+
+    private static int GetNearestYCoordinate(Vector3 from, IAnchor[,] anchorMat)
+    {
+        int nearestAnchorYcoord = 0;
+        float bestDistance = Vector3.Distance(from, anchorMat[0, 0].GetPosition());
+
+        for (int i = 0; i < anchorMat.GetLength(1); i++)
+        {
+            float actualDistance = Vector3.Distance(from, anchorMat[0, i].GetPosition());
+            if (actualDistance < bestDistance)
+            {
+                nearestAnchorYcoord = i;
+                bestDistance = actualDistance;
+            }
+        }
+        return nearestAnchorYcoord;
     }
 
     /// <summary>
-    /// Prend l'ancre la plus proche de l'objet qe celle-ci soit libre ou non.
+    /// Renvoi l'ancre la plus proche parmis une matrice d'ancres
     /// </summary>
-    /// <param name="taker">L'objet prenant une ancre.</param>
-    /// <returns>L'ancre prise.</returns>
-   public static AnchorState TakeNearestAnchor(GameObject taker)
+    /// <param name="from">L'objet de référence poiur la distance</param>
+    /// <param name="anchorMat">La matrice des ancres</param>
+    /// <returns>L'ancre la plus proche</returns>
+    public static IAnchor NearestAnchorOfAnchorMat(Vector3 from, IAnchor[,] anchorMat)
     {
-        AnchorState choosen = GridUtil.FindNearsetAnchor(taker);
-        GridUtil.TakeAnchor(choosen, taker);
-        return choosen;
+        int xCoordinate = GetNearestXCoordinate(from, anchorMat);
+        int yCoordiante = GetNearestYCoordinate(from, anchorMat);
+
+        return anchorMat[xCoordinate, yCoordiante];
     }
-    
+
+    /// <summary>
+    /// Retourne l'ancre la plus proche parmis celles de la grille
+    /// </summary>
+    /// <param name="from">L'objet de référence poiur la distance</param>
+    /// <returns>L'ancre la plus proche</returns>
+    public static IAnchor NearestAnchorOfAnchorMat(Vector3 from)
+    {
+       IAnchor[,] anchors = GameObject.Find("GridHolder").GetComponent<GridCreater>().GetMatAnchor();
+       return NearestAnchorOfAnchorMat(from, anchors);
+    }
+
+    private static bool CheckCollision(IAnchor anchor, Gate gate)
+    {
+        IAnchor[,] anchorsMat = GameObject.Find("GridHolder").GetComponent<GridCreater>().GetMatAnchor();
+        Vector2 matPosition = anchor.GetGridPos();
+        int sizeX = gate.GetAnchorsX() / 2;
+        int sizeY = (gate.GetAnchorsY() + gate.GetSpaceForIO())  / 2;
+        for (int i = (int)matPosition.x - sizeX; i <= matPosition.x + sizeX; i++)
+        {
+            for (int j = (int)matPosition.y - sizeY;  j <= matPosition.y + sizeY; j++)
+            {
+                if (!anchorsMat[i, j].IsWireFree())
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private static bool CheckCollisionWire(IAnchor anchor, Gate gate)
+    {
+        IAnchor[,] anchorsMat = GameObject.Find("GridHolder").GetComponent<GridCreater>().GetMatAnchor();
+        Vector2 matPosition = anchor.GetGridPos();
+        int sizeX = gate.GetAnchorsX() / 2;
+        int sizeY = (gate.GetAnchorsY() + gate.GetSpaceForIO())  / 2;
+        for (int i = (int)matPosition.x - sizeX; i <= matPosition.x + sizeX; i++)
+        {
+            for (int j = (int)matPosition.y - sizeY+1;  j <= matPosition.y + sizeY -1; j++)
+            {
+                if (!anchorsMat[i, j].IsFree())
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Est ce que l'objet entre en collision avec un autre objet si il prend l'ancre donnée
+    /// </summary>
+    /// <param name="anchor">L'ancre à prendre</param>
+    /// <param name="gate">La porte permettant de récuperer la taille de l'objet</param>
+    public static bool IsColliding(IAnchor anchor,Gate gate)
+    {
+        if (anchor.HandleCollisions())
+        {
+            if(CheckCollision(anchor, gate)||CheckCollisionWire(anchor,gate))
+                return true;
+            else{
+                return false;
+            }
+                
+        } else
+        {
+            return !anchor.IsWireFree();
+        }
+            
+    }
+
+    /// <summary>
+    /// Détécte si l'objet sort de la grille si il prend une ancre
+    /// </summary>
+    /// <param name="anchor">L'ancre à prendre</param>
+    /// <param name="gate">La porte permettant de récuperer la taille de l'objet</param>
+    public static bool IsOutOfBound(IAnchor anchor,Gate gate)
+    {
+        IAnchor[,] anchorsMat = GameObject.Find("GridHolder").GetComponent<GridCreater>().GetMatAnchor();
+        Vector2 matPosition = anchor.GetGridPos();
+        int sizeX = gate.GetAnchorsX() / 2;
+        int sizeY = (gate.GetAnchorsY() + gate.GetSpaceForIO()) / 2;
+        return (matPosition.x - sizeX < 0 ||
+                matPosition.y - sizeY < 0 ||
+                matPosition.x + sizeX >= anchorsMat.GetLength(0) ||
+                matPosition.y + sizeY >= anchorsMat.GetLength(1));
+    }
+
 }

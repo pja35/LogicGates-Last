@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum Platform { PC, PHONE }
 
@@ -50,7 +47,28 @@ public class ParametersLoader : MonoBehaviour
     /// Renvoi le nombre de niveaux du jeu.
     /// </summary>
     /// <returns>Le nombre de niveaux du jeu.</returns>
-    public static int GetNbLevels() { return parameters.getNbLevels(); }
+    public static int GetNbLevels() { return parameters.GetNbLevels(); }
+
+    /// <summary>
+    /// Renvoi une couleur en fonction des paramètres enregistrés
+    /// </summary>
+    /// <returns></returns>
+    public static Color GetColor() {
+        if(parameters == null)
+        {
+            return new Color(0.009f, 0.724f, 1f);
+        }
+        return new Color(parameters.r, parameters.g, parameters.b);
+    }
+
+    /// <summary>
+    /// Sauvegarde une couleur (utilisé pour les portes)
+    /// </summary>
+    public static void SetColor(Color color) {
+        parameters.r = color.r;
+        parameters.g = color.g;
+        parameters.b = color.b;
+    }
 
     /// <summary>
     /// Renvoi le nombre de niveaux débloqués.
@@ -58,7 +76,7 @@ public class ParametersLoader : MonoBehaviour
     /// <returns>Le nombre de niveaux débloqués.</returns>
     public static int GetUnlockedLevels()
     {
-        return parameters.getUnlockedLevels();
+        return parameters.GetUnlockedLevels();
     }
 
     /// <summary>
@@ -67,7 +85,7 @@ public class ParametersLoader : MonoBehaviour
     public static void UnlockLevel()
     {
         parameters.UnlockLevel();
-        parameters.saveParameters();
+        parameters.SaveParameters();
     }
 
     /// <summary>
@@ -75,8 +93,8 @@ public class ParametersLoader : MonoBehaviour
     /// </summary>
     public static void LockLevel()
     {
-        parameters.lockLevel();
-        parameters.saveParameters();
+        parameters.LockLevel();
+        parameters.SaveParameters();
     }
 
     /// <summary>
@@ -84,7 +102,7 @@ public class ParametersLoader : MonoBehaviour
     /// </summary>
     public static void SaveParameters()
     {
-        parameters.saveParameters();
+        parameters.SaveParameters();
     }
 
 
@@ -104,14 +122,20 @@ public class ParametersLoader : MonoBehaviour
         return Platform.PC;
     }
 
+    /// <summary>Renvoie l'etat du tutoriel.</summary>
+    /// <returns>l'etat du tutoriel.</returns>
+    public static bool GetTuto() { return parameters.tuto; }
     /// <summary>
-    /// Pour connaitre le niveau suivant par rapport au niveau actuel.
+    /// Inverse l'etat du tutoriel.
     /// </summary>
-    /// <returns>Le nom du niveau suivant.</returns>
-    public static string getNextLevelName(string currentSceneName)
-    {
-        double num = Char.GetNumericValue(currentSceneName, currentSceneName.Length - 1) + 1;
-        string next = "Niveau" + num;
-        return next;
-    }
+    public static void SetTuto() { parameters.tuto = !parameters.tuto; }
+
+    /// <summary>Renvoie le nombre d'interrupteur et de lampe dans le BAS.</summary>
+    /// <returns>le nombre d'interrupteur et de lampe dans le BAS.</returns>
+    public static int GetBASSize() { return parameters.BASSize; }
+    /// <summary>
+    /// Assigne un nouveau nombre d'interrupteur et de lampe dans le BAS.
+    /// </summary>
+    public static void SetBASSize(int size) { parameters.BASSize = size; }
+
 }

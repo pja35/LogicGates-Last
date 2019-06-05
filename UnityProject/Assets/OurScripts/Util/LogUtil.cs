@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Gère l'affichage des messages d'erreur
+/// </summary>
 public class LogUtil : MonoBehaviour {
 
     /// <summary>

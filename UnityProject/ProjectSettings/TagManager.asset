@@ -13,6 +13,7 @@ TagManager:
   - Lamp
   - DevPlaced
   - PopUp
+  - tuto
   layers:
   - Default
   - TransparentFX
@@ -55,4 +56,7 @@ TagManager:
     locked: 0
   - name: Layer2
     uniqueID: 783207641
+    locked: 0
+  - name: popup
+    uniqueID: 2824954141
     locked: 0

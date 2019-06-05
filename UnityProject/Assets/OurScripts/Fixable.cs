@@ -2,7 +2,7 @@
 /// <summary>
 /// Permet de gerer les objets fixable sur la grille pas l'utilisateur comme les portes.
 /// </summary>
-public interface Fixable {
+public interface IFixable {
     /// <summary>
     /// Quand l'objet est attaché.
     /// </summary>

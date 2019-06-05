@@ -8,7 +8,7 @@ public class ID : Comportement
     /// </summary>
     /// <param name="inputs">Liste des entrées de la porte</param>
     /// <returns>Retourne vrai si la première entrée est vraie</returns>
-    public override bool execute(Obj_Input[] inputs)
+    public override bool CalculateOut(Obj_Input[] inputs)
     {
         return inputs[0].value;
     }

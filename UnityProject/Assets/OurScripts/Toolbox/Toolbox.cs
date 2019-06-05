@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
 
-
+/// <summary>
+/// Gère la barre en bas du jeu permetant de placer de nouvelles portes
+/// </summary>
 public class Toolbox : MonoBehaviour
 {
     /// <summary>
@@ -24,60 +24,55 @@ public class Toolbox : MonoBehaviour
     /// </summary>
     public List<int> gateNbOutputs;
 	
-	
-    public void Start()
-    {
+    /// <summary>
+    /// Actualise la couleur des portes en jeu et des portes de la toolbox
+    /// </summary>
+    public  void RefreshGatesColor()
+        {
+            foreach( Gate gateAct in transform.GetComponentsInChildren<Gate>())
+            {
+            gateAct.RefreshColor();
+            }
 
+            foreach (GateInstantiater gateAct in transform.GetComponentsInChildren<GateInstantiater>())
+            {
+                gateAct.RefreshGatesColor();
+            }
+    }
+	
+    //instancie les portes de la toolbox
+    private void Start()
+    {
         List<GameObject> gates = new List<GameObject>();
 		
-        //Obligé pour pouvoir faire des modification depuis Unity (Violation de OCP).
         for (int i = 0; i < gateType.Capacity; i++)
-        {
-            Comportement gateComportement;
-            switch (gateType[i])
-            {
-                case "&":
-                    gateComportement = new ADD();
-                    break;
-                case "|":
-                    gateComportement = new OR();
-                    break;
-                case "!":
-                    gateComportement = new NOT();
-                    break;
-                case "ID":
-                    gateComportement = new ID();
-                    break;
-                case "XOR":
-                    gateComportement = new XOR();
-                    break;
-                case "NAND":
-                    gateComportement = new NAND();
-                    break;
-                case "NOR":
-                    gateComportement = new NOR();
-                    break;
-                default:
-                    Debug.LogError("Initalising toolbox gate with and invalid symbol please refer to toolbox script for available symbols.");
-                    return;
-            }
-            gates.Add(GateInstantiater.CACGameObject(
-                gateNbInputs[i], gateNbOutputs[i], gateComportement, gateType[i]));
+        {   
+            gates.Add(GateInstantiater.CreateToolboxGate(
+                gateNbInputs[i], gateNbOutputs[i], gateType[i], gateType[i]));
         }
 
         for (int i = 0; i < gates.Count; i++)
         {
-            //Attache la portes à la toolbox, rajoute un numéro au nom de l'objet et la place dans le sprite de la toolbox
-            gates[i].transform.SetParent(this.transform);
-            gates[i].name += i;
-            float X = (gates.Count > 1) ? (i) * (0.8f / (gates.Count - 1)) - 0.4f : 0;
-            Vector3 a = new Vector3(X, 0, -99);
-            gates[i].transform.localPosition = a;
+            PlaceToolboxDoor(gates, i);
+            RescaleToolboxDoor(gates, i);
 
-            //Ajuste la taille de la porte et change son materiel.
-            Vector3 gLoc = gates[i].transform.localScale;
-            gates[i].transform.localScale = new Vector3(gLoc.x * 7.5f, gLoc.y * 7.5f, 1f);
+            gates[i].name += i;
+            material.color = ParametersLoader.GetColor();
             gates[i].GetComponent<Renderer>().material = material;
         }
+    }
+
+    private void PlaceToolboxDoor(List<GameObject> gates, int gateNumber)
+    {
+        gates[gateNumber].transform.SetParent(this.transform);
+        float Xposition = (gates.Count > 1) ? (gateNumber) * (0.8f / (gates.Count - 1)) - 0.4f : 0;
+        Vector3 gatePosition = new Vector3(Xposition, 0, -99);
+        gates[gateNumber].transform.localPosition = gatePosition;
+    }
+
+    private void RescaleToolboxDoor(List<GameObject> gates, int gateNumber)
+    {
+        Vector3 gLoc = gates[gateNumber].transform.localScale;
+        gates[gateNumber].transform.localScale = new Vector3(gLoc.x * 7.5f, gLoc.y * 7.5f, 1f);
     }
 }

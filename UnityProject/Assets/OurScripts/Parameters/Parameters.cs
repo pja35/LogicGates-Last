@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
@@ -21,15 +19,25 @@ public class Parameters
     /// <summary>
     /// Couleur de l'interface.
     /// </summary>
-    public float color;
+    public float r = 0.009f;
+    public float g = 0.724f;
+    public float b = 1f;
     /// <summary>
     /// Nombres de niveaux existants.
     /// </summary>
-    private int nbLevels = 50;
+    private readonly int nbLevels = 24;
     /// <summary>
     /// Nombre de niveaux débloqués.
     /// </summary>
     private int UnlockedLevels = 1;
+    /// <summary>
+    /// Affichage du popup tutoriel.
+    /// </summary>
+    public bool tuto = true;
+    /// <summary>
+    /// Nombre de lampes et d'interrupteur dans le mode BAS.
+    /// </summary>
+    public int BASSize = 2;
 
     /// <summary>
     /// Charge les paramètres depuis un fichier sérialisé.
@@ -44,8 +52,12 @@ public class Parameters
             Debug.Log("Paramets loaded, value = " + loaded.musicVolume + " " + loaded.snooze);
             this.musicVolume = loaded.musicVolume;
             this.snooze = loaded.snooze;
-            this.color = loaded.color;
+            this.r = loaded.r;
+            this.g = loaded.g;
+            this.b = loaded.b;
+            this.tuto = loaded.tuto;
             this.UnlockedLevels = loaded.UnlockedLevels;
+            this.BASSize = loaded.BASSize;
             file.Close();
         }
         else
@@ -57,13 +69,13 @@ public class Parameters
     /// <summary>
     /// Sauvegarde les paramètres.
     /// </summary>
-    public void saveParameters()
+    public void SaveParameters()
     {
         Debug.Log("Saving Parameters");
-        ParametersLoader loader = (ParametersLoader)GameObject.FindGameObjectsWithTag("Parameters")[0].GetComponent(typeof(ParametersLoader));
+        //ParametersLoader loader = (ParametersLoader)GameObject.FindGameObjectsWithTag("Parameters")[0].GetComponent(typeof(ParametersLoader));
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/parameters.gd");
-        Debug.Log("test = " + ParametersLoader.parameters.musicVolume + " " + ParametersLoader.parameters.snooze);
+        Debug.Log("test = " + ParametersLoader.parameters.musicVolume + " " + ParametersLoader.parameters.snooze + ParametersLoader.parameters.tuto + ParametersLoader.parameters.BASSize);
         bf.Serialize(file, ParametersLoader.parameters);
         file.Close();
     }
@@ -71,7 +83,7 @@ public class Parameters
     /// <summary>
     /// Modifie l'etat du vribreur.
     /// </summary>
-    public void changeSnooze()
+    public void ChangeSnooze()
     {
         snooze = !snooze;
     }
@@ -80,7 +92,7 @@ public class Parameters
     /// Récupere le nombre de niveaux existants.
     /// </summary>
     /// <returns>Le nombres de niveaux du jeu.</returns>
-    public int getNbLevels()
+    public int GetNbLevels()
     {
         return nbLevels;
     }
@@ -89,7 +101,7 @@ public class Parameters
     /// Récupere le nombre de niveaux débloqués.
     /// </summary>
     /// <returns>Le nombres de niveaux débloqués.</returns>
-    public int getUnlockedLevels()
+    public int GetUnlockedLevels()
     {
         return UnlockedLevels;
     }
@@ -106,7 +118,7 @@ public class Parameters
     /// <summary>
     /// Bloque le niveau actuel.
     /// </summary>
-    public void lockLevel()
+    public void LockLevel()
     {
         UnlockedLevels--;
     }

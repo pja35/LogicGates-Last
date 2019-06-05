@@ -24,10 +24,6 @@ public class SnoozeChanger : MonoBehaviour
         ChangeColor(ParametersLoader.GetSnooze());
     }
 
-    /// <summary>
-    ///  Change la couleur du bouton vibreur pour un retour visuel de son activation.
-    /// </summary>
-    /// <param name="active">Le nouvel etat du bouton.</param>
     private void ChangeColor(bool active)
     {
         if (!active)
